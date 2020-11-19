@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aap>
+    <tasklist>
+        <initialisation>
+            <module><name>aamod_checkparameters</name></module>
+            <module><name>aamod_evaluatesubjectnames</name></module>
+            <module><name>aamod_study_init</name></module>
+            <module><name>aamod_newsubj_init</name></module>
+        </initialisation>
+        
+        <main>
+            <!-- Data -->
+            <module><name>aamod_structuralfromnifti</name></module>
+            <module><name>aamod_epifromnifti</name></module>
+            <module><name>aamod_tsdiffana</name></module>
+            <module><name>aamod_realign</name></module>
+            
+            <!-- Structural -->
+            <module><name>aamod_coreg_noss</name></module>
+            <module><name>aamod_norm_noss</name></module>
+            
+            <!-- Functional -->
+            <module><name>aamod_bet</name></module>
+            <module><name>aamod_bet_epi_reslicing</name></module>
+            <module><name>aamod_mask_fromstruct</name></module>
+            <module><name>aamod_compSignal</name></module> 
+            <module><name>aamod_norm_write</name></module>
+            <module><name>aamod_smooth</name></module>
+     
+            <!-- Modelling -->
+            <module>
+                <branch>
+                    <module><name>aamod_listspikes</name></module>
+                    <module><name>aamod_firstlevel_scrubbingmodel_BS</name></module>
+                    <module><name>aamod_firstlevel_modelestimate_saveresids</name></module>
+                    <!-- <module><name>aamod_seed_connectivity</name></module> -->
+                </branch>
+            </module>
+        </main>
+    </tasklist>
+</aap>
