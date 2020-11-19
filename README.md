@@ -18,16 +18,16 @@ TODO
 
 ```bash
 └───repo    # This repository
-    # ├───preprocessing             # Matlab scripts to preprocess the data using AA.
-    # │   ├───aa_user_bpho.m        # The main AA user script that defines the preprocessing pipeline.
-    # │   └───aap_tasklist_bpho.xml # The AA modules to run on the data.
-    # ├───research          # Files resulting from this research
-    # │   ├───charts        # Charts created using Chart.js
-    # │   ├───images        # Images from exploring the data and the ML models
-    # │   ├───paper         # Files to generate the research paper
-    # │   └───presentation  # Research presentation
-    # └───src                   # Main processing code
-    #     └───main.ipynb        # The main Python code to explore the data and to create ML models
+    ├───preprocessing             # Matlab scripts to preprocess the data using AA.
+    │   ├───aa_user_bpho.m        # The main AA user script that defines the preprocessing pipeline.
+    │   └───aap_tasklist_bpho.xml # The AA modules to run on the data.
+    ├───research          # Files resulting from this research
+    │   ├───charts        # Charts created using Chart.js
+    │   ├───images        # Images from exploring the data and the ML models
+    │   ├───paper         # Files to generate the research paper
+    │   └───presentation  # Research presentation
+    └───src                   # Main processing code
+        └───main.ipynb        # The main Python code to explore the data and to create ML models
 ```
 
 ## How to Run
