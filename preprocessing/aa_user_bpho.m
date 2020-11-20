@@ -23,7 +23,6 @@ aap.directory_conventions.fsldir = '/usr/share/fsl/6.0.1';
 aap.directory_conventions.rawdataafterconversionprefix = 'r';
 aap.directory_conventions.subject_directory_format = 3;
 aap.directory_conventions.subjectoutputformat = '%s';
-% aap.tasksettings.aamod_roi_extract_BS.ROIfile = '/imaging/owenlab/klyons/fMRI/CBS_DevCog/BioBankData/Biobank_rois/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii';
 
 % Modify AA options
 aap.options.aa_minver = 4.0;
@@ -35,16 +34,19 @@ aap.directory_conventions.fslsetup = sprintf('export FSLDIR=%s; export PATH=%s/b
 
 % Module settings
 aap.tasksettings.aamod_firstlevel_scrubbingmodel_BS.TR = 0.8;
+% aap.tasksettings.aamod_roi_extract_BS.ROIfile = '/imaging/owenlab/klyons/fMRI/CBS_DevCog/BioBankData/Biobank_rois/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii';
 
 % For each age, grab all subjects
-for age = 10:16
+for age = 8:8
+    fprintf('Processing age: %i.\n', age);
+
     % Set the data input path and output path
     ageRawDataPath = sprintf('%s/Age%d', rawDataPath, age);
     aap.directory_conventions.rawdatadir = ageRawDataPath;
     aap.acq_details.root = ageRawDataPath;  % Put the processed data in the same place as the raw data
 
     % Grab the number of subjects
-    ptpID = dir(sprintf('%s', ageRawDataPath, '*ND*'));
+    ptpID = dir(sprintf('%s/', ageRawDataPath, '*ND*'));
     % ptpID = ptpID(2:end);
     num_subjects = length(ptpID);
     fprintf('Number of subjects: %i.\n', num_subjects);
@@ -65,8 +67,8 @@ for age = 10:16
         
         aap = aas_addsubject(aap, sprintf('%s', ID), {movfname.name});
         aap = aas_addinitialstream_AL(aap, 'structural', sprintf('%s', ID), strcat(sprintf('%s/%s/', ageRawDataPath, ID), fT1w.name));
-        aap.acq_details.subjects(subject).seriesnumbers = {strcat(sprintf('%s/', ID), movfname.name)};
-        aap.acq_details.subjects(subject).structural = {strcat(sprintf('%s/', ID), fT1w.name)};
+        aap.acq_details.subjects(subject).seriesnumbers = {strcat(sprintf('%s', ID), movfname.name)};
+        aap.acq_details.subjects(subject).structural = {strcat(sprintf('%s', ID), fT1w.name)};
     end
 
 end
