@@ -4,6 +4,7 @@ function aa_user_bpho
 % Add libraries
 addpath(genpath('/imaging/cusacklab/cwild/automaticanalysis'));
 addpath(genpath('/software/spm8'), '-end');
+addpath(genpath('/imaging3/owenlab/bpho/marsbar-0.44'), '-end');
 
 % Add the directory of this script to the top of the matlab path
 addpath(fileparts(mfilename('fullpath')), '-begin');
@@ -14,8 +15,9 @@ aap=aarecipe('aap_tasklist_bpho.xml');
 
 % Location of raw data
 rawDataPath = '/imaging3/owenlab/bpho';
+% rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release8';
 % Folder name of processed data
-aap.directory_conventions.analysisid = 'BioBank_Analysis';
+aap.directory_conventions.analysisid = 'BioBank_Analysis_All';
 
 % Add template and FSL directory
 aap.directory_conventions.T1template = '/software/spm8/templates/T1.nii';
@@ -34,7 +36,8 @@ aap.directory_conventions.fslsetup = sprintf('export FSLDIR=%s; export PATH=%s/b
 
 % Module settings
 aap.tasksettings.aamod_firstlevel_scrubbingmodel_BS.TR = 0.8;
-% aap.tasksettings.aamod_roi_extract_BS.ROIfile = '/imaging/owenlab/klyons/fMRI/CBS_DevCog/BioBankData/Biobank_rois/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii';
+aap.tasksettings.aamod_roi_extract_BS.ROIfile = '/imaging3/owenlab/bpho/PP264_all_ROIs_combined.nii';
+% aap.tasksettings.aamod_fconn_computematrix.roi = '/imaging3/owenlab/bpho/PP264_all_ROIs_combined.nii';
 
 % For each age, grab all subjects
 for age = 8:8
@@ -67,8 +70,8 @@ for age = 8:8
         
         aap = aas_addsubject(aap, sprintf('%s', ID), {movfname.name});
         aap = aas_addinitialstream_AL(aap, 'structural', sprintf('%s', ID), strcat(sprintf('%s/%s/', ageRawDataPath, ID), fT1w.name));
-        aap.acq_details.subjects(subject).seriesnumbers = {strcat(sprintf('%s', ID), movfname.name)};
-        aap.acq_details.subjects(subject).structural = {strcat(sprintf('%s', ID), fT1w.name)};
+        aap.acq_details.subjects(subject).seriesnumbers = {strcat(sprintf('%s/', ID), movfname.name)};
+        aap.acq_details.subjects(subject).structural = {strcat(sprintf('%s/', ID), fT1w.name)};
     end
 
 end
