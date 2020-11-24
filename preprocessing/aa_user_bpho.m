@@ -14,8 +14,8 @@ setenv('HOME', fullfile('/home/bpho/'))
 aap=aarecipe('aap_tasklist_bpho.xml');
 
 % Location of raw data
-rawDataPath = '/imaging3/owenlab/bpho';
-% rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release8';
+% rawDataPath = '/imaging3/owenlab/bpho';
+rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release8';
 % Folder name of processed data
 aap.directory_conventions.analysisid = 'BioBank_Analysis_All';
 
@@ -36,11 +36,11 @@ aap.directory_conventions.fslsetup = sprintf('export FSLDIR=%s; export PATH=%s/b
 
 % Module settings
 aap.tasksettings.aamod_firstlevel_scrubbingmodel_BS.TR = 0.8;
-aap.tasksettings.aamod_roi_extract_BS.ROIfile = '/imaging3/owenlab/bpho/PP264_all_ROIs_combined.nii';
+% aap.tasksettings.aamod_roi_extract_BS.ROIfile = '/imaging3/owenlab/bpho/PP264_all_ROIs_combined.nii';
 % aap.tasksettings.aamod_fconn_computematrix.roi = '/imaging3/owenlab/bpho/PP264_all_ROIs_combined.nii';
 
 % For each age, grab all subjects
-for age = 8:8
+for age = 10:10
     fprintf('Processing age: %i.\n', age);
 
     % Set the data input path and output path
@@ -48,9 +48,13 @@ for age = 8:8
     aap.directory_conventions.rawdatadir = ageRawDataPath;
     aap.acq_details.root = ageRawDataPath;  % Put the processed data in the same place as the raw data
 
-    % Grab the number of subjects
+    % Grab the subjects from the age folder
     ptpID = dir(sprintf('%s/', ageRawDataPath, '*ND*'));
-    % ptpID = ptpID(2:end);
+    
+    % Skip processing on bad subjects
+    bad_subject_index = strcmp({ptpID.name}, 'sub-NDAREB303XDC');
+    ptpID(bad_subject_index) = [];
+    
     num_subjects = length(ptpID);
     fprintf('Number of subjects: %i.\n', num_subjects);
 
@@ -64,7 +68,7 @@ for age = 8:8
 
         % Subject Data
         if isa(ID, 'txt')
-            seldatname = find(strcmp(ID, txt));
+            seldatname = strcmp(ID, txt);
             aap.tasksettings.aamod_norm_noss.subject(subject) = struct('name', cellstr(ID), 'affineStartingEstimate', [num(seldatname, :)]);
         end
         
