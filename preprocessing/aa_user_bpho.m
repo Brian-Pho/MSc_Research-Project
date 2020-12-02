@@ -15,7 +15,7 @@ aap=aarecipe('aap_tasklist_bpho.xml');
 
 % Location of raw data
 % rawDataPath = '/imaging3/owenlab/bpho';
-rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release8';
+rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release7';
 % Folder name of processed data
 aap.directory_conventions.analysisid = 'BioBank_Analysis_All';
 
@@ -40,7 +40,7 @@ aap.tasksettings.aamod_firstlevel_scrubbingmodel_BS.TR = 0.8;
 % aap.tasksettings.aamod_fconn_computematrix.roi = '/imaging3/owenlab/bpho/PP264_all_ROIs_combined.nii';
 
 % For each age, grab all subjects
-for age = 10:10
+for age = 5:5
     fprintf('Processing age: %i.\n', age);
 
     % Set the data input path and output path
@@ -52,8 +52,12 @@ for age = 10:10
     ptpID = dir(sprintf('%s/', ageRawDataPath, '*ND*'));
     
     % Skip processing on bad subjects
-    bad_subject_index = strcmp({ptpID.name}, 'sub-NDAREB303XDC');
-    ptpID(bad_subject_index) = [];
+    bad_subject_IDs = {'sub-NDAREB303XDC', 'sub-NDARRB561VCP', 'sub-NDARTE115TAE', 'sub-NDARMC694YF3', 'sub-NDARNC489BX5', 'sub-NDARZE389XF0', 'sub-NDARLU529MP7'};
+    for index = 1:length(bad_subject_IDs)
+        subject = bad_subject_IDs(index);
+        bad_subject_index = strcmp({ptpID.name}, subject);
+        ptpID(bad_subject_index) = [];
+    end
     
     num_subjects = length(ptpID);
     fprintf('Number of subjects: %i.\n', num_subjects);
