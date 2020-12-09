@@ -1,0 +1,31 @@
+# Research Project Summary
+
+My research is based on the idea "Do great minds think alike?" This question came about from another research project that a PhD student was doing in Bobby's lab. The idea is to explore what brain structures enable high intelligence and cognition. To explore this idea, I will apply machine learning models to fMRI data in children and adolescents. I will use fMRI data during movie watching to generate a functional connectivity matrix for each subject, then I will feed that matrix into an ML model to predict their score on various cognitive measures. I plan to use the following cognitive measures: NIH Toolbox, WISC, WAIS, and KBIT.
+
+---
+
+# Using Machine Learning to Identify Neural Mechanisms Differentiating Low and High Cognitive Functioning in Children and Adolescents (CGS-M Application)
+
+## Summary
+
+As children grow up and become adolescents, their mental abilities change. Adolescents can solve more complex problems, plan further into the future, and take more risks. These changes overlap with changes in the brain. It is not clear, however, how these changes in the brain result in changes in mental abilities. It is known that some of these abilities develop because the frontal brain network develops during adolescence. It is also known that these abilities develop because widespread connections in the brain become more refined; meaning the connections can either strengthen or weaken, or grow or die. While the general picture of brain development is known, we do not know the details. The goal of my research is to tease out these details by training a machine learning model to distinguish between children and adolescents with low and high mental abilities. I will use data on individuals aged five to sixteen and train a model to predict the mental scores on a variety of tasks such as working memory and verbal comprehension. Assuming that the model is able to successfully predict the scores, I will analyze the model to better understand how parts of the brain are related to mental abilities. I predict that the model will use the strength and separation of the frontal brain network to predict abilities such as planning, working memory, and emotion control. I also predict that the model will the task-specific areas of the brain to predict task scores such as the language areas for vocabulary. By using machine learning to model the brain, I hope to better understand how children develop and I hope that this knowledge will inspire new and more biologically informed machine learning algorithms.
+
+## Background
+
+Children’s cognitive abilities, such as planning, working memory, and cognitive control, undergo considerable improvement as they enter adolescence. Coinciding with improvements to cognition are major changes to the brain. For instance, compared to other brain regions, the prefrontal cortex undergoes extended development in adolescents, which has been linked to improved working memory (Olson & Luciana, 2008). Furthermore, computational modeling suggests that the development of working memory is best explained by stronger synaptic connectivity between the prefrontal and parietal cortex (Edin et al., 2007). Another cognitive ability, executive functioning, is associated with brain-wide connections between the fronto-parietal network (Baum et al., 2017; Niendam et al., 2012), anterior cingulate cortex, and striatum (Buss & Spencer, 2018). However, the rate of cognitive development is not uniform as individuals often vary in their developmental trajectory (Casey et al., 2008). What remains unclear are the changes to the brain associated with rapid and delayed cognitive development in children and adolescents.
+
+## Objectives
+
+I propose to apply machine learning (ML) to explore and identify the neural mechanisms differentiating children and adolescents with low and high cognitive abilities. I will examine the structural brain changes and the connectivity profiles (strength and number of connections) within- and between-brain regions at the individual and group level (for each age between 7 and 16). For the cognitive abilities, I will explore working memory, verbal comprehension, and reasoning.
+
+## Hypothesis
+
+I predict that the model will use the strength and separation of the fronto-parietal network to predict cognitive performance at each age. By taking a big data approach, we expect to uncover novel aspects of structural and functional changes to the brain that account for cognitive development.
+
+## Methods
+
+I will use the Healthy Brain Network biobank dataset (Alexander et al., 2017) to train various ML models to explore the neural mechanisms associated with developing cognitive abilities. The dataset contains data from over 2000 participants on various cognitive measures, such as the NIH Toolbox Tasks and Wechsler Intelligence Scale for Children, along with functional magnetic resonance imaging at rest and during movie watching. I will use the neuroimaging data as input into the ML model and the cognitive measures as the label. To model the developing brain, I plan to use various machine learning models such as linear regression and artificial neural networks. Machine learning is an ideal tool to explore the relationship between brains and cognition because it has been successfully applied to model and explore the brain. For instance, Bertolero & Bassett (2020) were successful in using deep neural networks to model each brain region’s connectivity to predict measures of cognition and behavior.
+
+## Significance
+
+The outcome of my proposed project will result in a better understanding of the neural mechanisms associated with cognitive development during the critical transition period from childhood to adolescence. Moreover, it will shed new light on the set of neural mechanisms differentiating individuals with low and high cognitive abilities. This has implications in allowing us to identify children with atypical brain development and to provide them with more support. And lastly, this work is part of a virtuous cycle where insights in understanding how the human brain develops inspires new artificial intelligence algorithms, and the development of new algorithms allows us to better explore the brain.
