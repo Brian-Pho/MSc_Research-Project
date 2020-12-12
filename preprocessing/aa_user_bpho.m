@@ -4,7 +4,7 @@ function aa_user_bpho
 % Add libraries
 addpath(genpath('/imaging/cusacklab/cwild/automaticanalysis'));
 addpath(genpath('/software/spm8'), '-end');
-% addpath(genpath('/imaging3/owenlab/bpho/marsbar-0.44'), '-end');
+addpath(genpath('/imaging3/owenlab/bpho/marsbar-0.44'), '-end');
 
 % Add the directory of this script to the top of the Matlab path
 addpath(fileparts(mfilename('fullpath')), '-begin');
@@ -72,19 +72,16 @@ for age = 10:10
 
     % For each subject, add it to the AA pipeline
     for subject = 1:num_subjects
+        % Get the subject path
         subject_id = ptpID(subject).name;
         subject_path = sprintf('%s/%s', ageRawDataPath, subject_id);
-
+        
+        % Get the T1w nifti and movie nitfi filenames
         fT1w = dir(sprintf('%s/*T1w*', subject_path));
         movfname = dir(sprintf('%s/*ovie*', subject_path));
         aap.directory_conventions.protocol_structural = fT1w.name;
-
-        % Subject Data
-        if isa(subject_id, 'txt')
-            seldatname = strcmp(subject_id, txt);
-            aap.tasksettings.aamod_norm_noss.subject(subject) = struct('name', cellstr(subject_id), 'affineStartingEstimate', seldatname);
-        end
         
+        % Add the subject to the AA pipeline and the initial data stream
         aap = aas_addsubject(aap, subject_id, {movfname.name});
         aap = aas_addinitialstream_AL(aap, 'structural', subject_id, sprintf('%s/%s', subject_path, fT1w.name));
         aap.acq_details.subjects(subject).seriesnumbers = {sprintf('%s/%s', subject_id, movfname.name)};
