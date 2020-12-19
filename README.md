@@ -4,11 +4,11 @@ This repository holds the code for my research project on applying ML to brain d
 
 ## Project Description
 
-A summary and detailed description can be found [here](research/README.md).
+A summary and detailed description of the project can be found [here](research/README.md).
 
 ## Data Processing Pipeline
 
-1. Raw MRI and fMRI data.
+1. Obtain raw MRI and fMRI data.
 2. Preprocess data using Automatic Analysis (AA).
 3. Data exploration using Python.
 4. Machine learning models using Python.
@@ -69,8 +69,7 @@ I developed the data exploration and modeling in Python using Anaconda and Juypt
 ## TODO List
 
 - [ ] Go through ISC Python tutorial
-- [ ] Use FC in linear SVC
 - [ ] Organize data
-- [ ] Continue preprocessing
+- [x] Continue preprocessing
 - [ ] Get cognitive measures (aka labels)
 - [ ] Download release 9 from HBN

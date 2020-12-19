@@ -1,5 +1,7 @@
 # Preprocessing Checklist
 
+The following is a checklist of releases and ages that I need to preprocess. The subjects (sub-*) listed below are ones that have problems in the preprocessing pipeline. Most of the problems is at the last stage of preprocessing, the saveresids stage, with exception: "Please check your data: There are no significant voxels." If the subject has a different error, then I've listed it below.
+
 ## Data To Preprocess
 
 ### Release 7
@@ -31,26 +33,78 @@
   - sub-NDARNV983DET
   - sub-NDARRG269ML2
   - sub-NDARTK056HL3
-- [-] Age 8
-- [ ] Age 9
-- [ ] Age 10
-- [ ] Age 11
-- [ ] Age 12
-- [ ] Age 13
-- [ ] Age 14
-- [ ] Age 15
-- [ ] Age 16
+- [x] Age 8
+  - sub-NDAREA788ZAM
+  - sub-NDARFK262EKF
+  - sub-NDARHX252NVH
+  - sub-NDARMR134HUY
+  - sub-NDARTB300BN3
+  - sub-NDARUP441BKK
+  - sub-NDARWF259RB2
+- [x] Age 9
+  - sub-NDAREN999ERM
+  - sub-NDARLH043YDK
+  - sub-NDARLY872ZXA
+  - sub-NDARTT867NWT
+  - sub-NDARUY379PT5
+  - sub-NDARVJ468UZC
+  - sub-NDARVZ525AA0
+  - sub-NDARYN474PEK
+  - sub-NDARYN857XMX
+- [x] Age 10
+  - sub-NDARAB055BPR
+  - sub-NDARBE912PB0
+  - sub-NDAREB953UMY
+  - sub-NDARGK442YHH
+  - sub-NDARJJ216EGT
+  - sub-NDARRN047XHC
+  - sub-NDARTV119WJK
+  - sub-NDARTW456RAG
+  - sub-NDARTY533VXQ
+  - sub-NDARXK303DDB
+- [x] Age 11
+  - sub-NDARDZ440NGK
+  - sub-NDARLV812JXX
+  - sub-NDARNE800DCT
+  - sub-NDARWT694TXM
+  - sub-NDARYD958HAX
+- [x] Age 12
+  - sub-NDARWW174PA5
+  - sub-NDARXW276NXN
+- [x] Age 13
+  - sub-NDARAA947ZG5
+- [x] Age 14
+  - sub-NDARXB023AMW (Has T2 file, not T1)
+  - sub-NDARNK064DXY
+- [x] Age 15
+  - sub-NDARUU991VRE (EXCEPTION: Input to SVD must not contain NaN or Inf.)
+- [x] Age 16
 
 ### Release 8
 
-- [-] Age 5
+- [x] Age 5
   - sub-NDARFN854EJB
-- [ ] Age 6
-- [ ] Age 7
-- [-] Age 8
+- [x] Age 6
+  - sub-NDARGZ116HTR
+  - sub-NDARHC357HLP
+  - sub-NDARJW697MYZ
+  - sub-NDARWA570DNL
+- [x] Age 7
+  - sub-NDARCC824FCL
+  - sub-NDARCV628NRY
+  - sub-NDARFP243NWY
+  - sub-NDARFZ990EFG
+- [x] Age 8
   - sub-NDARFD628UVZ
   - sub-NDARGU067HT7
-- [ ] Age 9
+  - sub-NDARKZ949UAL
+  - sub-NDARRU820CXW
+  - sub-NDARUX818MGE
+  - sub-NDARVE980WU5
+- [x] Age 9
+  - sub-NDARAW247CCF (i0->c null rank sX == 0)
+  - sub-NDARMJ877UTP
+  - sub-NDARUK025ZFT
 - [x] Age 10
   - sub-NDAREB303XDC
   - sub-NDARRB561VCP
@@ -65,5 +119,3 @@
 - [x] Age 15
   - sub-NDARLU529MP7
 - [x] Age 16
-
-Stage: saveresids
