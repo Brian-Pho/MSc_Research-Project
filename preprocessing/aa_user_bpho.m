@@ -14,7 +14,7 @@ setenv('HOME', fullfile('/home/bpho/'))
 aap=aarecipe('aap_tasklist_bpho.xml');
 
 % Location of raw data
-rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release7';
+rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release8';
 % Folder name of processed data
 aap.directory_conventions.analysisid = 'BioBank_Analysis_All';
 
@@ -39,7 +39,7 @@ aap.tasksettings.aamod_firstlevel_scrubbingmodel_BS.TR = 0.8;
 % aap.tasksettings.aamod_fconn_computematrix.roi = '/imaging3/owenlab/bpho/PP264_all_ROIs_combined.nii';
 
 % For each age, grab all subjects and add them to the AA pipeline
-for age = 10:10
+for age = 9:9
     fprintf('Processing age: %i.\n', age);
 
     % Set the data input path and output path
@@ -59,8 +59,13 @@ for age = 10:10
         'sub-NDARHG906MEZ', 'sub-NDARER115FTJ', 'sub-NDARGC099LDZ', 'sub-NDARFC188VT4', 'sub-NDARFJ651RMJ', 'sub-NDARNC489BX5', ...
         'sub-NDARZE389XF0', 'sub-NDARLU529MP7', 'sub-NDARFN854EJB', 'sub-NDARFD628UVZ', 'sub-NDARLH043YDK', 'sub-NDARLY872ZXA', ...
         'sub-NDARTT867NWT', 'sub-NDARUY379PT5', 'sub-NDARVJ468UZC', 'sub-NDARVZ525AA0', 'sub-NDARYN474PEK', 'sub-NDARYN857XMX', ...
-        'sub-NDARMR134HUY', 'sub-NDARTB300BN3', 'sub-NDARUP441BKK', 'sub-NDARWF259RB2'};
-%     'sub-NDARWF259RB2'
+        'sub-NDARMR134HUY', 'sub-NDARTB300BN3', 'sub-NDARUP441BKK', 'sub-NDARWF259RB2', 'sub-NDARAB055BPR', 'sub-NDARDZ440NGK', ...
+        'sub-NDARLV812JXX', 'sub-NDARWW174PA5', 'sub-NDARXW276NXN', 'sub-NDARNE800DCT', 'sub-NDARWT694TXM', 'sub-NDARYD958HAX', ...
+        'sub-NDARBE912PB0', 'sub-NDAREB953UMY', 'sub-NDARGK442YHH', 'sub-NDARJJ216EGT', 'sub-NDARRN047XHC', 'sub-NDARTV119WJK', ...
+        'sub-NDARTW456RAG', 'sub-NDARTY533VXQ', 'sub-NDARXK303DDB', 'sub-NDARXB023AMW', 'sub-NDARNK064DXY', 'sub-NDARAA947ZG5', ...
+        'sub-NDARGZ116HTR', 'sub-NDARHC357HLP', 'sub-NDARJW697MYZ', 'sub-NDARWA570DNL', 'sub-NDARCC824FCL', 'sub-NDARCV628NRY', ...
+        'sub-NDARFP243NWY', 'sub-NDARFZ990EFG', 'sub-NDARKZ949UAL', 'sub-NDARRU820CXW', 'sub-NDARUX818MGE', 'sub-NDARVE980WU5', ...
+        'sub-NDARUU991VRE', 'sub-NDARAW247CCF', 'sub-NDARMJ877UTP', 'sub-NDARUK025ZFT'};
     for index = 1:length(bad_subject_IDs)
         subject = bad_subject_IDs(index);
         bad_subject_index = strcmp({ptpID.name}, subject);
@@ -91,7 +96,7 @@ for age = 10:10
 end
 
 % This 'for' loop is used to rerun the program if an exception is caught
-num_exceptions_to_skip = 2;
+num_exceptions_to_skip = 1;
 for counter = 1:num_exceptions_to_skip
     try
         aa_doprocessing(aap);
