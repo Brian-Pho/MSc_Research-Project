@@ -23,7 +23,7 @@
             <module><name>aamod_bet</name></module>
             <module><name>aamod_bet_epi_reslicing</name></module>
             <module><name>aamod_mask_fromstruct</name></module>
-            <module><name>aamod_compSignal</name></module> 
+            <module><name>aamod_compSignal</name></module>
             <module><name>aamod_norm_write</name></module>
             <module><name>aamod_smooth</name></module>
      
@@ -33,7 +33,6 @@
                     <module><name>aamod_listspikes</name></module>
                     <module><name>aamod_firstlevel_scrubbingmodel_BS</name></module>
                     <module><name>aamod_firstlevel_modelestimate_saveresids</name></module>
-                    <!-- <module><name>aamod_seed_connectivity_BS</name></module> -->
                 </branch>
             </module>
         </main>
