@@ -14,7 +14,7 @@ setenv('HOME', fullfile('/home/bpho/'))
 aap=aarecipe('aap_tasklist_bpho.xml');
 
 % Location of raw data
-rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release8';
+rawDataPath = '/imaging3/owenlab/wilson/MovieData/Release7';
 % Folder name of processed data
 aap.directory_conventions.analysisid = 'BioBank_Analysis_All';
 
@@ -39,7 +39,7 @@ aap.tasksettings.aamod_firstlevel_scrubbingmodel_BS.TR = 0.8;
 % aap.tasksettings.aamod_fconn_computematrix.roi = '/imaging3/owenlab/bpho/PP264_all_ROIs_combined.nii';
 
 % For each age, grab all subjects and add them to the AA pipeline
-for age = 9:9
+for age = 5:5
     fprintf('Processing age: %i.\n', age);
 
     % Set the data input path and output path
@@ -55,7 +55,7 @@ for age = 9:9
         'sub-NDARRF415CBE', 'sub-NDARHN482HPM', 'sub-NDAREB303XDC', 'sub-NDARRB561VCP', 'sub-NDARTE115TAE', 'sub-NDARMC694YF3', ...
         'sub-NDARTK056HL3', 'sub-NDARRG269ML2', 'sub-NDARNV983DET', 'sub-NDARHW467TA8', 'sub-NDARJT172UE0', 'sub-NDARJK842BCN', ...
         'sub-NDARFD213GMJ', 'sub-NDARDN996CPF', 'sub-NDARDU566NUY', 'sub-NDARGU067HT7', 'sub-NDARWT274EX1', 'sub-NDARXR389XA1', ...
-        'sub-NDARPV595RWB', 'sub-NDARGH425GB9', 'sub-NDAREW074ZM2', 'sub-NDARBW525JHY', 'sub-NDARAU840EUZ', 'sub-NDARCB142ZPB', ...
+        'sub-NDARPV595RWB', 'sub-NDARGH425GB9', 'sub-NDAREW074ZM2', 'sub-NDARAU840EUZ', 'sub-NDARCB142ZPB', ...
         'sub-NDARHG906MEZ', 'sub-NDARER115FTJ', 'sub-NDARGC099LDZ', 'sub-NDARFC188VT4', 'sub-NDARFJ651RMJ', 'sub-NDARNC489BX5', ...
         'sub-NDARZE389XF0', 'sub-NDARLU529MP7', 'sub-NDARFN854EJB', 'sub-NDARFD628UVZ', 'sub-NDARLH043YDK', 'sub-NDARLY872ZXA', ...
         'sub-NDARTT867NWT', 'sub-NDARUY379PT5', 'sub-NDARVJ468UZC', 'sub-NDARVZ525AA0', 'sub-NDARYN474PEK', 'sub-NDARYN857XMX', ...
@@ -74,6 +74,13 @@ for age = 9:9
     
     num_subjects = length(ptpID);
     fprintf('Number of subjects: %i.\n', num_subjects);
+    
+%     Change starting position
+%     start_position.name = 'sub-NDARBW525JHY';
+%     start_position.affineStartingEstimate = struct('x', 1, 'y', 17, 'z', -40);
+%     aap.tasksettings.aamod_norm_noss.subject(subject) = start_position; 
+    aap.tasksettings.aamod_norm_noss.subject = struct('name','sub-NDARBW525JHY','affineStartingEstimate',[1, 17, -40]); 
+
 
     % For each subject, add it to the AA pipeline
     for subject = 1:num_subjects
@@ -95,12 +102,4 @@ for age = 9:9
 
 end
 
-% This 'for' loop is used to rerun the program if an exception is caught
-num_exceptions_to_skip = 1;
-for counter = 1:num_exceptions_to_skip
-    try
-        aa_doprocessing(aap);
-    catch ex
-        fprintf('EXCEPTION: %s\n', ex.message);
-    end
-end
+aa_doprocessing(aap);
