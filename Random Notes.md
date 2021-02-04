@@ -69,8 +69,6 @@ Final Preprocessing Output Folder
 
 ISC Data Example: `/imaging/owenlab/klyons/fMRI/CBS_DevCog/BioBankData/Age7Data/BioBank_Analysis/aamod_moviecorr_summary_00001/NDARCM135DVC`
 
-Each nifti file is a data point every 800 msec. Put all of them together to get. (aa module for 3D to 4D)
-
 Think About
 
 - Input data statistics
@@ -78,3 +76,37 @@ Think About
 - Label descriptions
 - Potential models to use
 - By doing PCA, I assume the connections are symmetric
+
+FC Matrix Checklist
+
+- [ ] /imaging/owenlab/klyons/fMRI/CBS_DevCog/BioBankData (240)
+- [-] /imaging2/owenlab/wilson/MovieData (271)
+- [x] /imaging3/owenlab/wilson/MovieData (454)
+
+Notes
+
+- Each nifti file is a data point every 800 msec.
+- Don't merge the release folders as that will mess up AA (since it tracks paths to remember what stage of preprocessing it's at). Instead, only copy the end results out.
+- Maybe don't analyze every age, maybe group ages in groups of 3.
+- Age -> More segregated modules -> Better cognitive abilities
+
+## Advisory Committee Notes
+
+- How does the MNI space standardization work for children?
+- Is brain-age or chronological-age better? What if a 7 year old brain looks like a 5 year old brain? Use brain age predictor.
+- What do I plan to see as an end result? What do you expect to see given your input?
+- I should specify what ML, not just say ML.
+- What are the right algorithms here?
+- If I use a non-linear model, what type of features of a non-linear model allow it to do better than linear.
+- Not big data since features > number of subjects
+- What's the timeline for the project?
+- Instead of a linear model, try regularization (L1, L2)
+- Is the model used to predict cognitive scores at age 5 equally useful at age 15?
+- Be careful about linking models to conclusions. The model is only as good as the input data and chosen model.
+- Give reasons not to use autoencoders.
+- We tested the hypothesis that modules within structural brain networks become more segregated with age, as seen in functional brain networks.
+- Further, we predicted that segregated structural modules would support enhanced executive functioning.
+
+- What about the brain gives rise to intelligence? And how does that change over time?
+- Given the data we have, how can we answer this question?
+- Next meeting, prepare presentation on data, feature extraction, models, results. (can share whenever I get the results)
