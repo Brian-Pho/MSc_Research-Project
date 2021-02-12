@@ -50,9 +50,9 @@ Kathleen Notes
 
 Raw Data Paths
 
-- /imaging/owenlab/klyons/fMRI/CBS_DevCog/BioBankData (240)
-- /imaging2/owenlab/wilson/MovieData (311)
-- /imaging3/owenlab/wilson/MovieData (546)
+- **/imaging/owenlab/klyons/fMRI/CBS_DevCog/BioBankData (240)**
+- **/imaging2/owenlab/wilson/MovieData (311)**
+- **/imaging3/owenlab/wilson/MovieData (546)**
 
 Raw Data Filenames
 
@@ -106,6 +106,8 @@ Notes
 - Give reasons not to use autoencoders.
 - We tested the hypothesis that modules within structural brain networks become more segregated with age, as seen in functional brain networks.
 - Further, we predicted that segregated structural modules would support enhanced executive functioning.
+
+## Other
 
 - What about the brain gives rise to intelligence? And how does that change over time?
 - Given the data we have, how can we answer this question?

@@ -41,6 +41,7 @@ Prerequisite software packages
 - Matlab 2014a
 - SPM 8
 - [AA 4](https://github.com/automaticanalysis/automaticanalysis/)
+- [MarsBaR 0.44](http://marsbar.sourceforge.net/)
 - FSL 6.0.1
 
 I used this exact list of software packages to preprocess the data but if you modify my code, you can make it work with the version you have. Once you have the prerequisite software installed, follow these steps.
@@ -58,26 +59,37 @@ Prerequisite software packages
 - [NIlearn](https://nilearn.github.io)
 - [BrainIAK](https://brainiak.org)
 
-I developed the data exploration and modeling in Python using Anaconda and Juypter Notebook.
+I developed the data exploration and modeling in Python using Anaconda and Juypter Notebook. Once you have the prerequisite software installed, follow these steps.
+
+1. Open up a terminal and run `anaconda-navigator`.
+2. Choose the virtual environment that has the prerequisite packages.
+3. Launch the 'Jupyter Notebook' application.
+4. Navigate to the where the `*.ipynb` scripts are and open them.
+5. Run the script in Jupyter notebook to explore and analyze the data.
 
 ## Useful Links
 
 - [Automatic Analysis Wiki](https://github.com/automaticanalysis/automaticanalysis/wiki)
 - [ISC Tutorial](https://github.com/snastase/isc-tutorial)
-- [Healthy Brain Network Database](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/index.html)
+- [SPM: Setting the Origin and Normalization](https://andysbrainblog.blogspot.com/2012/11/spm-setting-origin-and-normalization.html)
 
 ## TODO List
 
+- [x] Continue preprocessing
+- [x] Display all T1 images in Python and confirm they're good
 - [ ] Go through ISC Python tutorial
 - [ ] Organize data
-- [x] Continue preprocessing
-- [ ] Get cognitive measures (aka labels)
+- [-] Get cognitive measures (aka labels)
 - [ ] Download release 9 from HBN (maybe not as kids with covid may affect fMRI results due to respiratory condition)
 - [ ] Try using ISC in analysis
 - [ ] Test simple ML models
 - [ ] Test ANN models
-- [ ] Display all T1 images in Python and confirm they're good
 - [ ] Read more literature
 - [ ] Sort out Mendeley literature
 - [ ] Figure out why the ISA for the combined dataset fails / doesn't look good
 - [ ] Remove duplicate subject "sub-NDARFU786BN4" in ages 9, 14, 15
+- [ ] Darren tasks
+  - [ ] Summarize paper for me
+  - [ ] Coding task
+  - [ ] fMRI task
+  - [x] Data organization task
