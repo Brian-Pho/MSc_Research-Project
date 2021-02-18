@@ -1,5 +1,43 @@
 # Processing
 
+## Experiments
+
+### Generate Functional Connectivity
+
+After preprocessing all of the fMRI data, I had to convert the data into a compressed representation for the machine learning models to handle. Example representations include functional connectivity (FC) and intersubject correlation (ISC). To generate the FCs of subjects, I used Nilearn and the Python scripts are located here:
+
+- [Testing](../src/FC/Testing%20FC.ipynb)
+- [Generating](../src/FC/Generate%20FC.ipynb)
+
+![Functional Connectivity Matrix](../images/FC/FC%20Matrix.png)
+![Functional Connectivity Correlation Graph](../images/FC/FC%20Correlation%20Graph.png)
+
+### Unsupervised
+
+After the FCs are generated, I didn't have access to the labels (cognitive measures) so I tried some unsupervised models. This included testing PCA, ICA, K-means, and t-SNE and then back-projecting the transformed data back into an FC. This was somewhat successful and the results are shown below. The Python scripts:
+
+- [Data Exploration](../src/Unsupervised/Data%20Exploration.ipynb)
+
+![PCA FC Matrix](../images/Unsupervised/PCA%20FC%20Matrix.png)
+![PCA Correlation Graph](../images/Unsupervised/PCA%20Correlation%20Graph.png)
+![ICA FC Matrix](../images/Unsupervised/ICA%20FC%20Matrix.png)
+![ICA Correlation Graph](../images/Unsupervised/ICA%20Correlation%20Graph.png)
+![Kmeans](../images/Unsupervised/Kmeans.png)
+
+### Data Sanity Check
+
+While matching subjects to labels, I performed some quick sanity checks to ensure the data was ok. The results are displayed below.
+
+![Age Distribution](../images/Data%20Distribution/Age%20Distribution.png.png)
+![IQ Distribution](../image/../images/Data%20Distribution/IQ%20Distribution.png)
+
+### Supervised
+
+Once I had the labels, I performed a matching between subjects and labels to get the subjects with labels (not all subjects had labels, and vice versa). After this, I used various supervised models to tease out any link between FC and cognitive score (IQ). I didn't find any promising results as shown below. The Python scripts:
+
+![PCR](../images/Supervised/PCR.png)
+![PLS](../images/Supervised/PLS.png)
+
 ## TODO
 
 - Explore FC changes over ages

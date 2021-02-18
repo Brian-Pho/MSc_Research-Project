@@ -75,18 +75,14 @@ I developed the data exploration and modeling in Python using Anaconda and Juypt
 
 ## TODO List
 
-- [x] Continue preprocessing
-- [x] Display all T1 images in Python and confirm they're good
 - [ ] Go through ISC Python tutorial
 - [ ] Organize data
 - [-] Get cognitive measures (aka labels)
 - [ ] Download release 9 from HBN (maybe not as kids with covid may affect fMRI results due to respiratory condition)
 - [ ] Try using ISC in analysis
 - [ ] Test simple ML models
-- [ ] Test ANN models
 - [ ] Read more literature
 - [ ] Sort out Mendeley literature
-- [ ] Figure out why the ISA for the combined dataset fails / doesn't look good
 - [ ] Remove duplicate subject "sub-NDARFU786BN4" in ages 9, 14, 15
 - [ ] Darren tasks
   - [ ] Summarize paper for me
