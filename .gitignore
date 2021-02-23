@@ -76,6 +76,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+nilearn_cache/
 
 # IPython
 profile_default/
