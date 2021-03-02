@@ -23,7 +23,7 @@ Error in aa_user_bpho (line 105)
 aa_doprocessing(aap);
 ```
 
-## Data To Preprocess
+## Bad Subject List
 
 ### Release 7
 
@@ -140,3 +140,13 @@ aa_doprocessing(aap);
 - [x] Age 15
   - ~~sub-NDARLU529MP7~~
 - [x] Age 16
+
+## Images
+
+### Good Subject
+
+![Good Subject](../images/Other/Good%20Subject%20T1.png)
+
+### Bad Subject
+
+![Bad Subject](../images/Other/Bad%20Subject%20T1.png)
