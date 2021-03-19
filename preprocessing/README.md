@@ -23,7 +23,7 @@ Error in aa_user_bpho (line 105)
 aa_doprocessing(aap);
 ```
 
-## Bad Subject List
+## Bad Subject List (Structural)
 
 ### Release 7
 
@@ -141,12 +141,121 @@ aa_doprocessing(aap);
   - ~~sub-NDARLU529MP7~~
 - [x] Age 16
 
-## Images
+### Images
 
-### Good Subject
+#### Good Subject
 
 ![Good Subject](../images/Other/Good%20Subject%20T1.png)
 
-### Bad Subject
+#### Bad Subject
 
 ![Bad Subject](../images/Other/Bad%20Subject%20T1.png)
+
+## Bad Subject List (Functional)
+
+### Release 7
+
+- [x] Age 5
+  - sub-NDARBW525JHY
+  - sub-NDARHN482HPM
+  - sub-NDARWG200CUE
+  - sub-NDARUR872MP9
+- [x] Age 6
+  - sub-NDARDP725ZVY
+  - sub-NDARGH425GB9
+  - sub-NDARZV983XK9
+  - **sub-NDARNP423EJQ**
+  - sub-NDARTL084LYM
+  - sub-NDARWT274EX1
+  - sub-NDARPG874CMG
+  - sub-NDARAN524ZK6
+  - sub-NDAREW074ZM2
+  - sub-NDARTC177RN5
+- [x] Age 7
+  - sub-NDARNT113YX7
+  - **sub-NDARRM158VXD**
+  - sub-NDARRG269ML2
+  - sub-NDARVV926KLM
+- [x] Age 8
+  - sub-NDARFW038ZNE
+  - sub-NDARMR134HUY
+  - sub-NDARJV225EYT
+  - sub-NDARPL479LHN
+  - sub-NDARUF236HM7
+  - **sub-NDARNG968RB9**
+  - sub-NDARTV034RN2
+  - sub-NDARMA598JTX
+  - sub-NDARHX252NVH
+  - sub-NDARVV704MND
+  - sub-NDARTB300BN3
+  - sub-NDARVY859ENR
+  - sub-NDARHN078CDT
+  - sub-NDARZV749GAP
+  - sub-NDAREN151YXN
+  - sub-NDARWF259RB2
+- [x] Age 9
+  - sub-NDARDE319VD1
+  - sub-NDARVJ468UZC
+  - sub-NDARLY872ZXA
+  - sub-NDARCN500KJG
+  - sub-NDARTT867NWT
+  - sub-NDARER379GTP
+  - sub-NDARLF484WJL
+  - sub-NDARVZ525AA0
+  - sub-NDARKD124UHN
+  - sub-NDARLL572UP2
+  - sub-NDARTE432ZRH
+- [x] Age 10
+  - sub-NDAREB953UMY
+  - **sub-NDARAB055BPR**
+  - sub-NDARBE912PB0
+  - sub-NDARCH514JCT
+  - sub-NDARNN745ZEK
+  - sub-NDARVF544YP6
+  - sub-NDARTY533VXQ
+  - sub-NDARBL242L4H
+  - sub-NDARTV119WJK
+  - sub-NDARRR622MYT
+- [x] Age 11
+  - sub-NDARJG494YDY
+  - sub-NDARHZ476MJP
+  - sub-NDARXE854EDK
+  - sub-NDARRG536CVP
+  - sub-NDARAR238RZ8
+- [x] Age 12
+  - sub-NDARYD666FL0
+  - sub-NDARVN280JTN
+  - sub-NDARCC340ER5
+  - sub-NDARUC980NZ5
+  - sub-NDARHT019ER6
+- [x] Age 13
+- [x] Age 14
+  - sub-NDARNK064DXY
+- [x] Age 15
+  - sub-NDARKT312RUD
+- [x] Age 16
+
+### Release 8
+
+- [ ] Age 5
+- [ ] Age 6
+- [ ] Age 7
+- [ ] Age 8
+- [ ] Age 9
+- [ ] Age 10
+- [ ] Age 11
+- [ ] Age 12
+- [ ] Age 13
+- [ ] Age 14
+- [ ] Age 15
+- [ ] Age 16
+
+### Images
+
+#### Good Subject
+
+![Good Subject]()
+
+#### Bad Subject
+
+![Bad Subject]()
