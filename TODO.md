@@ -18,6 +18,7 @@
 - Explore models lsvc, dnn, ica
 
 - Multivariate regression (once I can predict IQ well, predicting multiple labels)
+- Age bins
 - For PCA, separate ages
   - Kinda done
 - Run PCA for different components until explained variance is high
@@ -67,3 +68,21 @@
   - Use BCR
 - Then try ANN model
 - Temporal FC by splitting the movie fmri into windows of 1 minute
+
+- Run PLS like the paper and identify num of components (75%)
+- Then use age as one of the labels instead of IQ
+  - IQ may not be represented in brain connectivity (but we can't say it isn't)
+  - We can say that FC is more strongly related to age than IQ
+  - **Check WISC IQ and how they scale it** Dive into IQ and see its relationship with age
+  - Use percentile rank for IQ
+  - Instead of using IQ, use one of the test scores instead (working memory)
+  - Plot working memory against age to confirm
+- Try SVR on age instead of IQ
+- Read general cog dev
+
+- Run correlations for raw and scaled scores
+- Use PLS with raw score (digit span) and scaled score, and see if the results disappear
+- One way to disentangle age from cognitive scores is to use the scaled scores
+- See how they calculate IQ
+- Puberty onset score in HBN (include as a regressor)
+- Remove HBN data from Github
