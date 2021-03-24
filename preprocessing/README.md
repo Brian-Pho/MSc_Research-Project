@@ -153,20 +153,15 @@ Bad Subject
 
 ## Bad Subject List (Functional)
 
-### Release 7
+### Release 7 (51)
 
 - [x] Age 5
-  - sub-NDARBW525JHY
-  - sub-NDARHN482HPM
   - sub-NDARWG200CUE
-  - sub-NDARUR872MP9
 - [x] Age 6
   - sub-NDARDP725ZVY
-  - sub-NDARGH425GB9
   - sub-NDARZV983XK9
   - sub-NDARNP423EJQ
   - sub-NDARTL084LYM
-  - sub-NDARWT274EX1
   - sub-NDARPG874CMG
   - sub-NDARAN524ZK6
   - sub-NDAREW074ZM2
@@ -174,7 +169,6 @@ Bad Subject
 - [x] Age 7
   - sub-NDARNT113YX7
   - sub-NDARRM158VXD
-  - sub-NDARRG269ML2
   - sub-NDARVV926KLM
 - [x] Age 8
   - sub-NDARFW038ZNE
@@ -185,36 +179,27 @@ Bad Subject
   - sub-NDARNG968RB9
   - sub-NDARTV034RN2
   - sub-NDARMA598JTX
-  - sub-NDARHX252NVH
   - sub-NDARVV704MND
-  - sub-NDARTB300BN3
   - sub-NDARVY859ENR
   - sub-NDARHN078CDT
   - sub-NDARZV749GAP
   - sub-NDAREN151YXN
-  - sub-NDARWF259RB2
 - [x] Age 9
   - sub-NDARDE319VD1
   - sub-NDARVJ468UZC
-  - sub-NDARLY872ZXA
   - sub-NDARCN500KJG
-  - sub-NDARTT867NWT
   - sub-NDARER379GTP
   - sub-NDARLF484WJL
-  - sub-NDARVZ525AA0
   - sub-NDARKD124UHN
   - sub-NDARLL572UP2
   - sub-NDARTE432ZRH
 - [x] Age 10
   - sub-NDAREB953UMY
-  - sub-NDARAB055BPR
-  - sub-NDARBE912PB0
   - sub-NDARCH514JCT
   - sub-NDARNN745ZEK
   - sub-NDARVF544YP6
   - sub-NDARTY533VXQ
   - sub-NDARBL242L4H
-  - sub-NDARTV119WJK
   - sub-NDARRR622MYT
 - [x] Age 11
   - sub-NDARJG494YDY
@@ -230,18 +215,16 @@ Bad Subject
   - sub-NDARHT019ER6
 - [x] Age 13
 - [x] Age 14
-  - sub-NDARNK064DXY
 - [x] Age 15
   - sub-NDARKT312RUD
 - [x] Age 16
 
-### Release 8
+### Release 8 (25)
 
 - [x] Age 5
   - sub-NDARLY030ZBG
 - [x] Age 6
   - sub-NDARXH270TJ8
-  - sub-NDARWA570DNL
   - sub-NDARYC287UFV
   - sub-NDARWE130JMG
 - [x] Age 7
@@ -255,7 +238,6 @@ Bad Subject
   - sub-NDARWK793VK4
   - sub-NDARXG035ZVM
   - sub-NDARFV725LGA
-  - sub-NDARRU820CXW
   - sub-NDARZH699ZET
   - sub-NDARTU407HDD
   - sub-NDARJR280FEJ
@@ -270,7 +252,6 @@ Bad Subject
   - sub-NDARRR735VMN
 - [x] Age 12
   - sub-NDARLN749FML
-  - sub-NDARMC694YF3
 - [x] Age 13
 - [x] Age 14
 - [x] Age 15
