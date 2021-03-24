@@ -14,3 +14,5 @@ My research is based on the idea "Do great minds think alike?" This question cam
 - [ISC Tutorial](https://github.com/snastase/isc-tutorial)
 - [SPM: Setting the Origin and Normalization](https://andysbrainblog.blogspot.com/2012/11/spm-setting-origin-and-normalization.html)
 - [Neurosynth Location](https://neurosynth.org/locations/)
+- [Jupyter Book](https://jupyterbook.org/)
+- [GitHub Wiki Docs](https://docs.github.com/en/github/building-a-strong-community/about-wikis)
