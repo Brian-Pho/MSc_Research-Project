@@ -1,6 +1,6 @@
 # Preprocessing Checklist
 
-The following is a checklist of releases and ages that I need to preprocess. The subjects (sub-*) listed below are ones that have problems in the preprocessing pipeline. Most of the subjects have problems in the last stage of preprocessing, the saveresids stage, with exception: "Please check your data: There are no significant voxels." If the subject has a different error, I've listed it below. If the subject is crossed out, it means the T1 is so bad that I've rejected it.
+The checklist is a list of releases and ages that I need to preprocess. The subjects (sub-*) listed below are ones that have problems in the preprocessing pipeline. Most of the subjects have problems in the last stage of preprocessing, the saveresids stage, with the exception: "Please check your data: There are no significant voxels." If the subject has a different error, I've listed it below. If the subject is crossed out, it means the T1 is so bad that I've rejected it.
 
 ## Matlab Preprocessing Exception
 
