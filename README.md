@@ -10,9 +10,7 @@ My research is based on the idea: "Do great minds think alike?" This question ca
 
 ## Useful Links
 
-- [Automatic Analysis Wiki](https://github.com/automaticanalysis/automaticanalysis/wiki)
 - [ISC Tutorial](https://github.com/snastase/isc-tutorial)
 - [SPM: Setting the Origin and Normalization](https://andysbrainblog.blogspot.com/2012/11/spm-setting-origin-and-normalization.html)
 - [Neurosynth Location](https://neurosynth.org/locations/)
-- [GitHub Wiki Docs](https://docs.github.com/en/github/building-a-strong-community/about-wikis)
 - [WISC-V](https://www.wikiwand.com/en/Wechsler_Intelligence_Scale_for_Children)
