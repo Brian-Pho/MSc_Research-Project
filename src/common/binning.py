@@ -7,7 +7,7 @@ def bin_by_age(X, y, ages):
         np.logical_and(ages <= 12, ages > 9)))
     X_bin_3, y_bin_3 = _select_data(X, y, np.where(ages > 12))
 
-    return [[X_bin_1, y_bin_1], [X_bin_2, y_bin_2], [X_bin_3, y_bin_3]
+    return [[X_bin_1, y_bin_1], [X_bin_2, y_bin_2], [X_bin_3, y_bin_3]]
 
 
 def bin_by_feature(X, y, feature, num_bins=3):
@@ -17,10 +17,15 @@ def bin_by_feature(X, y, feature, num_bins=3):
     
     # Sort the data based on the feature
     sort_indices = np.argsort(feature)
+    feature = feature[sort_indices]
     X, y = _select_data(X, y, sort_indices)
     
     # Apply the bins to the sorted data
-    bins = [[_select_data(X, y, bin_index)] for bin_index in bin_indices]
+    bins = [_select_data(X, y, bin_index) for bin_index in bin_indices]
+    feature_bins = [feature[bin_index] for bin_index in bin_indices]
+    for bin_num, feature_bin in enumerate(feature_bins):
+        print(f'Bin {bin_num} Range: {feature_bin[0]:.2f} -> {feature_bin[-1]:.2f}')
+        
     return bins
 
 
