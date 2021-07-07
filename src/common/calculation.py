@@ -1,6 +1,12 @@
 import numpy as np
 
 
+def get_k_argmax(a, k):
+    k_argmax = np.argpartition(a, -k)[-k:]
+
+    return k_argmax
+
+
 def multiply(v1, v2):
     return v1 * v2
 
