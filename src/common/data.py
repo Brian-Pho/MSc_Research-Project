@@ -8,7 +8,8 @@ from .paths import POWER_FC, YEO_FC, WISC
 from .wisc import WISC_LEVEL
 
 AGE_COL = 'assessment Basic_Demos,Age'
-
+SEX_COL = 'assessment Basic_Demos,Sex'
+DIAGNOSIS_COL = 'assessment Diagnosis_ClinicianConsensus,NoDX'
 
 def get_data(atlas='Power', wisc_level=0):
     fcs = get_fc_data(atlas)
@@ -19,6 +20,8 @@ def get_data(atlas='Power', wisc_level=0):
 
     fc_matrices = []
     ages = []
+    sexes = []
+    diagnosis = []
     measures = {measure: [] for measure in wisc_measures}
 
     for subject_id in subject_ids:
@@ -27,12 +30,14 @@ def get_data(atlas='Power', wisc_level=0):
 
         fc_matrices.append(fcs[subject_id])
         ages.append(wisc_labels.at[subject_id, AGE_COL])
+        sexes.append(wisc_labels.at[subject_id, SEX_COL])
+        diagnosis.append(wisc_labels.at[subject_id, DIAGNOSIS_COL])
 
         for measure in wisc_measures:
             measures[measure].append(
                 wisc_labels.at[subject_id, f'assessment WISC,{measure}'])
 
-    return np.array(fc_matrices), measures, np.array(ages)
+    return np.array(fc_matrices), measures, np.array(ages), np.array(sexes), np.array(diagnosis)
 
 
 def get_fc_data(atlas='Power'):
