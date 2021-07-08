@@ -12,7 +12,7 @@
 ### Structural
 
 **aamod_coreg_noss**: spatially align (coregister) the mean fMRI volume with the structural.
-**aamod_norm_noss**: noramlization. Scale and warp the structural image so that each brain region matches the corresponding one in the MNI standard template (average brain).
+**aamod_norm_noss**: normalization. Scale and warp the structural image so that each brain region matches the corresponding one in the MNI standard template (average brain).
 
 ### Functional
 
