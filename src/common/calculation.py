@@ -2,9 +2,7 @@ import numpy as np
 
 
 def get_k_argmax(a, k):
-    k_argmax = np.argpartition(a, -k)[-k:]
-
-    return k_argmax
+    return np.argpartition(a, -k)[-k:]
 
 
 def multiply(v1, v2):
@@ -44,4 +42,5 @@ def compare_age_similarity(all_ages, bin_1, bin_2, bin_3, similarity_func):
     matrix = np.zeros((4, 4))
     matrix[np.triu_indices_from(matrix, k=1)] = comparisons
     matrix = matrix + matrix.T
+    
     return matrix

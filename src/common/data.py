@@ -7,37 +7,41 @@ import pandas as pd
 from .paths import POWER_FC, YEO_FC, WISC
 from .wisc import WISC_LEVEL
 
-AGE_COL = 'assessment Basic_Demos,Age'
-SEX_COL = 'assessment Basic_Demos,Sex'
-DIAGNOSIS_COL = 'assessment Diagnosis_ClinicianConsensus,NoDX'
 
 def get_data(atlas='Power', wisc_level=0):
     fcs = get_fc_data(atlas)
     wisc_labels = get_label_data()
 
     subject_ids = wisc_labels.index
+    demographic_measures = ['Age', 'Sex', 'Diagnosis']
     wisc_measures = WISC_LEVEL[wisc_level]
 
     fc_matrices = []
-    ages = []
-    sexes = []
-    diagnosis = []
-    measures = {measure: [] for measure in wisc_measures}
+    demographics = {measure: [] for measure in demographic_measures}
+    wiscs = {measure: [] for measure in wisc_measures}
 
     for subject_id in subject_ids:
         if subject_id not in fcs:
             continue
 
         fc_matrices.append(fcs[subject_id])
-        ages.append(wisc_labels.at[subject_id, AGE_COL])
-        sexes.append(wisc_labels.at[subject_id, SEX_COL])
-        diagnosis.append(wisc_labels.at[subject_id, DIAGNOSIS_COL])
+
+        for measure in demographic_measures:
+            if measure == 'Diagnosis':
+                demographics[measure].append(
+                    wisc_labels.at[subject_id, f'assessment Diagnosis_ClinicianConsensus,NoDX'])
+            else:
+                demographics[measure].append(
+                    wisc_labels.at[subject_id, f'assessment Basic_Demos,{measure}'])
 
         for measure in wisc_measures:
-            measures[measure].append(
+            wiscs[measure].append(
                 wisc_labels.at[subject_id, f'assessment WISC,{measure}'])
-
-    return np.array(fc_matrices), measures, np.array(ages), np.array(sexes), np.array(diagnosis)
+    
+    wiscs = _convert_dict_list_to_dict_numpy(wiscs)
+    demographics = _convert_dict_list_to_dict_numpy(demographics)
+    
+    return np.array(fc_matrices), wiscs, demographics
 
 
 def get_fc_data(atlas='Power'):
@@ -56,11 +60,20 @@ def get_fc_data(atlas='Power'):
 
 
 def get_label_data():
-    wisc_labels = pd.read_csv(WISC, index_col='assessment WISC,EID')
-    return wisc_labels
+    return pd.read_csv(WISC, index_col='assessment WISC,EID')
 
 
 def _get_subject_from_path(path):
     normalized_path = os.path.normpath(path)
     path_components = normalized_path.split(os.sep)
+    
     return path_components[-2][4:]
+
+
+def _convert_dict_list_to_dict_numpy(dict_list):
+    dict_numpy = {}
+    
+    for k, v in dict_list.items():
+        dict_numpy[k] = np.array(v)
+    
+    return dict_numpy

@@ -2,6 +2,7 @@ import numpy as np
 
 
 def bin_by_age(X, y, ages):
+    # DEPRECATED, USED 'bin_by_feature' INSTEAD
     X_bin_1, y_bin_1 = _select_data(X, y, np.where(ages <= 9))
     X_bin_2, y_bin_2 = _select_data(X, y, np.where(
         np.logical_and(ages <= 12, ages > 9)))
@@ -29,8 +30,8 @@ def bin_by_feature(X, y, feature, other_feature, num_bins=3):
         binned_stat = [sorted_stat[bin_index] for bin_index in bin_indices]
         
         for bin_num, feature_bin in enumerate(binned_stat):
-#             print(f'Bin {bin_num} Range: {np.min(feature_bin):.2f} -> {np.max(feature_bin):.2f}')
-            print(f'Bin {bin_num}: {np.unique(feature_bin, return_counts=True)}')
+            print(f'Bin {bin_num} Range: {np.min(feature_bin):.2f} -> {np.max(feature_bin):.2f}')
+#             print(f'Bin {bin_num}: {np.unique(feature_bin, return_counts=True)}')
             
         print('---')
         
