@@ -13,7 +13,7 @@ def get_data(atlas='Power', wisc_level=0):
     wisc_labels = get_label_data()
 
     subject_ids = wisc_labels.index
-    demographic_measures = ['Age', 'Sex', 'Diagnosis']
+    demographic_measures = ['Age', 'Sex']
     wisc_measures = WISC_LEVEL[wisc_level]
 
     fc_matrices = []
@@ -27,12 +27,8 @@ def get_data(atlas='Power', wisc_level=0):
         fc_matrices.append(fcs[subject_id])
 
         for measure in demographic_measures:
-            if measure == 'Diagnosis':
-                demographics[measure].append(
-                    wisc_labels.at[subject_id, f'assessment Diagnosis_ClinicianConsensus,NoDX'])
-            else:
-                demographics[measure].append(
-                    wisc_labels.at[subject_id, f'assessment Basic_Demos,{measure}'])
+            demographics[measure].append(
+                wisc_labels.at[subject_id, f'assessment Basic_Demos,{measure}'])
 
         for measure in wisc_measures:
             wiscs[measure].append(
