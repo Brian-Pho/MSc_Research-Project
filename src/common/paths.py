@@ -9,7 +9,7 @@ YEO_FC = os.path.join(BPHO_DIR, 'python_yeo_fc')
 
 # WISC
 WISC = os.path.join(BPHO_DIR, 'Biobank Labels', 'Subjects_with_WISC.csv')
-BAD_SUBJECTS = os.path.join(BPHO_DIR, 'scratch_data', 'bad_subjects.csv')
+BAD_SUBJECTS = os.path.join(REPO_DIR, 'scratch_data', 'bad_subjects.csv')
 
 # Model Weights
 PLS_WEIGHTS = os.path.join(REPO_DIR, 'scratch_data', 'pls_weights.npy')

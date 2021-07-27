@@ -25,9 +25,9 @@ def plot_connections(connections, vmin, vmax, mi_mode=False):
         plot_fc_graph(-negative_edges, 0, vmax, "PuBu")
         plot_node_strengths(negative_node_strength, 0, "PuBu")
 
-    node_strength = convert_fc_to_node_strength(fc)
-    plot_node_strengths(node_strength, 0, "Greens")
-    plot_node_strengths(node_strength, 0.5, "Greens")
+#     node_strength = convert_fc_to_node_strength(fc)
+#     plot_node_strengths(node_strength, 0, "Greens")
+#     plot_node_strengths(node_strength, 0.5, "Greens")
 
 
 def plot_fc_matrix(fc, vmin=None, vmax=None, cmap='bwr'):
