@@ -136,7 +136,7 @@ ROI,X,Y,Z,Assignment,Color,System
 135,11.27,-66.01,42.09,6,Gray,Memory retrieval?
 136,4.2,-48.06,50.71,6,Gray,Memory retrieval?
 137,-46.17,31.26,-13.03,5,Red,Default mode
-138,-9.88,10.95,66.61,11,Teal,Ventral attention
+138,-9.88,10.95,66.61,11,lime,Ventral attention
 139,49.26,35.47,-12.2,5,Red,Default mode
 140,7.98,-91.08,-7.1,-1,White,Uncertain
 141,17.27,-91.09,-13.64,-1,White,Uncertain
@@ -201,24 +201,24 @@ ROI,X,Y,Z,Assignment,Color,System
 200,43.25,49.25,-2.31,8,Yellow,Fronto-parietal Task Control
 201,-42.1,24.68,29.53,8,Yellow,Fronto-parietal Task Control
 202,-2.98,26.41,44.42,8,Yellow,Fronto-parietal Task Control
-203,10.51,-38.54,50.02,9,Black,Salience
-204,55.27,-44.59,36.7,9,Black,Salience
-205,42.05,-0.39,47.1,9,Black,Salience
-206,31.24,32.79,26.39,9,Black,Salience
-207,47.6,22.16,9.74,9,Black,Salience
-208,-35.44,20.03,0.07,9,Black,Salience
-209,35.91,21.91,2.62,9,Black,Salience
-210,36.89,32.35,-2.24,9,Black,Salience
-211,33.56,16.45,-7.58,9,Black,Salience
-212,-10.76,25.99,24.54,9,Black,Salience
-213,-0.94,14.86,43.99,9,Black,Salience
-214,-27.5,52.04,21.28,9,Black,Salience
-215,-0.2,30.35,27.22,9,Black,Salience
-216,5.23,23.22,37.03,9,Black,Salience
-217,10.26,22.06,27.48,9,Black,Salience
-218,31.07,55.71,14.49,9,Black,Salience
-219,26.07,49.56,26.58,9,Black,Salience
-220,-39.12,50.79,17.38,9,Black,Salience
+203,10.51,-38.54,50.02,9,navy,Salience
+204,55.27,-44.59,36.7,9,navy,Salience
+205,42.05,-0.39,47.1,9,navy,Salience
+206,31.24,32.79,26.39,9,navy,Salience
+207,47.6,22.16,9.74,9,navy,Salience
+208,-35.44,20.03,0.07,9,navy,Salience
+209,35.91,21.91,2.62,9,navy,Salience
+210,36.89,32.35,-2.24,9,navy,Salience
+211,33.56,16.45,-7.58,9,navy,Salience
+212,-10.76,25.99,24.54,9,navy,Salience
+213,-0.94,14.86,43.99,9,navy,Salience
+214,-27.5,52.04,21.28,9,navy,Salience
+215,-0.2,30.35,27.22,9,navy,Salience
+216,5.23,23.22,37.03,9,navy,Salience
+217,10.26,22.06,27.48,9,navy,Salience
+218,31.07,55.71,14.49,9,navy,Salience
+219,26.07,49.56,26.58,9,navy,Salience
+220,-39.12,50.79,17.38,9,navy,Salience
 221,1.75,-24.25,30.36,6,Gray,Memory retrieval?
 222,6.3,-23.68,-0.42,10,Brown,Subcortical
 223,-1.77,-13.05,11.82,10,Brown,Subcortical
@@ -233,18 +233,18 @@ ROI,X,Y,Z,Assignment,Color,System
 232,-31.38,-11.48,-0.3,10,Brown,Subcortical
 233,14.98,4.94,7.24,10,Brown,Subcortical
 234,8.62,-3.57,5.76,10,Brown,Subcortical
-235,53.9,-42.76,21.83,11,Teal,Ventral attention
-236,-56.47,-50.48,9.92,11,Teal,Ventral attention
-237,-55.3,-39.89,13.51,11,Teal,Ventral attention
-238,51.52,-32.52,7.55,11,Teal,Ventral attention
-239,51.28,-28.52,-4.3,11,Teal,Ventral attention
-240,55.75,-46.07,11.42,11,Teal,Ventral attention
-241,52.68,32.58,0.57,11,Teal,Ventral attention
-242,-49.07,25.13,-0.98,11,Teal,Ventral attention
-243,-16.31,-65.28,-19.69,13,Pale blue,Cerebellar
-244,-32.12,-55.03,-25.22,13,Pale blue,Cerebellar
-245,22.43,-57.55,-23.11,13,Pale blue,Cerebellar
-246,0.51,-61.91,-18.14,13,Pale blue,Cerebellar
+235,53.9,-42.76,21.83,11,lime,Ventral attention
+236,-56.47,-50.48,9.92,11,lime,Ventral attention
+237,-55.3,-39.89,13.51,11,lime,Ventral attention
+238,51.52,-32.52,7.55,11,lime,Ventral attention
+239,51.28,-28.52,-4.3,11,lime,Ventral attention
+240,55.75,-46.07,11.42,11,lime,Ventral attention
+241,52.68,32.58,0.57,11,lime,Ventral attention
+242,-49.07,25.13,-0.98,11,lime,Ventral attention
+243,-16.31,-65.28,-19.69,13,lightsteelblue,Cerebellar
+244,-32.12,-55.03,-25.22,13,lightsteelblue,Cerebellar
+245,22.43,-57.55,-23.11,13,lightsteelblue,Cerebellar
+246,0.51,-61.91,-18.14,13,lightsteelblue,Cerebellar
 247,32.85,-12.41,-34.41,-1,White,Uncertain
 248,-31.13,-9.99,-36.32,-1,White,Uncertain
 249,48.52,-2.85,-38.49,-1,White,Uncertain
