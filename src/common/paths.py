@@ -1,8 +1,10 @@
 import os.path
 
+# Main data and script locations
 BPHO_DIR = '/imaging3/owenlab/bpho'
 REPO_DIR = '/home/bpho/Documents/MSc_Research-Project'
 
+# Common folders
 BIOBANK_LABELS = os.path.join(BPHO_DIR, 'Biobank Labels')
 SCRATCH_DATA = os.path.join(REPO_DIR, 'scratch_data')
 
