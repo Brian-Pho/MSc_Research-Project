@@ -10,9 +10,9 @@ from .wisc import WISC_LEVEL
 
 def get_data(atlas='Power', wisc_level=0):
     fcs = get_fc_data(atlas)
-    wisc_labels = get_label_data()
+    labels = get_label_data()
 
-    subject_ids = wisc_labels.index
+    subject_ids = labels.index
     demographic_measures = ['Age', 'Sex']
     wisc_measures = WISC_LEVEL[wisc_level]
 
@@ -28,11 +28,11 @@ def get_data(atlas='Power', wisc_level=0):
 
         for measure in demographic_measures:
             demographics[measure].append(
-                wisc_labels.at[subject_id, f'assessment Basic_Demos,{measure}'])
+                labels.at[subject_id, f'assessment Basic_Demos,{measure}'])
 
         for measure in wisc_measures:
             wiscs[measure].append(
-                wisc_labels.at[subject_id, f'assessment WISC,{measure}'])
+                labels.at[subject_id, f'assessment WISC,{measure}'])
     
     wiscs = _convert_dict_list_to_dict_numpy(wiscs)
     demographics = _convert_dict_list_to_dict_numpy(demographics)
