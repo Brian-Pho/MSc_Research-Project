@@ -14,6 +14,7 @@ YEO_FC = os.path.join(BPHO_DIR, 'python_yeo_fc')
 
 # WISC
 RAW_WISC = os.path.join(BIOBANK_LABELS, 'Labels_Feb2_2021.csv')
+# RAW_WISC = os.path.join(BIOBANK_LABELS, 'data-2020-07-21T15_31_07.904Z.csv')
 WISC = os.path.join(BIOBANK_LABELS, 'Subjects_with_WISC.csv')
 BAD_SUBJECTS = os.path.join(SCRATCH_DATA, 'bad_subjects.csv')
 
