@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def bin_by_age(X, y, ages, other_feature):
+def bin_by_age(X, y, ages, other_feature, print_stats=False):
     # Locate the indices where the condition is true
     bin_1 = np.where(ages <= 9)
     bin_2 = np.where(np.logical_and(9 < ages, ages <= 12))
@@ -9,17 +9,21 @@ def bin_by_age(X, y, ages, other_feature):
     bin_indices = [bin_1, bin_2, bin_3]
     
     # Bin the data by those indices
-    bins = [(X[bin_index], y[bin_index]) for bin_index in bin_indices]
+    if y.ndim == 1:
+        bins = [(X[bin_index], y[bin_index]) for bin_index in bin_indices]
+    else:
+        bins = [(X[bin_index], y[bin_index, :]) for bin_index in bin_indices]
     
     # Print out statistics (min/max age, IQ, etc.) for each bin
-    all_stats = [ages, other_feature]
-    for stat in all_stats:
-        binned_stat = [stat[bin_index] for bin_index in bin_indices]
-        
-        for bin_num, feature_bin in enumerate(binned_stat):
-            print(f'Bin {bin_num} Range: {np.min(feature_bin):.2f} -> {np.max(feature_bin):.2f}')
-#             print(f'Bin {bin_num}: {np.unique(feature_bin, return_counts=True)}')
-        print('---')
+    if print_stats:
+        all_stats = [ages, other_feature]
+        for stat in all_stats:
+            binned_stat = [stat[bin_index] for bin_index in bin_indices]
+
+            for bin_num, feature_bin in enumerate(binned_stat):
+                print(f'Bin {bin_num} Range: {np.min(feature_bin):.2f} -> {np.max(feature_bin):.2f}')
+    #             print(f'Bin {bin_num}: {np.unique(feature_bin, return_counts=True)}')
+            print('---')
 
     return bins
 
