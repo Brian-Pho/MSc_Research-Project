@@ -40,7 +40,7 @@ def plot_fc_matrix(fc, vmin=None, vmax=None, cmap='bwr'):
 
 def plot_fc_graph(fc, emin=None, emax=None, cmap='bwr'):
     plotting.plot_connectome(fc, coords, node_size=5, colorbar=True, node_color=node_colors,
-                             edge_vmin=emin, edge_vmax=emax, edge_cmap=cmap, edge_threshold='90%')
+                             edge_vmin=emin, edge_vmax=emax, edge_cmap=cmap, edge_threshold='99.9%')
 
 
 def plot_node_strengths(node_strength, threshold=None, cmap="Greens"):
