@@ -19,8 +19,8 @@ WISC = os.path.join(BIOBANK_LABELS, 'Subjects_with_WISC.csv')
 BAD_SUBJECTS = os.path.join(SCRATCH_DATA, 'bad_subjects.csv')
 
 # Model Weights
-PLS_WEIGHTS = os.path.join(SCRATCH_DATA, 'pls_weights.npy')
-RIDGE_WEIGHTS = os.path.join(SCRATCH_DATA, 'ridge_weights.npy')
+MODEL_WEIGHTS = os.path.join(SCRATCH_DATA, 'model_weights')
+RIDGE_WEIGHTS = os.path.join(SCRATCH_DATA, 'model_weights', 'ridge_weights.npy')
 
 # Power atlas labels
 RAW_POWER = os.path.join(SCRATCH_DATA, 'power_atlas_labels.xls')

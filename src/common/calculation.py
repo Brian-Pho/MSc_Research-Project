@@ -1,4 +1,6 @@
 import numpy as np
+import pandas as pd
+import pingouin as pg
 
 
 def get_k_argmax(a, k):
@@ -44,3 +46,10 @@ def compare_age_similarity(all_ages, bin_1, bin_2, bin_3, similarity_func):
     matrix = matrix + matrix.T
     
     return matrix
+
+
+def calc_icc(coefs):
+    icc_data = pd.DataFrame(coefs).melt(var_name='connection', value_name='weight', ignore_index=False)
+    icc_data['cv_run_num'] = icc_data.index
+    icc = pg.intraclass_corr(data=icc_data, targets='connection', raters='cv_run_num', ratings='weight').round(3)
+    icc.set_index("Type")
