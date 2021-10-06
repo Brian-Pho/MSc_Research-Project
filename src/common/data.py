@@ -48,7 +48,7 @@ def get_fc_data(atlas='Power'):
 
     fcs = {}
     for path in fc_paths:
-        subject_id = _get_subject_from_path(path)
+        subject_id = get_subject_from_path(path)
         subject_fc = np.load(path)
         fcs[subject_id] = subject_fc[np.triu_indices(264, k=1)]
 
@@ -59,7 +59,7 @@ def get_label_data():
     return pd.read_csv(WISC, index_col='assessment WISC,EID')
 
 
-def _get_subject_from_path(path):
+def get_subject_from_path(path):
     normalized_path = os.path.normpath(path)
     path_components = normalized_path.split(os.sep)
     
