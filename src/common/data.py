@@ -15,6 +15,7 @@ def get_data(atlas='Power', wisc_level=0):
     subject_ids = labels.index
     demographic_measures = ['Age', 'Sex']
     wisc_measures = WISC_LEVEL[wisc_level]
+    population = check_population_diagnosis(labels)
 
     fc_matrices = []
     demographics = {measure: [] for measure in demographic_measures}
@@ -37,7 +38,7 @@ def get_data(atlas='Power', wisc_level=0):
     wiscs = _convert_dict_list_to_dict_numpy(wiscs)
     demographics = _convert_dict_list_to_dict_numpy(demographics)
     
-    return np.array(fc_matrices), wiscs, demographics
+    return np.array(fc_matrices), wiscs, demographics, population
 
 
 def get_fc_data(atlas='Power'):
@@ -73,3 +74,11 @@ def _convert_dict_list_to_dict_numpy(dict_list):
         dict_numpy[k] = np.array(v)
     
     return dict_numpy
+
+
+def check_population_diagnosis(labels):
+    has_diagnosis_col = 'assessment Diagnosis_ClinicianConsensus,NoDX'
+    has_diagnosis = labels[has_diagnosis_col] == 'Yes'
+    
+    return 'adhd' if any(has_diagnosis) else 'healthy'
+    

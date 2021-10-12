@@ -15,10 +15,10 @@ RAW_SUBTESTS = [subtest.replace("Scaled", "Raw") for subtest in SCALED_SUBTESTS]
 
 PRIMARY_INDICES = [
     'WISC_VSI',
+    'WISC_VCI',
     'WISC_FRI',
     'WISC_WMI',
     'WISC_PSI',
-    'WISC_VCI',
 ]
 
 FSIQ = ['WISC_FSIQ']
