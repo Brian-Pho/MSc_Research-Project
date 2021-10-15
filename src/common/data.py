@@ -4,12 +4,12 @@ import os
 import numpy as np
 import pandas as pd
 
-from .paths import POWER_FC, YEO_FC, WISC
+from .paths import POWER_FC, WISC
 from .wisc import WISC_LEVEL
 
 
-def get_data(atlas='Power', wisc_level=0):
-    fcs = get_fc_data(atlas)
+def get_data(wisc_level=0):
+    fcs = get_fc_data()
     labels = get_label_data()
 
     subject_ids = labels.index
@@ -41,11 +41,9 @@ def get_data(atlas='Power', wisc_level=0):
     return np.array(fc_matrices), wiscs, demographics, population
 
 
-def get_fc_data(atlas='Power'):
+def get_fc_data():
     # Search for all functional connectivity files and read them
-    fc_path = POWER_FC if atlas == 'Power' else YEO_FC
-    fc_filename = 'power_fc.npy' if atlas == 'Power' else 'yeo_fc.npy'
-    fc_paths = glob.glob(fc_path + f'/**/{fc_filename}', recursive=True)
+    fc_paths = glob.glob(POWER_FC + f'/**/power_fc.npy', recursive=True)
 
     fcs = {}
     for path in fc_paths:
