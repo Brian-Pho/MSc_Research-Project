@@ -4,7 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 
-from .paths import POWER_FC, WISC
+from .paths import POWER_FC, WISC, PLS_WEIGHTS, RIDGE_WEIGHTS
 from .wisc import WISC_LEVEL
 
 
@@ -80,3 +80,9 @@ def check_population_diagnosis(labels):
     
     return 'adhd' if any(has_diagnosis) else 'healthy'
     
+
+def get_model_weight(model, population, measure, age_group):
+    weight_folder = PLS_WEIGHTS if model == 'pls' else RIDGE_WEIGHTS
+    weight_path = os.path.join(weight_folder, f'{model}_{population}_{measure}_{age_group}.npy')
+    
+    return np.load(weight_path)
