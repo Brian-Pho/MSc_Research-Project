@@ -8,9 +8,9 @@ from .paths import POWER_FC, WISC, PLS_WEIGHTS, RIDGE_WEIGHTS
 from .wisc import WISC_LEVEL
 
 
-def get_data(wisc_level=0):
+def get_data(wisc_level=0, label_filename=None):
     fcs = get_fc_data()
-    labels = get_label_data()
+    labels = get_label_data(label_filename)
 
     subject_ids = labels.index
     demographic_measures = ['Age', 'Sex']
@@ -54,8 +54,9 @@ def get_fc_data():
     return fcs
 
 
-def get_label_data():
-    return pd.read_csv(WISC, index_col='assessment WISC,EID')
+def get_label_data(label_filename):
+    label_file = label_filename if label_filename else WISC
+    return pd.read_csv(label_file, index_col='assessment WISC,EID')
 
 
 def get_subject_from_path(path):
@@ -86,3 +87,11 @@ def get_model_weight(model, population, measure, age_group):
     weight_path = os.path.join(weight_folder, f'{model}_{population}_{measure}_{age_group}.npy')
     
     return np.load(weight_path)
+
+
+def get_subjects(subject_folder, desired_subjects=None):
+    subjects = [folder for folder in os.listdir(subject_folder) if folder.startswith("sub-")]
+    if desired_subjects:
+        subjects = [subject for subject in subjects if subject in desired_subjects]
+        
+    return subjects
