@@ -49,8 +49,8 @@ ptpID = dir(sprintf('%s/*ND*', rawDataPath));
 % bad_subject_IDs = {'sub-NDARAC904DMU', 'sub-NDARAE012DGA', 'sub-NDARMC759CX3', 'sub-NDARXT792GY8', 'sub-NDARAP522AFK', 'sub-NDARBK082PDD', ...
 %     'sub-NDARBW268XPY', 'sub-NDARCW963FP9', 'sub-NDAREW661NZJ', 'sub-NDAREX065KJU', 'sub-NDARGD507TDZ', 'sub-NDARKN509RP9', ...
 %     'sub-NDARKT811ATJ', 'sub-NDARLJ886BFK', 'sub-NDARMF508PA2', 'sub-NDARTC527WPZ', 'sub-NDARUY549PGQ'};
-bad_subject_IDs = {'sub-NDARAC904DMU', 'sub-NDARHX252NVH', 'sub-NDARXT792GY8', 'sub-NDARUY549PGQ', 'sub-NDARMF508PA2', 'sub-NDARMC759CX3', ...
-    'sub-NDARAP522AFK', 'sub-NDARBK082PDD'};
+bad_subject_IDs = {'sub-NDARAC904DMU', 'sub-NDARHX252NVH', 'sub-NDARXT792GY8', 'sub-NDARUY549PGQ', 'sub-NDARMF508PA2', 'sub-NDARMC759CX3', 'sub-NDARGD507TDZ', 'sub-NDARLJ886BFK', 'sub-NDAREX065KJU', ...
+    'sub-NDARBK082PDD', 'sub-NDARBW268XPY', 'sub-NDARCW963FP9', 'sub-NDAREW661NZJ', 'sub-NDARKN509RP9', 'sub-NDARKT811ATJ', 'sub-NDARMF508PA2', 'sub-NDARTC527WPZ', 'sub-NDARUY549PGQ'};
 
 % num_subjects = length(ptpID);
 % num_subjects_no_dm = 0;
@@ -110,6 +110,8 @@ for subject = 1:num_subjects
     aap = aas_addinitialstream_AL(aap, 'structural', subject_id, sprintf('%s/%s', subject_path, T1w_file.name));
     aap.acq_details.subjects(subject).seriesnumbers = {sprintf('%s/%s', subject_id, movie_file.name)};
     aap.acq_details.subjects(subject).structural = {sprintf('%s/%s', subject_id, T1w_file.name)};
+    
+%     aap.tasksettings.aamod_norm_noss.subject(1) = struct('name','2015_12_03_HE22_s7','affineStartingEstimate',[-1.1 -36.3 51.3 0 0 0]);
 end
 
 aa_doprocessing(aap);
