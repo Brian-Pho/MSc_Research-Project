@@ -12,13 +12,16 @@ SCRATCH_DATA = join(REPO_DIR, 'scratch_data')
 RAW_POWER = join(SCRATCH_DATA, 'power_atlas_labels.xls')
 POWER = join(SCRATCH_DATA, 'power_atlas_labels.csv')
 
+# Bad subjects
+BAD_SUBJECTS = join(SCRATCH_DATA, 'bad_subjects.csv')
+
 # Functional connectivity
 POWER_FC = join(BPHO_DIR, 'python_power_fc')
 
 # WISC
 RAW_WISC = join(BIOBANK_LABELS, 'Labels_Feb2_2021.csv')
 WISC = join(BIOBANK_LABELS, 'Subjects_with_WISC.csv')
-BAD_SUBJECTS = join(SCRATCH_DATA, 'bad_subjects.csv')
+HEALTHY = join(BIOBANK_LABELS, 'Subjects_with_WISC (healthy).csv')
 
 # Model weights
 MODEL_WEIGHTS = join(SCRATCH_DATA, 'model_weights')
@@ -27,5 +30,5 @@ RIDGE_WEIGHTS = join(MODEL_WEIGHTS, 'Ridge')
 
 # Model results
 MODEL_RESULTS = join(SCRATCH_DATA, 'model_results')
-PLS_RESULTS = join(MODEL_RESULTS, 'pls.csv')
-RIDGE_RESULTS = join(MODEL_RESULTS, 'ridge.csv')
+PLS_RESULTS = join(MODEL_RESULTS, 'PLS')
+RIDGE_RESULTS = join(MODEL_RESULTS, 'Ridge')

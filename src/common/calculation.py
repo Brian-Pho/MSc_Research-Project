@@ -46,3 +46,7 @@ def compare_age_similarity(all_ages, bin_1, bin_2, bin_3, similarity_func):
     matrix = matrix + matrix.T
     
     return matrix
+
+
+def calc_pvalue(permutation_scores, score, n_permutations):
+    return (np.sum(permutation_scores >= score) + 1.0) / (n_permutations + 1)

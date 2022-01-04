@@ -4,13 +4,13 @@ import os
 import numpy as np
 import pandas as pd
 
-from .paths import POWER_FC, WISC, PLS_WEIGHTS, RIDGE_WEIGHTS
+from .paths import POWER_FC, WISC, PLS_WEIGHTS, RIDGE_WEIGHTS, BIOBANK_LABELS
 from .wisc import WISC_LEVEL
 
 
-def get_data(wisc_level=0, label_filename=None):
+def get_data(wisc_level=0, label_path=WISC):
     fcs = get_fc_data()
-    labels = get_label_data(label_filename)
+    labels = get_label_data(label_path)
 
     subject_ids = labels.index
     demographic_measures = ['Age', 'Sex']
@@ -54,9 +54,8 @@ def get_fc_data():
     return fcs
 
 
-def get_label_data(label_filename):
-    label_file = label_filename if label_filename else WISC
-    return pd.read_csv(label_file, index_col='assessment WISC,EID')
+def get_label_data(label_path):
+    return pd.read_csv(label_path, index_col='assessment WISC,EID')
 
 
 def get_subject_from_path(path):
@@ -82,11 +81,14 @@ def check_population_diagnosis(labels):
     return 'adhd' if any(has_diagnosis) else 'healthy'
     
 
-def get_model_weight(model, population, measure, age_group):
-    weight_folder = PLS_WEIGHTS if model == 'pls' else RIDGE_WEIGHTS
-    weight_path = os.path.join(weight_folder, f'{model}_{population}_{measure}_{age_group}.npy')
+def get_model_weights(model, population, measure, age_group):
+    weight_filepath = None
+    if model == 'pls':
+        weight_filepath = os.path.join(PLS_WEIGHTS, f'{model}_{population}_{measure}_{age_group}.npy')
+    else:
+        weight_filepath = os.path.join(RIDGE_WEIGHTS, f'{model}_{population}_{measure}_{age_group}_coef.npy')
     
-    return np.load(weight_path)
+    return np.load(weight_filepath)
 
 
 def get_subjects(subject_folder, desired_subjects=None):

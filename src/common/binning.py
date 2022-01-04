@@ -1,5 +1,7 @@
 import numpy as np
 
+BIN_LABELS = ["All", "Bin 1", "Bin 2", "Bin 3"]
+
 
 def bin_by_age(X, y, ages, other_feature, print_stats=False):
     # Locate the indices where the condition is true
@@ -52,3 +54,18 @@ def equal_bin_by_feature(X, y, feature, other_feature, num_bins=3):
         print('---')
         
     return bins
+
+
+def bin_data(X, y, ages=None):
+    if ages and ages.any():
+        bins = bin_by_age(X, y, ages, y)
+        bin_1, bin_2, bin_3 = bins[0], bins[1], bins[2]
+        X_all = [X, bin_1[0], bin_2[0], bin_3[0]]
+        y_all = [y, bin_1[1], bin_2[1], bin_3[1]]
+        bin_labels = BIN_LABELS
+    else:
+        X_all = [X]
+        y_all = [y]
+        bin_labels = ["All"]
+    
+    return X_all, y_all, bin_labels
