@@ -46,11 +46,9 @@ aap.acq_details.root = rawDataPath;
 ptpID = dir(sprintf('%s/*ND*', rawDataPath));
 
 % Skip processing on bad subjects
-% bad_subject_IDs = {'sub-NDARAC904DMU', 'sub-NDARAE012DGA', 'sub-NDARMC759CX3', 'sub-NDARXT792GY8', 'sub-NDARAP522AFK', 'sub-NDARBK082PDD', ...
-%     'sub-NDARBW268XPY', 'sub-NDARCW963FP9', 'sub-NDAREW661NZJ', 'sub-NDAREX065KJU', 'sub-NDARGD507TDZ', 'sub-NDARKN509RP9', ...
-%     'sub-NDARKT811ATJ', 'sub-NDARLJ886BFK', 'sub-NDARMF508PA2', 'sub-NDARTC527WPZ', 'sub-NDARUY549PGQ'};
+% 'sub-NDARBK082PDD', 'sub-NDARBW268XPY', 'sub-NDARCW963FP9', 'sub-NDAREW661NZJ', 'sub-NDARKN509RP9', 'sub-NDARKT811ATJ', 'sub-NDARMF508PA2', 'sub-NDARTC527WPZ', 'sub-NDARUY549PGQ'
 bad_subject_IDs = {'sub-NDARAC904DMU', 'sub-NDARHX252NVH', 'sub-NDARXT792GY8', 'sub-NDARUY549PGQ', 'sub-NDARMF508PA2', 'sub-NDARMC759CX3', 'sub-NDARGD507TDZ', 'sub-NDARLJ886BFK', 'sub-NDAREX065KJU', ...
-    'sub-NDARBK082PDD', 'sub-NDARBW268XPY', 'sub-NDARCW963FP9', 'sub-NDAREW661NZJ', 'sub-NDARKN509RP9', 'sub-NDARKT811ATJ', 'sub-NDARMF508PA2', 'sub-NDARTC527WPZ', 'sub-NDARUY549PGQ'};
+    'sub-NDARAP522AFK', 'sub-NDARBK082PDD', 'sub-NDARBW268XPY', 'sub-NDARCW963FP9', 'sub-NDAREW661NZJ', 'sub-NDARKN509RP9', 'sub-NDARKT811ATJ', 'sub-NDARTC527WPZ'};
 
 % num_subjects = length(ptpID);
 % num_subjects_no_dm = 0;
