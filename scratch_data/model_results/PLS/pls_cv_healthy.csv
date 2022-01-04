@@ -1,0 +1,7 @@
+,Model,Population,Target,Bin,Score
+0,pls,healthy,WISC_FSIQ,All,0.05635758984112808
+1,pls,healthy,WISC_VSI,All,0.10961213762939304
+2,pls,healthy,WISC_VCI,All,0.2413842533635157
+3,pls,healthy,WISC_FRI,All,-0.06690211713566536
+4,pls,healthy,WISC_WMI,All,0.09844717189572955
+5,pls,healthy,WISC_PSI,All,-0.08364363560297766
