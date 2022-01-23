@@ -5,7 +5,7 @@ from sklearn.base import clone
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import RepeatedKFold
 
-N_PERM = 3000
+N_PERM = 500
 SCORING = ['train_r', 'test_r', 'test_p_value', 'test_mse']
 RKF_10_10 = RepeatedKFold(n_splits=10, n_repeats=10)
 

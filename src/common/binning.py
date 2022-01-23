@@ -3,12 +3,18 @@ import numpy as np
 BIN_LABELS = ["All", "Bin 1", "Bin 2", "Bin 3"]
 
 
-def bin_by_age(X, y, ages, other_feature, print_stats=False):
+def get_age_bins_indices(ages):
     # Locate the indices where the condition is true
     bin_1 = np.where(ages <= 9)
     bin_2 = np.where(np.logical_and(9 < ages, ages <= 12))
     bin_3 = np.where(12 < ages)
     bin_indices = [bin_1, bin_2, bin_3]
+    
+    return bin_indices
+
+
+def bin_by_age(X, y, ages):
+    bin_indices = get_age_bins_indices(ages)
     
     # Bin the data by those indices
     if y.ndim == 1:
