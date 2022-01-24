@@ -1,7 +1,7 @@
 import numpy as np
 
 BIN_LABELS = ["All", "Bin 1", "Bin 2", "Bin 3"]
-
+ONLY_BIN_LABELS = ["Bin 1", "Bin 2", "Bin 3"]
 
 def get_age_bins_indices(ages):
     # Locate the indices where the condition is true
@@ -21,17 +21,6 @@ def bin_by_age(X, y, ages):
         bins = [(X[bin_index], y[bin_index]) for bin_index in bin_indices]
     else:
         bins = [(X[bin_index], y[bin_index, :]) for bin_index in bin_indices]
-    
-    # Print out statistics (min/max age, IQ, etc.) for each bin
-    if print_stats:
-        all_stats = [ages, other_feature]
-        for stat in all_stats:
-            binned_stat = [stat[bin_index] for bin_index in bin_indices]
-
-            for bin_num, feature_bin in enumerate(binned_stat):
-                print(f'Bin {bin_num} Range: {np.min(feature_bin):.2f} -> {np.max(feature_bin):.2f}')
-    #             print(f'Bin {bin_num}: {np.unique(feature_bin, return_counts=True)}')
-            print('---')
 
     return bins
 
