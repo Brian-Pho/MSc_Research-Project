@@ -28,7 +28,7 @@ def unimetric_scorer(model, X, y):
     if y_pred.ndim == 2:
         y_pred = np.squeeze(y_pred)
         
-    r, _ = stats.pearsonr(y, y_pred)
+    r, p_value = stats.pearsonr(y, y_pred)
     
     return r
 
@@ -49,7 +49,8 @@ def custom_permutation_test_score(
     
     pvalues = []
     for true_score, perm_score in zip(true_scores, permutation_scores):
-        pvalues.append(calc_pvalue(perm_score, true_score, n_permutations))
+        pvalue = calc_pvalue(perm_score, true_score, n_permutations)
+        pvalues.append(pvalue)
     
     return true_scores, permutation_scores, pvalues
 
@@ -74,12 +75,12 @@ def _custom_permutation_test_score(estimator, X_0, y_0, X_1, y_1, X_2, y_2, cv_0
         G_scores[1].append(scorer(estimator, X_1_test, y_1_test))
         G_scores[2].append(scorer(estimator, X_2_test, y_2_test))
     
+    # Average the scores for each group independently
     return np.mean(G_scores, axis=1)
 
 
 def _shuffle(y):
-    rng = np.random.default_rng()
-    return rng.permutation(y)
+    return np.random.default_rng().permutation(y)
 
 
 def calc_pvalue(permutation_scores, score, n_permutations):
