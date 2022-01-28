@@ -13,6 +13,9 @@ node_colors = power_labels['Color'].values.tolist()
 
 
 def plot_connections(connections, vmin, vmax, pos_neg=False):
+    """
+    Plot functional connectivity connections in multiple ways (E.g. Matrix and glass-brain/graph).
+    """
     fc = create_power_fc_matrix(connections)
 
     plot_fc_matrix(fc, vmin, vmax)
@@ -35,20 +38,37 @@ def plot_connections(connections, vmin, vmax, pos_neg=False):
 
 
 def plot_fc_matrix(fc, vmin=None, vmax=None, cmap='bwr'):
+    """
+    Plot functional connectivity matrix where the x and y axis represent nodes, and
+    the cell value represents the correlation strength.
+    """
     plotting.plot_matrix(fc, vmin=vmin, vmax=vmax, colorbar=True, cmap=cmap)
 
 
 def plot_fc_graph(fc, emin=None, emax=None, cmap='bwr'):
+    """
+    Plot functional connectivity graph where nodes in a brain are connected by edges 
+    of varying strength.
+    """
     plotting.plot_connectome(fc, coords, node_size=5, colorbar=True, node_color=node_colors,
                              edge_vmin=emin, edge_vmax=emax, edge_cmap=cmap, edge_threshold='99.9%')
 
 
 def plot_node_strengths(node_strength, threshold=None, cmap="Greens"):
+    """
+    Plot node strengths where each node is colored darker based on the absolute sum of
+    edge weights connected to that node.
+    """
     plotting.plot_markers(node_strength, coords, node_threshold=threshold,
                           node_vmin=0, node_vmax=1, node_cmap=cmap)
 
 
 def create_power_fc_matrix(connections):
+    """
+    Create a Power et al. functional connectivity matrix of 264 x 264 ROIs.
+    
+    Sets the diagonal to zero and makes the matrix symmetric about the diagonal.
+    """
     fc = np.zeros((264, 264))
     fc[np.triu_indices_from(fc, k=1)] = connections
     fc = fc + fc.T
@@ -56,11 +76,10 @@ def create_power_fc_matrix(connections):
 
 
 def convert_fc_to_node_strength(fc):
+    """
+    Convert all edges connected to a node to a node strength representing the
+    absolute sum of all edges connected to that node.
+    """
     node_strength = np.sum(np.abs(fc), axis=0)
     node_strength /= np.max(node_strength)
     return node_strength
-
-
-def plot_age_comparisons(comparisons):
-    f, ax = plt.subplots(figsize=(10, 10))
-    sns.heatmap(comparisons, annot=True, fmt=".3f", linewidths=.5, ax=ax)
