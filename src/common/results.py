@@ -49,7 +49,14 @@ class CVResult(Result):
         result['Population'] = self.population
         result['Num Permutations'] = self.n_permutations
         return result
-
+    
+    def to_string(self):
+        """
+        Convert the class into a string.
+        """
+        result = f'Model: {self.model}, Target: {self.target}, Train: {self.train}, Test: {self.test}, Population: {self.population}, Num Perm: {self.n_permutations}'
+        return result
+        
     
 def save_results(results, fn, output_folder):
     """
