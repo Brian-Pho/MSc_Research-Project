@@ -18,7 +18,7 @@ def plot_connections(connections, vmin, vmax, pos_neg=False):
     """
     fc = create_power_fc_matrix(connections)
 
-    plot_fc_matrix(fc, vmin, vmax)
+#     plot_fc_matrix(fc, vmin, vmax)
     plot_fc_graph(fc, vmin, vmax)
 
     if pos_neg:
@@ -51,7 +51,7 @@ def plot_fc_graph(fc, emin=None, emax=None, cmap='bwr'):
     of varying strength.
     """
     plotting.plot_connectome(fc, coords, node_size=5, colorbar=True, node_color=node_colors,
-                             edge_vmin=emin, edge_vmax=emax, edge_cmap=cmap, edge_threshold='99.9%')
+                             edge_vmin=emin, edge_vmax=emax, edge_cmap=cmap, edge_threshold='99.7%')
 
 
 def plot_node_strengths(node_strength, threshold=None, cmap="Greens"):
