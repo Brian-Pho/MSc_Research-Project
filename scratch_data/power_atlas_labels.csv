@@ -131,10 +131,10 @@ ROI,X,Y,Z,Assignment,Color,System
 130,46.68,-50.08,28.76,5,Red,Default mode
 131,-49.3,-42.15,0.83,5,Red,Default mode
 132,-30.63,18.71,-18.98,-1,White,Uncertain
-133,-2.47,-34.8,31.07,6,Gray,Memory retrieval?
-134,-6.58,-71.47,41.74,6,Gray,Memory retrieval?
-135,11.27,-66.01,42.09,6,Gray,Memory retrieval?
-136,4.2,-48.06,50.71,6,Gray,Memory retrieval?
+133,-2.47,-34.8,31.07,6,Gray,Memory retrieval
+134,-6.58,-71.47,41.74,6,Gray,Memory retrieval
+135,11.27,-66.01,42.09,6,Gray,Memory retrieval
+136,4.2,-48.06,50.71,6,Gray,Memory retrieval
 137,-46.17,31.26,-13.03,5,Red,Default mode
 138,-9.88,10.95,66.61,11,lime,Ventral attention
 139,49.26,35.47,-12.2,5,Red,Default mode
@@ -219,7 +219,7 @@ ROI,X,Y,Z,Assignment,Color,System
 218,31.07,55.71,14.49,9,navy,Salience
 219,26.07,49.56,26.58,9,navy,Salience
 220,-39.12,50.79,17.38,9,navy,Salience
-221,1.75,-24.25,30.36,6,Gray,Memory retrieval?
+221,1.75,-24.25,30.36,6,Gray,Memory retrieval
 222,6.3,-23.68,-0.42,10,Brown,Subcortical
 223,-1.77,-13.05,11.82,10,Brown,Subcortical
 224,-10.28,-18.48,7.04,10,Brown,Subcortical
