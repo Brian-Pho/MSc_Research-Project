@@ -8,7 +8,7 @@ from .paths import POWER_FC, WISC, PLS_WEIGHTS, RIDGE_WEIGHTS, BIOBANK_LABELS
 from .wisc import WISC_LEVEL
 
 
-def get_data(wisc_level=0, label_path=WISC):
+def get_data(wisc_level=5, label_path=WISC):
     """
     Get functional connectivity data, cognition data, and demographic data.
     
@@ -59,7 +59,7 @@ def get_fc_data():
 
     fcs = {}
     for path in fc_paths:
-        subject_id = get_subject_from_path(path)
+        subject_id = get_subject_id_from_path(path)
         subject_fc = np.load(path)
         fcs[subject_id] = subject_fc[np.triu_indices(264, k=1)]
 
@@ -73,7 +73,7 @@ def get_label_data(label_path):
     return pd.read_csv(label_path, index_col='assessment WISC,EID')
 
 
-def get_subject_from_path(path):
+def get_subject_id_from_path(path):
     """
     Get subject ID from subject path.
     """
@@ -130,3 +130,13 @@ def get_subjects(subject_folder, desired_subjects=None):
         subjects = [subject for subject in subjects if subject in desired_subjects]
         
     return subjects
+
+
+def generate_fake_data(X, y):
+    X_mean, X_std = np.mean(X), np.std(X)
+    y_mean, y_std = np.mean(y), np.std(y)
+    
+    X_fake = np.random.default_rng().normal(X_mean, X_std, size=X.shape)
+    y_fake = np.random.default_rng().normal(y_mean, y_std, size=y.shape)
+    
+    return X_fake, y_fake
