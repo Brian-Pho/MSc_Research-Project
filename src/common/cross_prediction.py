@@ -48,16 +48,16 @@ def get_group_order(groups, cvs, labels):
      ['Bin 2', 'Bin 3', 'Bin 1'],
      ['Bin 3', 'Bin 1', 'Bin 2']])
     """
-    groups, cvs, labels = deque(groups), deque(cvs), deque(labels)
+    g, c, l = deque(groups), deque(cvs), deque(labels)
     group_order, cv_order, label_order = [], [], []
     
-    for idx in range(len(groups)):     
-        group_order.append(groups.copy())
-        cv_order.append(cvs.copy())
-        label_order.append(labels.copy())
+    for idx in range(len(g)):     
+        group_order.append(g.copy())
+        cv_order.append(c.copy())
+        label_order.append(l.copy())
         
-        groups.rotate(-1)
-        cvs.rotate(-1)
-        labels.rotate(-1)
+        g.rotate(-1)
+        c.rotate(-1)
+        l.rotate(-1)
     
     return group_order, cv_order, label_order
