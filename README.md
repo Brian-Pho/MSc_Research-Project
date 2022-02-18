@@ -10,6 +10,7 @@ My research is based on the idea: "Do great minds think alike?" This question ca
 
 ## Useful Links
 
+- [Introduction to ADHD](https://www.youtube.com/watch?v=ouZrZa5pLXk)
 - [ISC Tutorial](https://github.com/snastase/isc-tutorial)
 - [SPM: Setting the Origin and Normalization](https://andysbrainblog.blogspot.com/2012/11/spm-setting-origin-and-normalization.html)
 - [Neurosynth Location](https://neurosynth.org/locations/)
