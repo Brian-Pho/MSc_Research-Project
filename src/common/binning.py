@@ -34,10 +34,12 @@ def bin_by_age(X, y, ages):
 
 def bin_data(X, y, ages=None):
     """
-    TODO: Remove
+    Bin the dataset by age if ages is given.
+    
+    Returns either the original data or the binned data.
     """
-    if ages and ages.any():
-        bins = bin_by_age(X, y, ages, y)
+    if ages is not None and ages.any():
+        bins = bin_by_age(X, y, ages)
         bin_1, bin_2, bin_3 = bins[0], bins[1], bins[2]
         X_all = [X, bin_1[0], bin_2[0], bin_3[0]]
         y_all = [y, bin_1[1], bin_2[1], bin_3[1]]

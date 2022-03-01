@@ -1,9 +1,14 @@
-import numpy as np
+from joblib import Parallel, logger
 
+import numpy as np
 from scipy import stats
 from sklearn.base import clone
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, check_scoring
 from sklearn.model_selection import RepeatedKFold
+from sklearn.utils import resample, indexable, check_random_state
+from sklearn.utils.metaestimators import _safe_split
+from sklearn.utils.validation import _check_fit_params
+from sklearn.utils.fixes import delayed
 
 N_PERM = 500
 SCORING = ['train_r', 'test_r', 'test_p_value', 'test_mse']
@@ -113,3 +118,73 @@ def calc_pvalue(permutation_scores, score, n_permutations):
     the number of permutations plus one, to get the p-value.
     """
     return (np.sum(permutation_scores >= score) + 1.0) / (n_permutations + 1)
+
+
+def bootstrap_permutation_test_score(
+    estimator,
+    X,
+    y,
+    *,
+    groups=None,
+    cv=None,
+    n_permutations=100,
+    n_jobs=None,
+    random_state=0,
+    verbose=0,
+    scoring=None,
+    fit_params=None,
+    bootstrap_n=None,
+):
+    X, y, groups = indexable(X, y, groups)
+
+    scorer = check_scoring(estimator, scoring=scoring)
+    random_state = check_random_state(random_state)
+
+    # We clone the estimator to make sure that all the folds are
+    # independent, and that it is pickle-able.
+    score = _bootstrap_permutation_test_score(
+        clone(estimator), X, y, groups, cv, scorer, fit_params=fit_params, bootstrap_n=bootstrap_n
+    )
+    permutation_scores = Parallel(n_jobs=n_jobs, verbose=verbose)(
+        delayed(_bootstrap_permutation_test_score)(
+            clone(estimator),
+            X,
+            _shuffle(y),
+            groups,
+            cv,
+            scorer,
+            fit_params=fit_params,
+            bootstrap_n=bootstrap_n
+        )
+        for _ in range(n_permutations)
+    )
+    permutation_scores = np.array(permutation_scores)
+    pvalue = (np.sum(permutation_scores >= score) + 1.0) / (n_permutations + 1)
+    return score, permutation_scores, pvalue
+
+
+def _bootstrap_permutation_test_score(estimator, X, y, groups, cv, scorer, fit_params, bootstrap_n):
+    """Auxiliary function for permutation_test_score"""
+    # Adjust length of sample weights
+    fit_params = fit_params if fit_params is not None else {}
+    avg_score = []
+    for train, test in cv.split(X, y, groups):
+        X_train, y_train = _safe_split(estimator, X, y, train)
+        X_test, y_test = _safe_split(estimator, X, y, test, train)
+        fit_params = _check_fit_params(X, fit_params, train)
+        X_train, y_train = _bootstrap_train(X_train, y_train, n_samples=bootstrap_n)
+        estimator.fit(X_train, y_train, **fit_params)
+        avg_score.append(scorer(estimator, X_test, y_test))
+    return np.mean(avg_score)
+
+
+def _bootstrap_train(X_train, y_train, n_samples, group_size=5):
+    X_bootstrap = []
+    y_boostrap = []
+    
+    for _ in range(n_samples):
+        X_subset, y_subset = resample(X_train, y_train, n_samples=5)
+        X_bootstrap.append(np.mean(X_subset, axis=0))
+        y_boostrap.append(np.mean(y_subset))
+    
+    return np.array(X_bootstrap), np.array(y_boostrap)
