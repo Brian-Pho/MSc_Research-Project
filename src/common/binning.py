@@ -41,9 +41,13 @@ def bin_data(X, y, ages=None):
     if ages is not None and ages.any():
         bins = bin_by_age(X, y, ages)
         bin_1, bin_2, bin_3 = bins[0], bins[1], bins[2]
-        X_all = [X, bin_1[0], bin_2[0], bin_3[0]]
-        y_all = [y, bin_1[1], bin_2[1], bin_3[1]]
-        bin_labels = BIN_LABELS
+#         X_all = [X, bin_1[0], bin_2[0], bin_3[0]]
+#         y_all = [y, bin_1[1], bin_2[1], bin_3[1]]
+#         bin_labels = BIN_LABELS
+
+        X_all = [bin_1[0], np.concatenate((bin_2[0], bin_3[0]), axis=0)]
+        y_all = [bin_1[1], np.concatenate((bin_2[1], bin_3[1]), axis=0)]
+        bin_labels = ["Bin 1", "Bin 2 + 3"]
     else:
         X_all = [X]
         y_all = [y]

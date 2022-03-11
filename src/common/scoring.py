@@ -3,7 +3,7 @@ from joblib import Parallel, logger
 import numpy as np
 from scipy import stats
 from sklearn.base import clone
-from sklearn.metrics import mean_squared_error, check_scoring
+from sklearn.metrics import mean_squared_error, check_scoring, r2_score
 from sklearn.model_selection import RepeatedKFold
 from sklearn.utils import resample, indexable, check_random_state
 from sklearn.utils.metaestimators import _safe_split
@@ -11,7 +11,7 @@ from sklearn.utils.validation import _check_fit_params
 from sklearn.utils.fixes import delayed
 
 N_PERM = 500
-SCORING = ['train_r', 'test_r', 'test_p_value', 'test_mse']
+SCORING = ['train_r', 'test_r', 'test_p_value', 'test_mse', 'test_r2']
 RKF_10_10 = RepeatedKFold(n_splits=10, n_repeats=10)
 
 
@@ -26,8 +26,9 @@ def multimetric_scorer(model, X, y):
     
     r, p_value = stats.pearsonr(y, y_pred)
     mse = mean_squared_error(y, y_pred)
+    r2 = r2_score(y, y_pred)
     
-    return {'r': r, 'p_value': p_value, 'mse': mse}
+    return {'r': r, 'p_value': p_value, 'mse': mse, 'r2': r2}
 
 
 def unimetric_scorer(model, X, y):
