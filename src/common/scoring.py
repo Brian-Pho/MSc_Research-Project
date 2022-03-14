@@ -13,6 +13,7 @@ from sklearn.utils.fixes import delayed
 N_PERM = 500
 SCORING = ['train_r', 'test_r', 'test_p_value', 'test_mse', 'test_r2']
 RKF_10_10 = RepeatedKFold(n_splits=10, n_repeats=10)
+RKF_5_5 = RepeatedKFold(n_splits=5, n_repeats=5)
 
 
 def multimetric_scorer(model, X, y):
