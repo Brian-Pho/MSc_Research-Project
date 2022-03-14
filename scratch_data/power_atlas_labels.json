@@ -1,0 +1,2378 @@
+[
+ {
+   "ROI": 1,
+   "X": -24.66,
+   "Y": -97.84,
+   "Z": -12.33,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 2,
+   "X": 26.68,
+   "Y": -97.3,
+   "Z": -13.49,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 3,
+   "X": 23.96,
+   "Y": 31.94,
+   "Z": -17.78,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 4,
+   "X": -56.16,
+   "Y": -44.76,
+   "Z": -24.23,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 5,
+   "X": 8.13,
+   "Y": 41.12,
+   "Z": -24.31,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 6,
+   "X": -21.38,
+   "Y": -22.22,
+   "Z": -19.97,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 7,
+   "X": 17.44,
+   "Y": -28.06,
+   "Z": -17.32,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 8,
+   "X": -37.26,
+   "Y": -28.8,
+   "Z": -25.58,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 9,
+   "X": 64.6,
+   "Y": -24.41,
+   "Z": -18.57,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 10,
+   "X": 51.79,
+   "Y": -34.17,
+   "Z": -27.23,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 11,
+   "X": 55.18,
+   "Y": -30.8,
+   "Z": -16.93,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 12,
+   "X": 33.55,
+   "Y": 38.46,
+   "Z": -12.03,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 13,
+   "X": -7.12,
+   "Y": -52.22,
+   "Z": 60.71,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 14,
+   "X": -13.74,
+   "Y": -17.95,
+   "Z": 39.84,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 15,
+   "X": 0.05,
+   "Y": -14.53,
+   "Z": 46.74,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 16,
+   "X": 9.5,
+   "Y": -1.84,
+   "Z": 44.73,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 17,
+   "X": -6.9,
+   "Y": -20.59,
+   "Z": 65.21,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 18,
+   "X": -6.79,
+   "Y": -33.09,
+   "Z": 72.27,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 19,
+   "X": 13.19,
+   "Y": -32.82,
+   "Z": 74.98,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 20,
+   "X": -53.52,
+   "Y": -22.54,
+   "Z": 43.1,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 21,
+   "X": 28.88,
+   "Y": -16.95,
+   "Z": 70.55,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 22,
+   "X": 9.94,
+   "Y": -45.52,
+   "Z": 72.63,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 23,
+   "X": -22.5,
+   "Y": -30.1,
+   "Z": 72.44,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 24,
+   "X": -39.63,
+   "Y": -19.04,
+   "Z": 54.21,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 25,
+   "X": 28.54,
+   "Y": -39.24,
+   "Z": 59.17,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 26,
+   "X": 50.24,
+   "Y": -20.37,
+   "Z": 41.74,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 27,
+   "X": -38.28,
+   "Y": -27.17,
+   "Z": 69.45,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 28,
+   "X": 20.21,
+   "Y": -28.8,
+   "Z": 59.8,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 29,
+   "X": 44.34,
+   "Y": -7.55,
+   "Z": 56.98,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 30,
+   "X": -29.1,
+   "Y": -43,
+   "Z": 60.66,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 31,
+   "X": 10.09,
+   "Y": -17.1,
+   "Z": 74.14,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 32,
+   "X": 22.45,
+   "Y": -42.29,
+   "Z": 68.99,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 33,
+   "X": -45.1,
+   "Y": -31.85,
+   "Z": 46.63,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 34,
+   "X": -20.66,
+   "Y": -31.33,
+   "Z": 60.85,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 35,
+   "X": -12.96,
+   "Y": -17.34,
+   "Z": 74.66,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 36,
+   "X": 42.14,
+   "Y": -20.24,
+   "Z": 54.59,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 37,
+   "X": -38.24,
+   "Y": -14.57,
+   "Z": 68.72,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 38,
+   "X": -16.25,
+   "Y": -45.8,
+   "Z": 73.22,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 39,
+   "X": 2.4,
+   "Y": -27.94,
+   "Z": 60.15,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 40,
+   "X": 3.45,
+   "Y": -17.44,
+   "Z": 58.45,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 41,
+   "X": 37.74,
+   "Y": -17.3,
+   "Z": 45.01,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 42,
+   "X": -49.47,
+   "Y": -11.06,
+   "Z": 34.95,
+   "Assignment": 2,
+   "Color": "Orange",
+   "System": "Sensory/somatomotor Mouth"
+ },
+ {
+   "ROI": 43,
+   "X": 36.04,
+   "Y": -9.44,
+   "Z": 13.95,
+   "Assignment": 2,
+   "Color": "Orange",
+   "System": "Sensory/somatomotor Mouth"
+ },
+ {
+   "ROI": 44,
+   "X": 51.14,
+   "Y": -5.8,
+   "Z": 32.42,
+   "Assignment": 2,
+   "Color": "Orange",
+   "System": "Sensory/somatomotor Mouth"
+ },
+ {
+   "ROI": 45,
+   "X": -52.84,
+   "Y": -10.23,
+   "Z": 24.41,
+   "Assignment": 2,
+   "Color": "Orange",
+   "System": "Sensory/somatomotor Mouth"
+ },
+ {
+   "ROI": 46,
+   "X": 65.64,
+   "Y": -7.88,
+   "Z": 24.83,
+   "Assignment": 2,
+   "Color": "Orange",
+   "System": "Sensory/somatomotor Mouth"
+ },
+ {
+   "ROI": 47,
+   "X": -2.88,
+   "Y": 2.38,
+   "Z": 53.21,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 48,
+   "X": 54.22,
+   "Y": -27.83,
+   "Z": 33.64,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 49,
+   "X": 19.33,
+   "Y": -7.71,
+   "Z": 63.88,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 50,
+   "X": -16.14,
+   "Y": -4.82,
+   "Z": 70.83,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 51,
+   "X": -10.48,
+   "Y": -2.1,
+   "Z": 42.02,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 52,
+   "X": 36.73,
+   "Y": 0.78,
+   "Z": -3.57,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 53,
+   "X": 13.21,
+   "Y": -1.36,
+   "Z": 69.98,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 54,
+   "X": 6.52,
+   "Y": 7.69,
+   "Z": 50.58,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 55,
+   "X": -44.76,
+   "Y": 0.1,
+   "Z": 8.83,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 56,
+   "X": 49.4,
+   "Y": 8.32,
+   "Z": -1.12,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 57,
+   "X": -34.37,
+   "Y": 3.29,
+   "Z": 4.19,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 58,
+   "X": -51.26,
+   "Y": 8.26,
+   "Z": -2.06,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 59,
+   "X": -5.33,
+   "Y": 17.8,
+   "Z": 34.41,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 60,
+   "X": 35.83,
+   "Y": 10.32,
+   "Z": 1.18,
+   "Assignment": 3,
+   "Color": "Purple",
+   "System": "Cingulo-opercular Task Control"
+ },
+ {
+   "ROI": 61,
+   "X": 31.75,
+   "Y": -26.33,
+   "Z": 12.91,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 62,
+   "X": 65.43,
+   "Y": -33.2,
+   "Z": 19.97,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 63,
+   "X": 57.88,
+   "Y": -15.62,
+   "Z": 7.49,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 64,
+   "X": -38.43,
+   "Y": -33.34,
+   "Z": 16.98,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 65,
+   "X": -60.48,
+   "Y": -25.22,
+   "Z": 13.82,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 66,
+   "X": -49.14,
+   "Y": -26.3,
+   "Z": 5.18,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 67,
+   "X": 43.45,
+   "Y": -22.93,
+   "Z": 19.85,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 68,
+   "X": -49.77,
+   "Y": -34.36,
+   "Z": 25.74,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 69,
+   "X": -52.92,
+   "Y": -21.83,
+   "Z": 22.97,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 70,
+   "X": -55.22,
+   "Y": -9.42,
+   "Z": 11.73,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 71,
+   "X": 55.96,
+   "Y": -5.03,
+   "Z": 13.25,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 72,
+   "X": 59.4,
+   "Y": -17.34,
+   "Z": 28.69,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 73,
+   "X": -30.12,
+   "Y": -27.02,
+   "Z": 12.2,
+   "Assignment": 4,
+   "Color": "Pink",
+   "System": "Auditory"
+ },
+ {
+   "ROI": 74,
+   "X": -40.5,
+   "Y": -75.27,
+   "Z": 25.8,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 75,
+   "X": 5.55,
+   "Y": 66.69,
+   "Z": -3.55,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 76,
+   "X": 8.36,
+   "Y": 47.59,
+   "Z": -15.18,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 77,
+   "X": -12.6,
+   "Y": -39.64,
+   "Z": 0.93,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 78,
+   "X": -17.65,
+   "Y": 63.19,
+   "Z": -9.17,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 79,
+   "X": -45.79,
+   "Y": -60.69,
+   "Z": 20.85,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 80,
+   "X": 43.43,
+   "Y": -72.21,
+   "Z": 28,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 81,
+   "X": -43.58,
+   "Y": 11.99,
+   "Z": -34.15,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 82,
+   "X": 45.64,
+   "Y": 16.2,
+   "Z": -30.02,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 83,
+   "X": -68.47,
+   "Y": -22.66,
+   "Z": -15.74,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 84,
+   "X": -57.97,
+   "Y": -25.69,
+   "Z": -14.73,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 85,
+   "X": 27.06,
+   "Y": 16.22,
+   "Z": -16.93,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 86,
+   "X": -44.45,
+   "Y": -64.64,
+   "Z": 34.78,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 87,
+   "X": -39.05,
+   "Y": -74.95,
+   "Z": 43.72,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 88,
+   "X": -6.84,
+   "Y": -54.9,
+   "Z": 27.05,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 89,
+   "X": 5.91,
+   "Y": -58.82,
+   "Z": 35.45,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 90,
+   "X": -11.29,
+   "Y": -56.2,
+   "Z": 15.6,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 91,
+   "X": -2.94,
+   "Y": -48.79,
+   "Z": 12.87,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 92,
+   "X": 7.94,
+   "Y": -48.37,
+   "Z": 30.57,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 93,
+   "X": 15.12,
+   "Y": -63.09,
+   "Z": 25.98,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 94,
+   "X": -2.2,
+   "Y": -36.68,
+   "Z": 43.85,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 95,
+   "X": 10.77,
+   "Y": -53.83,
+   "Z": 17.09,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 96,
+   "X": 52.04,
+   "Y": -59.37,
+   "Z": 35.52,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 97,
+   "X": 23.33,
+   "Y": 33.07,
+   "Z": 47.68,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 98,
+   "X": -10.09,
+   "Y": 39.09,
+   "Z": 52.29,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 99,
+   "X": -16.4,
+   "Y": 28.52,
+   "Z": 53.05,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 100,
+   "X": -35.36,
+   "Y": 19.86,
+   "Z": 50.8,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 101,
+   "X": 22.11,
+   "Y": 39.21,
+   "Z": 38.9,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 102,
+   "X": 12.73,
+   "Y": 54.87,
+   "Z": 38.19,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 103,
+   "X": -10.33,
+   "Y": 54.63,
+   "Z": 38.71,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 104,
+   "X": -19.78,
+   "Y": 45.07,
+   "Z": 39.48,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 105,
+   "X": 5.94,
+   "Y": 54.42,
+   "Z": 16.18,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 106,
+   "X": 6.11,
+   "Y": 63.98,
+   "Z": 21.96,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 107,
+   "X": -7.04,
+   "Y": 50.82,
+   "Z": -1.29,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 108,
+   "X": 8.8,
+   "Y": 54.23,
+   "Z": 3.45,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 109,
+   "X": -3.06,
+   "Y": 44.41,
+   "Z": -9.46,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 110,
+   "X": 7.51,
+   "Y": 42.49,
+   "Z": -5.35,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 111,
+   "X": -11.06,
+   "Y": 44.62,
+   "Z": 7.61,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 112,
+   "X": -2.06,
+   "Y": 37.85,
+   "Z": 36.34,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 113,
+   "X": -2.5,
+   "Y": 41.7,
+   "Z": 16.05,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 114,
+   "X": -20.16,
+   "Y": 63.65,
+   "Z": 19.39,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 115,
+   "X": -7.55,
+   "Y": 48.08,
+   "Z": 23.18,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 116,
+   "X": 64.64,
+   "Y": -11.8,
+   "Z": -19.3,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 117,
+   "X": -55.72,
+   "Y": -12.96,
+   "Z": -10.24,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 118,
+   "X": -57.75,
+   "Y": -29.7,
+   "Z": -3.94,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 119,
+   "X": 64.8,
+   "Y": -30.55,
+   "Z": -8.7,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 120,
+   "X": -68.3,
+   "Y": -41.41,
+   "Z": -5.14,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 121,
+   "X": 13.08,
+   "Y": 29.99,
+   "Z": 58.65,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 122,
+   "X": 12.25,
+   "Y": 35.63,
+   "Z": 20.3,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 123,
+   "X": 52.16,
+   "Y": -2.43,
+   "Z": -16.4,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 124,
+   "X": -26.44,
+   "Y": -39.95,
+   "Z": -8.26,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 125,
+   "X": 26.94,
+   "Y": -37.34,
+   "Z": -12.76,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 126,
+   "X": -33.93,
+   "Y": -38.06,
+   "Z": -15.6,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 127,
+   "X": 28.46,
+   "Y": -76.56,
+   "Z": -31.64,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 128,
+   "X": 51.9,
+   "Y": 6.81,
+   "Z": -29.61,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 129,
+   "X": -52.89,
+   "Y": 2.55,
+   "Z": -27.06,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 130,
+   "X": 46.68,
+   "Y": -50.08,
+   "Z": 28.76,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 131,
+   "X": -49.3,
+   "Y": -42.15,
+   "Z": 0.83,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 132,
+   "X": -30.63,
+   "Y": 18.71,
+   "Z": -18.98,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 133,
+   "X": -2.47,
+   "Y": -34.8,
+   "Z": 31.07,
+   "Assignment": 6,
+   "Color": "Gray",
+   "System": "Memory retrieval"
+ },
+ {
+   "ROI": 134,
+   "X": -6.58,
+   "Y": -71.47,
+   "Z": 41.74,
+   "Assignment": 6,
+   "Color": "Gray",
+   "System": "Memory retrieval"
+ },
+ {
+   "ROI": 135,
+   "X": 11.27,
+   "Y": -66.01,
+   "Z": 42.09,
+   "Assignment": 6,
+   "Color": "Gray",
+   "System": "Memory retrieval"
+ },
+ {
+   "ROI": 136,
+   "X": 4.2,
+   "Y": -48.06,
+   "Z": 50.71,
+   "Assignment": 6,
+   "Color": "Gray",
+   "System": "Memory retrieval"
+ },
+ {
+   "ROI": 137,
+   "X": -46.17,
+   "Y": 31.26,
+   "Z": -13.03,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 138,
+   "X": -9.88,
+   "Y": 10.95,
+   "Z": 66.61,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 139,
+   "X": 49.26,
+   "Y": 35.47,
+   "Z": -12.2,
+   "Assignment": 5,
+   "Color": "Red",
+   "System": "Default mode"
+ },
+ {
+   "ROI": 140,
+   "X": 7.98,
+   "Y": -91.08,
+   "Z": -7.1,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 141,
+   "X": 17.27,
+   "Y": -91.09,
+   "Z": -13.64,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 142,
+   "X": -12.08,
+   "Y": -94.56,
+   "Z": -12.8,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 143,
+   "X": 17.53,
+   "Y": -46.86,
+   "Z": -9.88,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 144,
+   "X": 39.98,
+   "Y": -72.49,
+   "Z": 14.36,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 145,
+   "X": 8.45,
+   "Y": -71.84,
+   "Z": 10.79,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 146,
+   "X": -8.43,
+   "Y": -80.5,
+   "Z": 7.44,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 147,
+   "X": -28.07,
+   "Y": -79.45,
+   "Z": 19.43,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 148,
+   "X": 19.81,
+   "Y": -65.56,
+   "Z": 1.72,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 149,
+   "X": -23.94,
+   "Y": -90.98,
+   "Z": 18.96,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 150,
+   "X": 26.93,
+   "Y": -59.37,
+   "Z": -9.36,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 151,
+   "X": -15.02,
+   "Y": -72.42,
+   "Z": -7.68,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 152,
+   "X": -17.87,
+   "Y": -68.03,
+   "Z": 4.81,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 153,
+   "X": 42.52,
+   "Y": -78.17,
+   "Z": -11.78,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 154,
+   "X": -46.54,
+   "Y": -75.95,
+   "Z": -9.95,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 155,
+   "X": -14.22,
+   "Y": -90.66,
+   "Z": 31.4,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 156,
+   "X": 15.27,
+   "Y": -87.09,
+   "Z": 36.89,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 157,
+   "X": 28.68,
+   "Y": -76.62,
+   "Z": 25.42,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 158,
+   "X": 19.64,
+   "Y": -85.62,
+   "Z": -2.39,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 159,
+   "X": 15.18,
+   "Y": -76.68,
+   "Z": 31,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 160,
+   "X": -15.85,
+   "Y": -52.34,
+   "Z": -1.43,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 161,
+   "X": 41.6,
+   "Y": -65.5,
+   "Z": -8.27,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 162,
+   "X": 24.41,
+   "Y": -87.21,
+   "Z": 24.01,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 163,
+   "X": 5.59,
+   "Y": -71.65,
+   "Z": 23.52,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 164,
+   "X": -42.1,
+   "Y": -73.62,
+   "Z": 0.38,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 165,
+   "X": 25.66,
+   "Y": -79.47,
+   "Z": -15.56,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 166,
+   "X": -16.21,
+   "Y": -76.97,
+   "Z": 33.82,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 167,
+   "X": -2.88,
+   "Y": -81.25,
+   "Z": 21.1,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 168,
+   "X": -40.21,
+   "Y": -88.44,
+   "Z": -6.19,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 169,
+   "X": 36.76,
+   "Y": -84.11,
+   "Z": 12.99,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 170,
+   "X": 6.21,
+   "Y": -81.41,
+   "Z": 6.11,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 171,
+   "X": -26.39,
+   "Y": -90.23,
+   "Z": 3.12,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 172,
+   "X": -33,
+   "Y": -79.02,
+   "Z": -13.24,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 173,
+   "X": 36.51,
+   "Y": -81.16,
+   "Z": 1.2,
+   "Assignment": 7,
+   "Color": "Blue",
+   "System": "Visual"
+ },
+ {
+   "ROI": 174,
+   "X": -43.93,
+   "Y": 1.8,
+   "Z": 45.7,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 175,
+   "X": 47.98,
+   "Y": 24.56,
+   "Z": 26.5,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 176,
+   "X": -46.5,
+   "Y": 10.85,
+   "Z": 23.04,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 177,
+   "X": -52.6,
+   "Y": -48.83,
+   "Z": 42.5,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 178,
+   "X": -22.53,
+   "Y": 10.76,
+   "Z": 63.73,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 179,
+   "X": 58.31,
+   "Y": -52.79,
+   "Z": -13.61,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 180,
+   "X": 24.07,
+   "Y": 44.61,
+   "Z": -15.35,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 181,
+   "X": 33.6,
+   "Y": 54.22,
+   "Z": -12.95,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 182,
+   "X": -21.14,
+   "Y": 40.87,
+   "Z": -20.48,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 183,
+   "X": -17.51,
+   "Y": -75.89,
+   "Z": -24.33,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 184,
+   "X": 16.85,
+   "Y": -79.89,
+   "Z": -34.36,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 185,
+   "X": 34.72,
+   "Y": -67.08,
+   "Z": -34.45,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 186,
+   "X": 47.01,
+   "Y": 9.93,
+   "Z": 32.66,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 187,
+   "X": -41.06,
+   "Y": 5.81,
+   "Z": 32.72,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 188,
+   "X": -42.23,
+   "Y": 38.21,
+   "Z": 21.35,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 189,
+   "X": 38.37,
+   "Y": 43.18,
+   "Z": 15.06,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 190,
+   "X": 49.18,
+   "Y": -42.41,
+   "Z": 45.16,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 191,
+   "X": -28.4,
+   "Y": -57.93,
+   "Z": 47.78,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 192,
+   "X": 43.93,
+   "Y": -52.95,
+   "Z": 46.95,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 193,
+   "X": 31.83,
+   "Y": 14.37,
+   "Z": 55.98,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 194,
+   "X": 37.45,
+   "Y": -64.7,
+   "Z": 40.38,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 195,
+   "X": -42.09,
+   "Y": -54.98,
+   "Z": 44.74,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 196,
+   "X": 39.87,
+   "Y": 18.39,
+   "Z": 39.72,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 197,
+   "X": -34.16,
+   "Y": 54.83,
+   "Z": 4.36,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 198,
+   "X": -41.68,
+   "Y": 45.16,
+   "Z": -2.31,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 199,
+   "X": 33.38,
+   "Y": -53.12,
+   "Z": 44.02,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 200,
+   "X": 43.25,
+   "Y": 49.25,
+   "Z": -2.31,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 201,
+   "X": -42.1,
+   "Y": 24.68,
+   "Z": 29.53,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 202,
+   "X": -2.98,
+   "Y": 26.41,
+   "Z": 44.42,
+   "Assignment": 8,
+   "Color": "Yellow",
+   "System": "Fronto-parietal Task Control"
+ },
+ {
+   "ROI": 203,
+   "X": 10.51,
+   "Y": -38.54,
+   "Z": 50.02,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 204,
+   "X": 55.27,
+   "Y": -44.59,
+   "Z": 36.7,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 205,
+   "X": 42.05,
+   "Y": -0.39,
+   "Z": 47.1,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 206,
+   "X": 31.24,
+   "Y": 32.79,
+   "Z": 26.39,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 207,
+   "X": 47.6,
+   "Y": 22.16,
+   "Z": 9.74,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 208,
+   "X": -35.44,
+   "Y": 20.03,
+   "Z": 0.07,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 209,
+   "X": 35.91,
+   "Y": 21.91,
+   "Z": 2.62,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 210,
+   "X": 36.89,
+   "Y": 32.35,
+   "Z": -2.24,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 211,
+   "X": 33.56,
+   "Y": 16.45,
+   "Z": -7.58,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 212,
+   "X": -10.76,
+   "Y": 25.99,
+   "Z": 24.54,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 213,
+   "X": -0.94,
+   "Y": 14.86,
+   "Z": 43.99,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 214,
+   "X": -27.5,
+   "Y": 52.04,
+   "Z": 21.28,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 215,
+   "X": -0.2,
+   "Y": 30.35,
+   "Z": 27.22,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 216,
+   "X": 5.23,
+   "Y": 23.22,
+   "Z": 37.03,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 217,
+   "X": 10.26,
+   "Y": 22.06,
+   "Z": 27.48,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 218,
+   "X": 31.07,
+   "Y": 55.71,
+   "Z": 14.49,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 219,
+   "X": 26.07,
+   "Y": 49.56,
+   "Z": 26.58,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 220,
+   "X": -39.12,
+   "Y": 50.79,
+   "Z": 17.38,
+   "Assignment": 9,
+   "Color": "navy",
+   "System": "Salience"
+ },
+ {
+   "ROI": 221,
+   "X": 1.75,
+   "Y": -24.25,
+   "Z": 30.36,
+   "Assignment": 6,
+   "Color": "Gray",
+   "System": "Memory retrieval"
+ },
+ {
+   "ROI": 222,
+   "X": 6.3,
+   "Y": -23.68,
+   "Z": -0.42,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 223,
+   "X": -1.77,
+   "Y": -13.05,
+   "Z": 11.82,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 224,
+   "X": -10.28,
+   "Y": -18.48,
+   "Z": 7.04,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 225,
+   "X": 11.75,
+   "Y": -17.18,
+   "Z": 7.54,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 226,
+   "X": -5.33,
+   "Y": -28.08,
+   "Z": -4.13,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 227,
+   "X": -21.97,
+   "Y": 7.48,
+   "Z": -4.78,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 228,
+   "X": -15.41,
+   "Y": 3.57,
+   "Z": 7.99,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 229,
+   "X": 30.5,
+   "Y": -13.92,
+   "Z": 1.65,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 230,
+   "X": 23.26,
+   "Y": 10.19,
+   "Z": 1.46,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 231,
+   "X": 28.52,
+   "Y": 0.82,
+   "Z": 4.01,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 232,
+   "X": -31.38,
+   "Y": -11.48,
+   "Z": -0.3,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 233,
+   "X": 14.98,
+   "Y": 4.94,
+   "Z": 7.24,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 234,
+   "X": 8.62,
+   "Y": -3.57,
+   "Z": 5.76,
+   "Assignment": 10,
+   "Color": "Brown",
+   "System": "Subcortical"
+ },
+ {
+   "ROI": 235,
+   "X": 53.9,
+   "Y": -42.76,
+   "Z": 21.83,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 236,
+   "X": -56.47,
+   "Y": -50.48,
+   "Z": 9.92,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 237,
+   "X": -55.3,
+   "Y": -39.89,
+   "Z": 13.51,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 238,
+   "X": 51.52,
+   "Y": -32.52,
+   "Z": 7.55,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 239,
+   "X": 51.28,
+   "Y": -28.52,
+   "Z": -4.3,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 240,
+   "X": 55.75,
+   "Y": -46.07,
+   "Z": 11.42,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 241,
+   "X": 52.68,
+   "Y": 32.58,
+   "Z": 0.57,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 242,
+   "X": -49.07,
+   "Y": 25.13,
+   "Z": -0.98,
+   "Assignment": 11,
+   "Color": "lime",
+   "System": "Ventral attention"
+ },
+ {
+   "ROI": 243,
+   "X": -16.31,
+   "Y": -65.28,
+   "Z": -19.69,
+   "Assignment": 13,
+   "Color": "lightsteelblue",
+   "System": "Cerebellar"
+ },
+ {
+   "ROI": 244,
+   "X": -32.12,
+   "Y": -55.03,
+   "Z": -25.22,
+   "Assignment": 13,
+   "Color": "lightsteelblue",
+   "System": "Cerebellar"
+ },
+ {
+   "ROI": 245,
+   "X": 22.43,
+   "Y": -57.55,
+   "Z": -23.11,
+   "Assignment": 13,
+   "Color": "lightsteelblue",
+   "System": "Cerebellar"
+ },
+ {
+   "ROI": 246,
+   "X": 0.51,
+   "Y": -61.91,
+   "Z": -18.14,
+   "Assignment": 13,
+   "Color": "lightsteelblue",
+   "System": "Cerebellar"
+ },
+ {
+   "ROI": 247,
+   "X": 32.85,
+   "Y": -12.41,
+   "Z": -34.41,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 248,
+   "X": -31.13,
+   "Y": -9.99,
+   "Z": -36.32,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 249,
+   "X": 48.52,
+   "Y": -2.85,
+   "Z": -38.49,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 250,
+   "X": -50.06,
+   "Y": -7.09,
+   "Z": -39.24,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 251,
+   "X": 9.61,
+   "Y": -61.5,
+   "Z": 60.88,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 252,
+   "X": -52.44,
+   "Y": -63.14,
+   "Z": 5.29,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 253,
+   "X": -46.68,
+   "Y": -50.91,
+   "Z": -20.91,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 254,
+   "X": 45.68,
+   "Y": -46.67,
+   "Z": -16.85,
+   "Assignment": -1,
+   "Color": "White",
+   "System": "Uncertain"
+ },
+ {
+   "ROI": 255,
+   "X": 47.21,
+   "Y": -29.75,
+   "Z": 48.7,
+   "Assignment": 1,
+   "Color": "Cyan",
+   "System": "Sensory/somatomotor Hand"
+ },
+ {
+   "ROI": 256,
+   "X": 21.9,
+   "Y": -64.74,
+   "Z": 48.12,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 257,
+   "X": 46.09,
+   "Y": -58.93,
+   "Z": 3.93,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 258,
+   "X": 25.34,
+   "Y": -58.18,
+   "Z": 60.34,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 259,
+   "X": -32.56,
+   "Y": -46.42,
+   "Z": 47.2,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 260,
+   "X": -26.6,
+   "Y": -70.72,
+   "Z": 36.86,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 261,
+   "X": -32.23,
+   "Y": -1.08,
+   "Z": 54.06,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 262,
+   "X": -42.26,
+   "Y": -60.12,
+   "Z": -8.85,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 263,
+   "X": -16.5,
+   "Y": -58.57,
+   "Z": 64.46,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ },
+ {
+   "ROI": 264,
+   "X": 28.56,
+   "Y": -4.62,
+   "Z": 53.99,
+   "Assignment": 12,
+   "Color": "Green",
+   "System": "Dorsal attention"
+ }
+]
