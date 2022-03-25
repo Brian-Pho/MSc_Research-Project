@@ -23,6 +23,7 @@ POWER_FC = join(BPHO_DIR, 'python_power_fc')
 RAW_WISC = join(BIOBANK_LABELS, 'Labels_Feb2_2021.csv')
 WISC = join(BIOBANK_LABELS, 'Subjects_with_WISC.csv')
 HEALTHY = join(BIOBANK_LABELS, 'Subjects_with_WISC (healthy).csv')
+ADHD = join(BIOBANK_LABELS, 'Subjects_with_WISC (adhd).csv')
 ADHD_ONE = join(BIOBANK_LABELS, 'Subjects_with_WISC (adhd 1).csv')
 ADHD_TWO = join(BIOBANK_LABELS, 'Subjects_with_WISC (adhd 2).csv')
 
