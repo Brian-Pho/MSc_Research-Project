@@ -66,4 +66,4 @@ def bin_data(X, y, ages=None, include_all=False):
         y_bins = [y]
         bin_labels = ["All"]
     
-    return np.array(X_bins), np.array(y_bins), np.array(bin_labels)
+    return np.array(X_bins, dtype=object), np.array(y_bins, dtype=object), np.array(bin_labels, dtype=object)
