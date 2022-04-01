@@ -10,8 +10,8 @@ SCRATCH_DATA = join(REPO_DIR, 'scratch_data')
 
 # Power atlas labels
 RAW_POWER = join(SCRATCH_DATA, 'power_atlas_labels.xls')
-# POWER = join(SCRATCH_DATA, 'power_atlas_labels.csv')
-POWER = join(SCRATCH_DATA, 'power_atlas_labels (copy).csv')
+POWER = join(SCRATCH_DATA, 'power_atlas_labels.csv')
+# POWER = join(SCRATCH_DATA, 'power_atlas_labels (extrapolate).csv')
 
 # Bad subjects
 BAD_SUBJECTS = join(SCRATCH_DATA, 'bad_subjects.csv')
