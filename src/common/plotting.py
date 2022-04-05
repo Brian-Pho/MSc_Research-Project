@@ -37,12 +37,12 @@ def plot_connections(connections, vmin=None, vmax=None, pos_neg=False, threshold
 #     plot_node_strengths(node_strength, 0.5, "Greens")
 
 
-def plot_fc_matrix(fc, vmin=None, vmax=None, cmap='bwr'):
+def plot_fc_matrix(fc, vmin=None, vmax=None, cmap='bwr', title=None):
     """
     Plot functional connectivity matrix where the x and y axis represent nodes, and
     the cell value represents the correlation strength.
     """
-    plotting.plot_matrix(fc, vmin=vmin, vmax=vmax, colorbar=True, cmap=cmap)
+    plotting.plot_matrix(fc, vmin=vmin, vmax=vmax, colorbar=True, cmap=cmap, title=title)
 
 
 def plot_fc_graph(fc, emin=None, emax=None, cmap='bwr', threshold="99.7%"):
