@@ -28,7 +28,7 @@ def get_data(wisc_level=5, label_path=WISC):
     population = check_population_diagnosis(labels)
 
     fc_matrices = []
-    fc_ids = []
+#     fc_ids = []
     demographics = {measure: [] for measure in demographic_measures}
     wiscs = {measure: [] for measure in wisc_measures}
 
@@ -36,7 +36,7 @@ def get_data(wisc_level=5, label_path=WISC):
         if subject_id not in fcs:
             continue
         
-        fc_ids.append(subject_id)
+#         fc_ids.append(subject_id)
         fc_matrices.append(fcs[subject_id])
 
         for measure in demographic_measures:
@@ -50,7 +50,7 @@ def get_data(wisc_level=5, label_path=WISC):
     wiscs = _convert_dict_list_to_dict_numpy(wiscs)
     demographics = _convert_dict_list_to_dict_numpy(demographics)
     
-    return np.array(fc_matrices), wiscs, demographics, population, fc_ids
+    return np.array(fc_matrices), wiscs, demographics, population
 
 
 def get_fc_data():
