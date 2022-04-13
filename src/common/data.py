@@ -4,11 +4,11 @@ import os
 import numpy as np
 import pandas as pd
 
-from .paths import POWER_FC, WISC, PLS_WEIGHTS, RIDGE_WEIGHTS, BIOBANK_LABELS
+from .paths import POWER_FC, ADHD, PLS_WEIGHTS, RIDGE_WEIGHTS, BIOBANK_LABELS
 from .wisc import WISC_LEVEL
 
 
-def get_data(wisc_level=5, label_path=WISC):
+def get_data(wisc_level=5, label_path=ADHD):
     """
     Get functional connectivity data, cognition data, and demographic data.
     

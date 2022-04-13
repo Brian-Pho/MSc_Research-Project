@@ -47,14 +47,14 @@ def bin_data(X, y, ages=None, include_all=False):
         bins = bin_by_age(X, y, ages)
         bin_1, bin_2, bin_3 = bins[0], bins[1], bins[2]
         
-        X_bins = [bin_1[0], bin_2[0], bin_3[0]]
-        y_bins = [bin_1[1], bin_2[1], bin_3[1]]
-        bin_labels = ONLY_BIN_LABELS
-        
         if include_all:
-            X_bins = X_bins.insert(0, X)
-            y_bins = y_bins.insert(0, y)
+            X_bins = [X, bin_1[0], bin_2[0], bin_3[0]]
+            y_bins = [y, bin_1[1], bin_2[1], bin_3[1]]
             bin_labels = BIN_LABELS
+        else:
+            X_bins = [bin_1[0], bin_2[0], bin_3[0]]
+            y_bins = [bin_1[1], bin_2[1], bin_3[1]]
+            bin_labels = ONLY_BIN_LABELS
 
 #         bin_1, bin_2 = bins[0], bins[1]
 #         X_bins = [bin_1[0], bin_2[0]]
