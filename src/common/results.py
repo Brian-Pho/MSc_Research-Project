@@ -1,4 +1,5 @@
 from os.path import join, exists
+import numpy as np
 
 
 class Result:
@@ -60,10 +61,21 @@ class CVResult(Result):
     
 def save_results(results, fn, output_folder):
     """
-    Save the modeling results to a csv file.
+    Save by appending the modeling results to a csv file.
     """
+    fn = fn + '.csv'
     output_path = join(output_folder, fn)
     output_exists = exists(output_path)
     m = 'a' if output_exists else 'w'
     results.to_csv(output_path, mode=m, header=not output_exists)
+    return output_path
+
+
+def save_perm_score(perm_scores, fn, output_folder):
+    """
+    Save the permutation scores to a NumPy array file.
+    """
+    fn = fn + '.npy'
+    output_path = join(output_folder, fn)
+    np.save(output_path, perm_scores)
     return output_path

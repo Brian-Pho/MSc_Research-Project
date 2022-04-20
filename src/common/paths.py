@@ -37,3 +37,8 @@ MODEL_RESULTS = join(SCRATCH_DATA, 'model_results')
 PLS_RESULTS = join(MODEL_RESULTS, 'PLS')
 RIDGE_RESULTS = join(MODEL_RESULTS, 'Ridge')
 CROSS_PRED_RESULTS = join(MODEL_RESULTS, 'Cross Prediction')
+
+# Permutation scores
+PERM_SCORES = join(SCRATCH_DATA, 'permutation_scores')
+RIDGE_PSCORES = join(PERM_SCORES, 'Ridge')
+PLS_PSCORES = join(PERM_SCORES, 'PLS')

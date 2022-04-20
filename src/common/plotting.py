@@ -12,14 +12,15 @@ power_labels = pd.read_csv(POWER, index_col='ROI')
 node_colors = power_labels['Color'].values.tolist()
 
 
-def plot_connections(connections, vmin=None, vmax=None, pos_neg=False, threshold="99.7%"):
+def plot_connections(connections, vmin=None, vmax=None, pos_neg=False, threshold="99.7%", show_matrix=False, title=None):
     """
     Plot functional connectivity connections in multiple ways (E.g. Matrix and glass-brain/graph).
     """
     fc = create_power_fc_matrix(connections)
-
-    plot_fc_matrix(fc, vmin, vmax)
-    plot_fc_graph(fc, vmin, vmax, threshold=threshold)
+    
+    if show_matrix:
+        plot_fc_matrix(fc, vmin, vmax)
+    plot_fc_graph(fc, vmin, vmax, threshold=threshold, title=title)
 
     if pos_neg:
         positive_edges = np.clip(fc, 0, np.max(fc))
@@ -45,13 +46,14 @@ def plot_fc_matrix(fc, vmin=None, vmax=None, cmap='bwr', title=None):
     plotting.plot_matrix(fc, vmin=vmin, vmax=vmax, colorbar=True, cmap=cmap, title=title)
 
 
-def plot_fc_graph(fc, emin=None, emax=None, cmap='bwr', threshold="99.7%"):
+def plot_fc_graph(fc, emin=None, emax=None, cmap='bwr', threshold="99.7%", title=None):
     """
     Plot functional connectivity graph where nodes in a brain are connected by edges 
     of varying strength.
     """
     plotting.plot_connectome(fc, coords, node_size=5, colorbar=True, node_color=node_colors,
-                             edge_vmin=emin, edge_vmax=emax, edge_cmap=cmap, edge_threshold=threshold)
+                             edge_vmin=emin, edge_vmax=emax, edge_cmap=cmap, edge_threshold=threshold,
+                             title=title)
 
 
 def plot_node_strengths(node_strength, threshold=None, cmap="Greens"):

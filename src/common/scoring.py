@@ -46,7 +46,7 @@ def unimetric_scorer(model, X, y):
     return r
 
 
-def custom_permutation_test_score(
+def cross_prediction_permutation_test_score(
     estimator, G_0, G_1, G_2, cv_0, cv_1, cv_2, n_permutations=100, scorer=None):
     """
     Custom permutation test function based off of: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.permutation_test_score.html
@@ -54,12 +54,12 @@ def custom_permutation_test_score(
     Is extended from the scikit-learn version to handle multiple testing sets 
     used in cross-prediction.
     """
-    true_scores = _custom_permutation_test_score(
+    true_scores = _cross_prediction_permutation_test_score(
         clone(estimator), G_0[0], G_0[1], G_1[0], G_1[1], G_2[0], G_2[1], cv_0, cv_1, cv_2, scorer)
     
     permutation_scores = []
     for _ in range(n_permutations):
-        permutation_scores.append(_custom_permutation_test_score(
+        permutation_scores.append(_cross_prediction_permutation_test_score(
             clone(estimator), G_0[0], _shuffle(G_0[1]), G_1[0], _shuffle(G_1[1]), 
             G_2[0], _shuffle(G_2[1]), cv_0, cv_1, cv_2, scorer))
     permutation_scores = np.array(permutation_scores).T
@@ -72,9 +72,9 @@ def custom_permutation_test_score(
     return true_scores, permutation_scores, pvalues
 
 
-def _custom_permutation_test_score(estimator, X_0, y_0, X_1, y_1, X_2, y_2, cv_0, cv_1, cv_2, scorer):
+def _cross_prediction_permutation_test_score(estimator, X_0, y_0, X_1, y_1, X_2, y_2, cv_0, cv_1, cv_2, scorer):
     """
-    Helper function for custom_permutation_test_score.
+    Helper function for cross_prediction_permutation_test_score.
     
     Given three groups and their cross-fold validation splits, train on the first
     group, and test on all three groups. Return the average score from all cross-folds.
@@ -104,7 +104,7 @@ def _custom_permutation_test_score(estimator, X_0, y_0, X_1, y_1, X_2, y_2, cv_0
 
 def _shuffle(y):
     """
-    Helper function for custom_permutation_test_score.
+    Helper function for cross_prediction_permutation_test_score.
     
     Shuffle the data's targets.
     """
@@ -120,73 +120,3 @@ def calc_pvalue(permutation_scores, score, n_permutations):
     the number of permutations plus one, to get the p-value.
     """
     return (np.sum(permutation_scores >= score) + 1.0) / (n_permutations + 1)
-
-
-def bootstrap_permutation_test_score(
-    estimator,
-    X,
-    y,
-    *,
-    groups=None,
-    cv=None,
-    n_permutations=100,
-    n_jobs=None,
-    random_state=0,
-    verbose=0,
-    scoring=None,
-    fit_params=None,
-    bootstrap_n=None,
-):
-    X, y, groups = indexable(X, y, groups)
-
-    scorer = check_scoring(estimator, scoring=scoring)
-    random_state = check_random_state(random_state)
-
-    # We clone the estimator to make sure that all the folds are
-    # independent, and that it is pickle-able.
-    score = _bootstrap_permutation_test_score(
-        clone(estimator), X, y, groups, cv, scorer, fit_params=fit_params, bootstrap_n=bootstrap_n
-    )
-    permutation_scores = Parallel(n_jobs=n_jobs, verbose=verbose)(
-        delayed(_bootstrap_permutation_test_score)(
-            clone(estimator),
-            X,
-            _shuffle(y),
-            groups,
-            cv,
-            scorer,
-            fit_params=fit_params,
-            bootstrap_n=bootstrap_n
-        )
-        for _ in range(n_permutations)
-    )
-    permutation_scores = np.array(permutation_scores)
-    pvalue = (np.sum(permutation_scores >= score) + 1.0) / (n_permutations + 1)
-    return score, permutation_scores, pvalue
-
-
-def _bootstrap_permutation_test_score(estimator, X, y, groups, cv, scorer, fit_params, bootstrap_n):
-    """Auxiliary function for permutation_test_score"""
-    # Adjust length of sample weights
-    fit_params = fit_params if fit_params is not None else {}
-    avg_score = []
-    for train, test in cv.split(X, y, groups):
-        X_train, y_train = _safe_split(estimator, X, y, train)
-        X_test, y_test = _safe_split(estimator, X, y, test, train)
-        fit_params = _check_fit_params(X, fit_params, train)
-        X_train, y_train = _bootstrap_train(X_train, y_train, n_samples=bootstrap_n)
-        estimator.fit(X_train, y_train, **fit_params)
-        avg_score.append(scorer(estimator, X_test, y_test))
-    return np.mean(avg_score)
-
-
-def _bootstrap_train(X_train, y_train, n_samples, group_size=5):
-    X_bootstrap = []
-    y_boostrap = []
-    
-    for _ in range(n_samples):
-        X_subset, y_subset = resample(X_train, y_train, n_samples=5)
-        X_bootstrap.append(np.mean(X_subset, axis=0))
-        y_boostrap.append(np.mean(y_subset))
-    
-    return np.array(X_bootstrap), np.array(y_boostrap)
