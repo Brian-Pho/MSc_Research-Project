@@ -1,5 +1,6 @@
 from os.path import join, exists
 import numpy as np
+import pandas as pd
 
 
 class Result:
@@ -71,6 +72,16 @@ def save_results(results, fn, output_folder):
     return output_path
 
 
+def load_results(fn, input_folder):
+    """
+    Load results from a csv file.
+    """
+    fn = fn + '.csv'
+    input_path = join(input_folder, fn)
+    results = pd.read_csv(input_path)
+    return results
+
+
 def save_perm_score(perm_scores, fn, output_folder):
     """
     Save the permutation scores to a NumPy array file.
@@ -79,3 +90,13 @@ def save_perm_score(perm_scores, fn, output_folder):
     output_path = join(output_folder, fn)
     np.save(output_path, perm_scores)
     return output_path
+
+
+def load_perm_score(fn, input_folder):
+    """
+    Load a NumPy array file of permutation scores.
+    """
+    fn = fn + '.npy'
+    input_path = join(input_folder, fn)
+    perm_scores = np.load(input_path)
+    return perm_scores
