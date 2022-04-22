@@ -78,8 +78,8 @@ def load_results(fn, input_folder):
     """
     fn = fn + '.csv'
     input_path = join(input_folder, fn)
-    results = pd.read_csv(input_path)
-    return results
+    results = pd.read_csv(input_path, index_col=0)
+    return results, input_path
 
 
 def save_perm_score(perm_scores, fn, output_folder):
