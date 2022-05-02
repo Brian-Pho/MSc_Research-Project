@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 
 from .paths import POWER_FC, ADHD, PLS_WEIGHTS, RIDGE_WEIGHTS, BIOBANK_LABELS
+from .power_atlas import to_power_fc_vector
 from .wisc import WISC_LEVEL
 
 
@@ -63,7 +64,7 @@ def get_fc_data():
     for path in fc_paths:
         subject_id = get_subject_id_from_path(path)
         subject_fc = np.load(path)
-        fcs[subject_id] = subject_fc[np.triu_indices(264, k=1)]
+        fcs[subject_id] = to_power_fc_vector(subject_fc)
 
     return fcs
 

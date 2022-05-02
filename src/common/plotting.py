@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from nilearn import plotting, datasets
 
 from common.paths import POWER
+from common.power_atlas import to_power_fc_matrix
 
 power = datasets.fetch_coords_power_2011()
 coords = np.vstack((power.rois['x'], power.rois['y'], power.rois['z'])).T
@@ -16,7 +17,7 @@ def plot_connections(connections, vmin=None, vmax=None, pos_neg=False, threshold
     """
     Plot functional connectivity connections in multiple ways (E.g. Matrix and glass-brain/graph).
     """
-    fc = create_power_fc_matrix(connections)
+    fc = to_power_fc_matrix(connections)
     
     if show_matrix:
         plot_fc_matrix(fc, vmin, vmax)
@@ -63,18 +64,6 @@ def plot_node_strengths(node_strength, threshold=None, cmap="Greens"):
     """
     plotting.plot_markers(node_strength, coords, node_threshold=threshold,
                           node_vmin=0, node_vmax=1, node_cmap=cmap)
-
-
-def create_power_fc_matrix(connections):
-    """
-    Create a Power et al. functional connectivity matrix of 264 x 264 ROIs.
-    
-    Sets the diagonal to zero and makes the matrix symmetric about the diagonal.
-    """
-    fc = np.zeros((264, 264))
-    fc[np.triu_indices_from(fc, k=1)] = connections
-    fc = fc + fc.T
-    return fc
 
 
 def convert_fc_to_node_strength(fc):
