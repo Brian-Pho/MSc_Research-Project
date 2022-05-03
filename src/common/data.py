@@ -4,9 +4,9 @@ import os
 import numpy as np
 import pandas as pd
 
-from .paths import POWER_FC, ADHD, PLS_WEIGHTS, RIDGE_WEIGHTS, BIOBANK_LABELS
-from .power_atlas import to_power_fc_vector
-from .wisc import WISC_LEVEL
+from common.paths import POWER_FC, ADHD, PLS_WEIGHTS, RIDGE_WEIGHTS, BIOBANK_LABELS
+from common.power_atlas import to_power_fc_vector, get_power_fc_vector_labels
+from common.wisc import WISC_LEVEL
 
 
 def get_data(wisc_level=5, label_path=ADHD):
@@ -143,3 +143,21 @@ def generate_fake_data(X, y):
     y_fake = np.random.default_rng().normal(y_mean, y_std, size=y.shape)
     
     return X_fake, y_fake
+
+
+def filter_data_by_network(X, network, only_within_network=False, only_connections=True):
+    vector_labels = get_power_fc_vector_labels(True)
+    
+    if only_within_network:
+        network_connection_indices = [index for (index, connection) in enumerate(vector_labels) if connection[0] == network and connection[1] == network]
+    else:
+        network_connection_indices = [index for (index, connection) in enumerate(vector_labels) if connection[0] == network or connection[1] == network]
+    
+    if only_connections:
+        X_filtered = X[:, network_connection_indices]
+    else:
+        X_filtered = np.zeros(X.shape)
+        X_filtered[:, network_connection_indices] = X[:, network_connection_indices]
+    
+    return X_filtered
+    
