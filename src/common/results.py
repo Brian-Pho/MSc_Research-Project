@@ -60,14 +60,14 @@ class CVResult(Result):
         return result
         
     
-def save_results(results, fn, output_folder):
+def save_results(results, fn, output_folder, append=False):
     """
     Save by appending the modeling results to a csv file.
     """
     fn = fn + '.csv'
     output_path = join(output_folder, fn)
     output_exists = exists(output_path)
-    m = 'a' if output_exists else 'w'
+    m = 'a' if output_exists and append else 'w'
     results.to_csv(output_path, mode=m, header=not output_exists)
     return output_path
 
