@@ -145,7 +145,7 @@ def generate_fake_data(X, y):
     return X_fake, y_fake
 
 
-def filter_data_by_network(X, network, only_within_network=False, only_connections=True):
+def filter_data_by_network(X, network, only_within_network=False, keep_connections=False):
     vector_labels = get_power_fc_vector_labels(True)
     
     if only_within_network:
@@ -153,11 +153,11 @@ def filter_data_by_network(X, network, only_within_network=False, only_connectio
     else:
         network_connection_indices = [index for (index, connection) in enumerate(vector_labels) if connection[0] == network or connection[1] == network]
     
-    if only_connections:
-        X_filtered = X[:, network_connection_indices]
-    else:
+    if keep_connections:
         X_filtered = np.zeros(X.shape)
         X_filtered[:, network_connection_indices] = X[:, network_connection_indices]
+    else:
+        X_filtered = X[:, network_connection_indices]
     
     return X_filtered
     
