@@ -83,7 +83,7 @@ def to_power_fc_vector(fc_matrix):
     return fc_matrix[np.triu_indices(POWER_NUM_NODES, k=1)]
 
 
-def get_power_fc_matrix_labels(return_system=False):
+def get_power_fc_matrix_labels(return_system=True):
     """
     Gets a matrix (264 x 264) where each element is a pair representing the endpoints of that connection.
     
@@ -94,13 +94,12 @@ def get_power_fc_matrix_labels(return_system=False):
     label_matrix = []
     
     for row_label in labels:
-        row_labels = []
         label_matrix.append([(row_label, col_label) for col_label in labels])
     
     return np.array(label_matrix)
 
 
-def get_power_fc_vector_labels(return_system=False):
+def get_power_fc_vector_labels(return_system=True):
     """
     Gets a vector (34716 x 1) where each element is a pair representing the endpoints of that connection.
     """

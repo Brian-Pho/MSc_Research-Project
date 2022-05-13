@@ -10,9 +10,9 @@ SCALED_SUBTESTS = [
     'WISC_PS_Scaled',
     'WISC_SS_Scaled',
 ]
-
 RAW_SUBTESTS = [subtest.replace("Scaled", "Raw") for subtest in SCALED_SUBTESTS]
 
+FSIQ = ['WISC_FSIQ']
 PRIMARY_INDICES = [
     'WISC_VSI',
     'WISC_VCI',
@@ -20,8 +20,6 @@ PRIMARY_INDICES = [
     'WISC_WMI',
     'WISC_PSI',
 ]
-
-FSIQ = ['WISC_FSIQ']
 
 WISC_LEVEL = {
     0: FSIQ + PRIMARY_INDICES + SCALED_SUBTESTS,
