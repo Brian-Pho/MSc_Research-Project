@@ -74,3 +74,12 @@ def convert_fc_to_node_strength(fc):
     node_strength = np.sum(np.abs(fc), axis=0)
     node_strength /= np.max(node_strength)
     return node_strength
+
+
+def round_to_sig_digs(number, n_sig_digs=1):
+    """
+    Rounds a floating number to the specified number of significant digits.
+    """
+    ndigits = n_sig_digs - int(math.floor(math.log10(abs(number)))) - 1
+    
+    return round(number, ndigits)
