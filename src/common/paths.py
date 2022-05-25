@@ -7,6 +7,7 @@ REPO_DIR = '/home/bpho/Documents/MSc_Research-Project'
 # Common folders
 BIOBANK_LABELS = join(BPHO_DIR, 'Biobank Labels')
 SCRATCH_DATA = join(REPO_DIR, 'scratch_data')
+IMAGES = join(REPO_DIR, 'images')
 
 # Power atlas labels
 RAW_POWER = join(SCRATCH_DATA, 'power_atlas_labels.xls')
@@ -31,6 +32,11 @@ ADHD_TWO = join(BIOBANK_LABELS, 'Subjects_with_WISC (adhd 2).csv')
 MODEL_WEIGHTS = join(SCRATCH_DATA, 'model_weights')
 PLS_WEIGHTS = join(MODEL_WEIGHTS, 'PLS')
 RIDGE_WEIGHTS = join(MODEL_WEIGHTS, 'Ridge')
+
+# Model weight images
+MODEL_WEIGHT_IMGS = join(IMAGES, 'Models')
+RIDGE_WEIGHT_IMGS = join(MODEL_WEIGHT_IMGS, 'Ridge')
+PLS_WEIGHT_IMGS = join(MODEL_WEIGHT_IMGS, 'PLS')
 
 # Model results
 MODEL_RESULTS = join(SCRATCH_DATA, 'model_results')

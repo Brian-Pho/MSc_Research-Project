@@ -8,6 +8,7 @@ import pandas as pd
 from common.paths import POWER
 
 POWER_NUM_NODES = 264
+POWER_NUM_NETWORKS = 13
 POWER_DATASET = datasets.fetch_coords_power_2011()
 POWER_COORDS = np.vstack((POWER_DATASET.rois['x'], POWER_DATASET.rois['y'], POWER_DATASET.rois['z'])).T
 POWER_LABELS = pd.read_csv(POWER, index_col='ROI')
@@ -119,3 +120,15 @@ def get_power_mpl_legend():
         power_legend_patches.append(mpatches.Patch(color=color, label=system))
     
     return power_legend_patches
+
+
+def to_power_network_fc_matrix(fc_vector):
+    """
+    Converts a Power network connectivity vector (91 x 1) to a matrix (13 x 13).
+    
+    Sets the diagonal to within-network connections and makes the matrix symmetric about the diagonal.
+    """
+    fc_matrix = np.zeros((POWER_NUM_NETWORKS, POWER_NUM_NETWORKS))
+    fc_matrix[np.triu_indices_from(fc_matrix, k=0)] = fc_vector
+    fc_matrix = fc_matrix + fc_matrix.T
+    return fc_matrix

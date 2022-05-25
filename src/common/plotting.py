@@ -16,25 +16,25 @@ def plot_connections(connections, vmin=None, vmax=None, threshold="99.7%", show_
     """
     Plot functional connectivity connections in multiple ways (E.g. Matrix and glass-brain/graph).
     """
-    fc = to_power_fc_matrix(connections)
+    fc_matrix = to_power_fc_matrix(connections)
     
     if show_matrix:
-        plot_fc_matrix(fc, vmin, vmax)
-    plot_fc_graph(fc, vmin, vmax, threshold=threshold, title=title)
+        plot_fc_matrix(fc_matrix, vmin, vmax)
+    plot_fc_graph(fc_matrix, vmin, vmax, threshold=threshold, title=title)
 
     if show_pos_neg:
-        positive_edges = np.clip(fc, 0, np.max(fc))
+        positive_edges = get_positive_connections(fc_matrix)
         positive_node_strength = convert_fc_to_node_strength(positive_edges)
         plot_fc_graph(positive_edges, 0, vmax, POS_CMAP, threshold=threshold)
         plot_node_strengths(positive_node_strength, 0, POS_CMAP)
 
-        negative_edges = np.clip(fc, np.min(fc), 0)
+        negative_edges = get_negative_connections(fc_matrix)
         negative_node_strength = convert_fc_to_node_strength(negative_edges)
         plot_fc_graph(-negative_edges, 0, vmax, NEG_CMAP, threshold=threshold)
         plot_node_strengths(negative_node_strength, 0, NEG_CMAP)
     
     if show_node_strength:
-        node_strength = convert_fc_to_node_strength(fc)
+        node_strength = convert_fc_to_node_strength(fc_matrix)
         plot_node_strengths(node_strength, 0, "Greens")
         plot_node_strengths(node_strength, 0.5, "Greens")
 
@@ -76,10 +76,18 @@ def convert_fc_to_node_strength(fc):
     return node_strength
 
 
-def round_to_sig_digs(number, n_sig_digs=1):
+def get_positive_connections(fc_matrix):
     """
-    Rounds a floating number to the specified number of significant digits.
+    Gets only the positive connections from the functional connectivity matrix.
     """
-    ndigits = n_sig_digs - int(math.floor(math.log10(abs(number)))) - 1
-    
-    return round(number, ndigits)
+    positive_connections = np.clip(fc_matrix, 0, np.max(fc_matrix))
+    return positive_connections
+
+
+def get_negative_connections(fc_matrix):
+    """
+    Gets only the negative connections from the functional connectivity matrix.
+
+    """
+    negative_connections = np.clip(fc_matrix, np.min(fc_matrix), 0)
+    return negative_connections
