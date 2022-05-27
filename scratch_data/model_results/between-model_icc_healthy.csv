@@ -1,7 +1,0 @@
-,Population,Target,Bin,Type,Description,ICC,F,df1,df2,pval,CI95%
-0,healthy,WISC_FSIQ,All,ICC1,Single raters absolute,0.978,89.228,34715,34716,0.0,[0.98 0.98]
-1,healthy,WISC_VSI,All,ICC1,Single raters absolute,0.978,90.155,34715,34716,0.0,[0.98 0.98]
-2,healthy,WISC_VCI,All,ICC1,Single raters absolute,0.941,33.087,34715,34716,0.0,[0.94 0.94]
-3,healthy,WISC_FRI,All,ICC1,Single raters absolute,0.976,83.172,34715,34716,0.0,[0.98 0.98]
-4,healthy,WISC_WMI,All,ICC1,Single raters absolute,0.872,14.657,34715,34716,0.0,[0.87 0.87]
-5,healthy,WISC_PSI,All,ICC1,Single raters absolute,0.977,85.075,34715,34716,0.0,[0.98 0.98]
