@@ -2,6 +2,7 @@ import numpy as np
 
 BIN_LABELS = ["All", "Bin 1", "Bin 2", "Bin 3"]
 ONLY_BIN_LABELS = ["Bin 1", "Bin 2", "Bin 3"]
+EQUAL_BIN_LABELS = ["Bin 1", "Bin 2 Equal", "Bin 3"]
 
 
 def get_age_bins_indices(ages, num_bins):

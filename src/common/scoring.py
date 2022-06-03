@@ -11,7 +11,7 @@ RKF_5_5 = RepeatedKFold(n_splits=5, n_repeats=5)
 
 def multimetric_scorer(model, X, y):
     """
-    Scores the model on multiple metrics (Pearson r, MSE).
+    Scores the model on multiple metrics (Pearson r, MSE, r2).
     """
     y_pred = model.predict(X)
     
