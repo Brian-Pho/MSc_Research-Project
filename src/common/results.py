@@ -64,11 +64,12 @@ def save_results(results, fn, output_folder, append=False):
     """
     Save by appending the modeling results to a csv file.
     """
-    fn = fn + '.csv'
+    if not fn.endswith('.csv'):
+        fn += '.csv'
     output_path = join(output_folder, fn)
-    output_exists = exists(output_path)
-    m = 'a' if output_exists and append else 'w'
-    results.to_csv(output_path, mode=m, header=not output_exists)
+    m = 'a' if exists(output_path) and append else 'w'
+    h = False if m == 'a' else True
+    results.to_csv(output_path, mode=m, header=h)
     return output_path
 
 
@@ -76,7 +77,7 @@ def load_results(fn, input_folder):
     """
     Load results from a csv file.
     """
-    fn = fn + '.csv'
+    fn += '.csv'
     input_path = join(input_folder, fn)
     results = pd.read_csv(input_path, index_col=0)
     return results, input_path
