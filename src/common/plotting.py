@@ -2,10 +2,11 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from mne.viz import circular_layout, plot_connectivity_circle
 from nilearn import plotting, datasets
 
 from common.paths import POWER
-from common.power_atlas import POWER_DATASET, POWER_COORDS, POWER_LABELS, POWER_NODE_COLORS, to_power_fc_matrix
+from common.power_atlas import POWER_DATASET, POWER_COORDS, POWER_LABELS, POWER_LEGEND, POWER_NODE_COLORS, to_power_fc_matrix
 
 DEFAULT_CMAP = 'bwr'
 POS_CMAP = 'YlOrRd'
@@ -66,6 +67,21 @@ def plot_node_strengths(node_strength, threshold=None, cmap=DEFAULT_CMAP):
                           node_vmin=0, node_vmax=1, node_cmap=cmap)
 
 
+def plot_circular_graph(fc, title=None, sign='pos', vmin=0, fig=None):
+    cm_sign = 'Reds' if sign == 'pos' else 'Blues'
+    node_names = POWER_LEGEND.values()
+    node_colors = POWER_LEGEND.keys()
+    node_order = list(node_names)
+    node_angles = circular_layout(node_names, node_order)
+    
+    return plot_connectivity_circle(
+        fc, node_names, node_angles=node_angles, 
+        colormap=cm_sign, show=True, node_colors=node_colors, facecolor='white', 
+        textcolor='black', node_edgecolor='white', colorbar=True, fig=fig,
+        title=title, vmin=vmin
+    )
+    
+    
 def convert_fc_to_node_strength(fc):
     """
     Convert all edges connected to a node to a node strength representing the
