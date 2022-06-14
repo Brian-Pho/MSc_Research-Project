@@ -136,6 +136,12 @@ def get_subjects(subject_folder, desired_subjects=None):
 
 
 def generate_fake_data(X, y):
+    """
+    Generates a fake dataset that matches the shape of X and y. 
+    
+    The fake data is generated from a normal distribution with matching mean and standard 
+    deviation as X and y respectively.
+    """
     X_mean, X_std = np.mean(X), np.std(X)
     y_mean, y_std = np.mean(y), np.std(y)
     
@@ -146,6 +152,13 @@ def generate_fake_data(X, y):
 
 
 def filter_data_by_network(X, network, only_within_network=False, keep_connections=False):
+    """
+    Filters a dataset by the given Power network.
+    
+    The output can be either only connections within a network or all connections where one endpoint
+    is the network. The output shape can also change to the network connections or fill the
+    unselected connections with zero (done to maintain original dataset shape).
+    """
     vector_labels = get_power_fc_vector_labels(True)
     
     if only_within_network:

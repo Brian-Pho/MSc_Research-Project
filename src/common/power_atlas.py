@@ -122,6 +122,34 @@ def get_power_mpl_legend():
     return power_legend_patches
 
 
+def to_power_network_fc_vector(fc_node_vector, reduction_func=np.mean):
+    """
+    Reduces a Power FC vector (34716 x 1) representing all node connections to a 
+    Power FC network vector (91 x 1) representing all network connections.
+    
+    Can reduce the vector by various functions (mean, sum, sum of absolute value, etc.)
+    """
+    # Get all connections for each network pair
+    network_weights = dict()
+    vector_labels = get_power_fc_vector_labels()
+    
+    for endpoint, weight in zip(vector_labels, fc_node_vector):
+        endpoint = frozenset(endpoint)  # Use frozenset because order of network pair doesn't matter
+
+        if endpoint not in network_weights:
+            network_weights[endpoint] = [weight]
+        else:
+            network_weights[endpoint].append(weight)
+    
+    # Reduce the connections for each network pair
+    network_reduced_weights = dict()
+    for network, weights in network_weights.items():
+        network_reduced_weights[network] = reduction_func(weights)
+    
+    fc_network_vector = list(network_reduced_weights.values())
+    return fc_network_vector
+
+    
 def to_power_network_fc_matrix(fc_vector):
     """
     Converts a Power network connectivity vector (91 x 1) to a matrix (13 x 13).
