@@ -67,7 +67,7 @@ def plot_node_strengths(node_strength, threshold=None, cmap=DEFAULT_CMAP):
                           node_vmin=0, node_vmax=1, node_cmap=cmap)
 
 
-def plot_circular_graph(fc, title=None, sign='pos', vmin=0, fig=None):
+def plot_circular_graph(fc, title=None, sign='pos', vmin=None, vmax=None, fig=None):
     cm_sign = 'Reds' if sign == 'pos' else 'Blues'
     node_names = POWER_LEGEND.values()
     node_colors = POWER_LEGEND.keys()
@@ -78,7 +78,7 @@ def plot_circular_graph(fc, title=None, sign='pos', vmin=0, fig=None):
         fc, node_names, node_angles=node_angles, 
         colormap=cm_sign, show=True, node_colors=node_colors, facecolor='white', 
         textcolor='black', node_edgecolor='white', colorbar=True, fig=fig,
-        title=title, vmin=vmin
+        title=title, vmin=vmin, vmax=vmax
     )
     
     

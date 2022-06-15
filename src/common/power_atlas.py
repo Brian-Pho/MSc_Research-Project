@@ -158,5 +158,5 @@ def to_power_network_fc_matrix(fc_vector):
     """
     fc_matrix = np.zeros((POWER_NUM_NETWORKS, POWER_NUM_NETWORKS))
     fc_matrix[np.triu_indices_from(fc_matrix, k=0)] = fc_vector
-    fc_matrix = fc_matrix + fc_matrix.T
+    fc_matrix = fc_matrix + fc_matrix.T - np.diag(np.diag(fc_matrix))
     return fc_matrix
