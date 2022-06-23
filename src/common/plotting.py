@@ -15,7 +15,7 @@ NEG_CMAP = 'PuBu'
 
 def plot_connections(connections, vmin=None, vmax=None, threshold="99.7%", show_matrix=False, show_pos_neg=True, show_node_strength=False, title=None):
     """
-    Plot functional connectivity connections in multiple ways (E.g. Matrix and glass-brain/graph).
+    Plots a functional connectivity connections in multiple ways (E.g. Matrix and glass-brain/graph).
     """
     fc_matrix = to_power_fc_matrix(connections)
     
@@ -42,7 +42,7 @@ def plot_connections(connections, vmin=None, vmax=None, threshold="99.7%", show_
 
 def plot_fc_matrix(fc, vmin=None, vmax=None, cmap=DEFAULT_CMAP, title=None):
     """
-    Plot functional connectivity matrix where the x and y axis represent nodes, and
+    Plots a functional connectivity matrix where the x and y axis represent nodes, and
     the cell value represents the correlation strength.
     """
     plotting.plot_matrix(fc, vmin=vmin, vmax=vmax, colorbar=True, cmap=cmap, title=title)
@@ -50,7 +50,7 @@ def plot_fc_matrix(fc, vmin=None, vmax=None, cmap=DEFAULT_CMAP, title=None):
 
 def plot_fc_graph(fc, emin=None, emax=None, cmap=DEFAULT_CMAP, threshold="99.7%", title=None):
     """
-    Plot functional connectivity graph where nodes in a brain are connected by edges 
+    Plots a functional connectivity graph where nodes in a brain are connected by edges 
     of varying strength.
     """
     plotting.plot_connectome(fc, POWER_COORDS, node_size=5, colorbar=True, node_color=POWER_NODE_COLORS,
@@ -60,7 +60,7 @@ def plot_fc_graph(fc, emin=None, emax=None, cmap=DEFAULT_CMAP, threshold="99.7%"
 
 def plot_node_strengths(node_strength, threshold=None, cmap=DEFAULT_CMAP):
     """
-    Plot node strengths where each node is colored darker based on the absolute sum of
+    Plots node strengths where each node is colored darker based on the absolute sum of
     edge weights connected to that node.
     """
     plotting.plot_markers(node_strength, POWER_COORDS, node_threshold=threshold,
@@ -68,6 +68,10 @@ def plot_node_strengths(node_strength, threshold=None, cmap=DEFAULT_CMAP):
 
 
 def plot_circular_graph(fc, title=None, sign='pos', vmin=None, vmax=None, fig=None):
+    """
+    Plots a circular graph where the circle is divided into arcs, each arc representing one
+    Power network.
+    """
     cm_sign = 'Reds' if sign == 'pos' else 'Blues'
     node_names = POWER_LEGEND.values()
     node_colors = POWER_LEGEND.keys()
@@ -84,7 +88,7 @@ def plot_circular_graph(fc, title=None, sign='pos', vmin=None, vmax=None, fig=No
     
 def convert_fc_to_node_strength(fc):
     """
-    Convert all edges connected to a node to a node strength representing the
+    Converts all edges connected to a node to a node strength representing the
     absolute sum of all edges connected to that node.
     """
     node_strength = np.sum(np.abs(fc), axis=0)
@@ -103,7 +107,23 @@ def get_positive_connections(fc_matrix):
 def get_negative_connections(fc_matrix):
     """
     Gets only the negative connections from the functional connectivity matrix.
-
     """
     negative_connections = np.clip(fc_matrix, np.min(fc_matrix), 0)
     return negative_connections
+
+
+def get_matrix_mask(fc_matrix_shape, part='upper'):
+    """
+    Gets a mask for the upper/lower triangle of a matrix.
+    
+    The mask is used to hide duplicate data since the matrix is symmetric about the diagonal.
+    """
+    mask = np.zeros(fc_matrix_shape)
+    
+    if part == 'upper':
+        mask[np.triu_indices_from(mask, k=1)] = True
+    elif part == 'lower':
+        mask[np.tril_indices_from(mask, k=1)] = True
+    
+    return mask
+    

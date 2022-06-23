@@ -7,7 +7,7 @@ EQUAL_BIN_LABELS = ["Bin 1", "Bin 2 Equal", "Bin 3"]
 
 def get_age_bins_indices(ages, num_bins):
     """
-    Locate the subjects/indicies where the condition is true.
+    Locates the samples/indicies where the condition is true.
     """
     bin_indices = []
     
@@ -26,7 +26,7 @@ def get_age_bins_indices(ages, num_bins):
 
 def bin_by_age(X, y, ages, num_bins):
     """
-    Bin the dataset by age.
+    Bins the dataset by age.
     
     Returns three age bins: 6-> 9, 9 -> 12, and 12 -> 16.
     """
@@ -43,7 +43,7 @@ def bin_by_age(X, y, ages, num_bins):
 
 def bin_data(X, y, ages=None, include_all=False, num_bins=3):
     """
-    Bin the dataset by age if ages is given.
+    Bins the dataset by age if ages is given.
     
     Returns either the original data or the binned data.
     """

@@ -5,13 +5,13 @@ import pandas as pd
 
 class Result:
     """
-    Hold the results from modeling.
+    Holds the results from modeling.
     
     Used to keep the reporting of results consistent across models and methodologies.
     """
     def __init__(self, model, target, train, test, score, pvalue):
         """
-        Initialize the class with the results.
+        Initializes the class with the results.
         """
         self.model = model
         self.target = target
@@ -22,7 +22,7 @@ class Result:
     
     def to_dict(self):
         """
-        Convert the class into a dictionary.
+        Converts the class into a dictionary.
         """
         return {
             'Model': self.model,
@@ -37,7 +37,7 @@ class Result:
 class CVResult(Result):
     def __init__(self, model, target, train, test, score, pvalue, population, n_permutations):
         """
-        Initialize the class with the results.
+        Initializes the class with the results.
         """
         super().__init__(model, target, train, test, score, pvalue)
         self.population = population
@@ -45,7 +45,7 @@ class CVResult(Result):
     
     def to_dict(self):
         """
-        Convert the class into a dictionary.
+        Converts the class into a dictionary.
         """
         result = super().to_dict()
         result['Population'] = self.population
@@ -54,7 +54,7 @@ class CVResult(Result):
     
     def to_string(self):
         """
-        Convert the class into a string.
+        Converts the class into a string.
         """
         result = f'Model: {self.model}, Target: {self.target}, Train: {self.train}, Test: {self.test}, Population: {self.population}, Num Perm: {self.n_permutations}'
         return result
@@ -62,7 +62,7 @@ class CVResult(Result):
     
 def save_results(results, fn, output_folder, append=False):
     """
-    Save by appending the modeling results to a csv file.
+    Saves by appending the modeling results to a csv file.
     """
     if not fn.endswith('.csv'):
         fn += '.csv'
@@ -75,7 +75,7 @@ def save_results(results, fn, output_folder, append=False):
 
 def load_results(fn, input_folder):
     """
-    Load results from a csv file.
+    Loads modeling results from a csv file.
     """
     fn += '.csv'
     input_path = join(input_folder, fn)
@@ -85,7 +85,7 @@ def load_results(fn, input_folder):
 
 def save_perm_score(perm_scores, fn, output_folder):
     """
-    Save the permutation scores to a NumPy array file.
+    Saves the permutation scores to a NumPy array file.
     """
     fn = fn + '.npy'
     output_path = join(output_folder, fn)
@@ -95,7 +95,7 @@ def save_perm_score(perm_scores, fn, output_folder):
 
 def load_perm_score(fn, input_folder):
     """
-    Load a NumPy array file of permutation scores.
+    Loads a NumPy array file of permutation scores.
     """
     fn = fn + '.npy'
     input_path = join(input_folder, fn)

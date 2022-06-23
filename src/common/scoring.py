@@ -41,7 +41,7 @@ def unimetric_scorer(model, X, y):
 
 def calc_pvalue(permutation_scores, score, n_permutations):
     """
-    Calculate the empirical p-value against the null hypothesis that features and targets
+    Calculates the empirical p-value against the null hypothesis that features and targets
     are independent.
     
     Get the number of permutation scores above the true score plus one, divided by
