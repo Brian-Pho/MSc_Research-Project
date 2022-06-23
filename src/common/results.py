@@ -77,7 +77,8 @@ def load_results(fn, input_folder):
     """
     Loads modeling results from a csv file.
     """
-    fn += '.csv'
+    if not fn.endswith('.csv'):
+        fn += '.csv'
     input_path = join(input_folder, fn)
     results = pd.read_csv(input_path, index_col=0)
     return results, input_path
@@ -87,7 +88,8 @@ def save_perm_score(perm_scores, fn, output_folder):
     """
     Saves the permutation scores to a NumPy array file.
     """
-    fn = fn + '.npy'
+    if not fn.endswith('.npy'):
+        fn += '.npy'
     output_path = join(output_folder, fn)
     np.save(output_path, perm_scores)
     return output_path
@@ -97,7 +99,8 @@ def load_perm_score(fn, input_folder):
     """
     Loads a NumPy array file of permutation scores.
     """
-    fn = fn + '.npy'
+    if not fn.endswith('.npy'):
+        fn += '.npy'
     input_path = join(input_folder, fn)
     perm_scores = np.load(input_path)
     return perm_scores
