@@ -174,7 +174,7 @@ def select_k_connections(fc_vector, k=10, mode='top'):
     if mode == 'top':
         fc_vector_mode_k = np.zeros(fc_vector.shape)
         mode_k_indicies = np.argsort(fc_vector)[-k:]
-    elif mode == 'bottom':
+    elif mode == 'bottom' or mode == 'bot':
         fc_vector_mode_k = np.full(fc_vector.shape, np.max(fc_vector))
         mode_k_indicies = np.argsort(fc_vector)[:k]
 

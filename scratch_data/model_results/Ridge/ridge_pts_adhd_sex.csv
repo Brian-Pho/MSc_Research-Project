@@ -1,0 +1,2 @@
+,Model,Population,Target,Bin,Alpha,Score,P-value
+0,ridge,adhd,sex,all,2301,0.74,9.01E-22
