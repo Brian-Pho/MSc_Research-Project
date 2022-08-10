@@ -173,10 +173,13 @@ def select_k_connections(fc_vector, k=10, mode='top'):
     
     if mode == 'top':
         fc_vector_mode_k = np.zeros(fc_vector.shape)
-        mode_k_indicies = np.argsort(fc_vector)[-k:]
+        mode_k_indicies = np.argpartition(fc_vector, -k)[-k:]
     elif mode == 'bottom' or mode == 'bot':
         fc_vector_mode_k = np.full(fc_vector.shape, np.max(fc_vector))
-        mode_k_indicies = np.argsort(fc_vector)[:k]
+        mode_k_indicies = np.argpartition(fc_vector, k)[:k]
+    elif mode == 'both' or not mode:
+        fc_vector_mode_k = np.zeros(fc_vector.shape)
+        mode_k_indicies = np.argpartition(np.abs(fc_vector), -k)[-k:]
 
     fc_vector_mode_k[mode_k_indicies] = fc_vector[mode_k_indicies]
     
