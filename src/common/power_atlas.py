@@ -24,7 +24,7 @@ POWER_NETWORKS = {
     'SAL': 'Salience',
     'MEM': 'Memory retrieval',
     'VAN': 'Ventral attention',
-    'CBR': 'Cerebellar',
+    'CER': 'Cerebellar',
     'SUB': 'Subcortical',
     'DAN': 'Dorsal attention',
 }
@@ -42,7 +42,7 @@ POWER_LEGEND = {
     'navy': POWER_NETWORKS['SAL'],
     'Gray': POWER_NETWORKS['MEM'],
     'lime': POWER_NETWORKS['VAN'],
-    'lightsteelblue': POWER_NETWORKS['CBR'],
+    'lightsteelblue': POWER_NETWORKS['CER'],
     'Brown': POWER_NETWORKS['SUB'],
     'Green': POWER_NETWORKS['DAN'],
 }
