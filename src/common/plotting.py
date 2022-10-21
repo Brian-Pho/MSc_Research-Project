@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from mne.viz import circular_layout, plot_connectivity_circle
+from mne.viz import circular_layout
+from mne_connectivity.viz import plot_connectivity_circle
 from nilearn import plotting, datasets
 
 from common.paths import POWER
