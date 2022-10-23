@@ -1,6 +1,6 @@
 import matplotlib.patches as mpatches
 from nilearn import plotting, image, datasets
-from nilearn.input_data import NiftiSpheresMasker
+from nilearn.maskers import NiftiSpheresMasker
 from nilearn.connectome import ConnectivityMeasure
 import numpy as np
 import pandas as pd
@@ -9,7 +9,7 @@ from common.paths import POWER
 
 POWER_NUM_NODES = 264
 POWER_NUM_NETWORKS = 13
-POWER_DATASET = datasets.fetch_coords_power_2011()
+POWER_DATASET = datasets.fetch_coords_power_2011(legacy_format=False)
 POWER_COORDS = np.vstack((POWER_DATASET.rois['x'], POWER_DATASET.rois['y'], POWER_DATASET.rois['z'])).T
 POWER_LABELS = pd.read_csv(POWER, index_col='ROI')
 POWER_NODE_COLORS = POWER_LABELS['Color'].values.tolist()
