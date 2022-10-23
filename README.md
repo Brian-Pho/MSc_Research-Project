@@ -1,7 +1,14 @@
-# Using Machine Learning to Predict Cognition in Children and Adolescents with ADHD
+# Using Machine Learning To Identify Neural Mechanisms Underlying the Development of Cognition in Children and Adolescents With ADHD
 
-This repository contains the code for my Masters in Neuroscience research project: Using Machine Learning to Predict Cognition in Children and Adolescents with ADHD.
+Author: Brian Pho
 
-This project started on Sept 2020 and completed on Aug 2022 under the supervision of [Bobby Stojanoski](http://bobbystojanoski.com/) and [Yalda Mohsenzadeh](https://mohsenzadehlab.com/) at Western University.
+Supervisor: Stojanoski, Bobby, Ontario Tech University, The University of Western Ontario 
+Co-Supervisor: Mohsenzadeh, Yalda, The University of Western Ontario
 
-To view this project's detailed documentation and results, head over to the [Wiki](https://github.com/Brian-Pho/MSc_Research-Project/wiki).
+---
+
+This repository contains the code for my Masters in Neuroscience research project. The project started in September 2020 and finished in September 2022 under the supervision of [Bobby Stojanoski](http://bobbystojanoski.com/) and [Yalda Mohsenzadeh](https://mohsenzadehlab.com/) at Western University (The University of Western Ontario).
+
+To view this project's detailed documentation and results, head over to the [wiki](https://github.com/Brian-Pho/MSc_Research-Project/wiki).
+
+To read the completed thesis, download the PDF from [here](TODO).
