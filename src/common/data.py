@@ -1,3 +1,6 @@
+"""
+Holds the functions for getting the functional connectivity and WISC data.
+"""
 import glob
 import os
 

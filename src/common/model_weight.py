@@ -1,3 +1,6 @@
+"""
+Holds the functions for saving and loading model weights.
+"""
 import os
 
 import numpy as np
@@ -5,6 +8,33 @@ import numpy as np
 from common.binning import BIN_LABELS
 from common.paths import PLS_WEIGHTS, RIDGE_WEIGHTS
 from common.wisc import WISC_LEVEL
+
+
+def save_model_weight(model, population, measure, age_group, model_weight):
+    """
+    Saves the feature/model weights for a specific model, diagnosis,
+    WISC measure, and age bin.
+    
+    Parameters
+    ----------
+    model : str
+    population : str
+    measure : str
+    age_group : str
+    model_weight : np.array
+
+    Returns
+    -------
+    str
+        Location of the saved model weight.
+    
+    """
+    filename = f'{model}_{population}_{measure}_{age_group}.npy'
+    model_weight_folder = PLS_WEIGHTS if model == 'pls' else RIDGE_WEIGHTS
+    filepath = os.path.join(model_weight_folder, filename)
+    np.save(filepath, model_weight)
+    
+    return filepath
 
 
 def load_model_weight(model, population, measure, age_group):
@@ -24,9 +54,10 @@ def load_model_weight(model, population, measure, age_group):
     np.array
 
     """
-    coef_filename, model_weight_path = "", RIDGE_WEIGHTS
     if model == "pls":
-        coef_filename, model_weight_path = "_coef", PLS_WEIGHTS
+        coef_filename, model_weight_path = "", PLS_WEIGHTS
+    elif model == "ridge":
+        coef_filename, model_weight_path = "_coef", RIDGE_WEIGHTS
 
     weight_filepath = os.path.join(
         model_weight_path,

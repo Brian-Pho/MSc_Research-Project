@@ -1,3 +1,6 @@
+"""
+Holds the constants for the main program paths.
+"""
 from os.path import join
 
 # Main data and script locations

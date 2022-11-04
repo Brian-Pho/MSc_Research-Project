@@ -322,5 +322,7 @@ dependencies:
   - zipp=3.8.0
   - zlib=1.2.13
   - zstd=1.5.2
+  - pip:
+    - multipy==0.16
 prefix: /home/bpho/.conda/envs/venv
 

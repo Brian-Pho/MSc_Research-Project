@@ -1,3 +1,6 @@
+"""
+Holds the constants for the Weschler Intelligence Scale for Children (WISC).
+"""
 # The ten WISC-V scaled subtests.
 SCALED_SUBTESTS = [
     'WISC_BD_Scaled',

@@ -1,3 +1,6 @@
+"""
+Holds the functions and constants for manipulating the Power et al. (2014) atlas.
+"""
 import matplotlib.patches as mpatches
 import numpy as np
 import pandas as pd

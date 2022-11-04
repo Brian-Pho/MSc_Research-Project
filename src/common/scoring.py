@@ -1,3 +1,6 @@
+"""
+Holds the functions for scoring the model.
+"""
 import numpy as np
 from scipy import stats
 from sklearn.metrics import mean_squared_error, r2_score

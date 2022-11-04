@@ -1,3 +1,6 @@
+"""
+Holds the functions for the cross-prediction (out-of-sample cross-validation) procedure.
+"""
 from collections import deque
 
 import numpy as np

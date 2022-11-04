@@ -1,3 +1,6 @@
+"""
+Holds the functions for saving and loading the model's results and permutation test results.
+"""
 from os.path import join, exists
 
 import numpy as np

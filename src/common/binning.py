@@ -1,3 +1,6 @@
+"""
+Holds the functions for binning the dataset by age.
+"""
 import numpy as np
 
 BIN_LABELS = ["All", "Bin 1", "Bin 2", "Bin 3"]
@@ -118,3 +121,24 @@ def bin_data(X, y, ages=None, include_all=False, num_bins=3):
 
     return (np.array(X_bins, dtype=object), np.array(y_bins, dtype=object),
             np.array(bin_labels, dtype=object))
+
+
+def subsample_bin(X_bin, y_bin, num_samples):
+    """
+    Subsamples an age bin randomly for the given number of samples.
+    
+    Parameters
+    ----------
+    X_bin : np.array
+    y_bin : np.array
+    num_samples : int
+
+    Returns
+    -------
+    tuple
+        A tuple containing the subsampled X and y
+    
+    """
+    subsample_indices = np.random.choice(X_bin.shape[0], num_samples, replace=False)
+    
+    return X_bin[subsample_indices], y_bin[subsample_indices]

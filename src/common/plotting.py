@@ -1,3 +1,6 @@
+"""
+Holds the functions for plotting the brain data.
+"""
 import numpy as np
 from mne.viz import circular_layout
 from mne_connectivity.viz import plot_connectivity_circle
