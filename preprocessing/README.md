@@ -145,11 +145,11 @@ aa_doprocessing(aap);
 
 Good Subject
 
-![Good Subject](../images/Other/Good%20Subject%20T1.png)
+![Good Subject](../images/Raw Data/Structural/Good%20Subject%20T1.png)
 
 Bad Subject
 
-![Bad Subject](../images/Other/Bad%20Subject%20T1.png)
+![Bad Subject](../images/Raw Data/Structural/Bad%20Subject%20T1.png)
 
 ## Bad Subject List (Functional)
 
@@ -263,8 +263,8 @@ Bad Subject
 
 Good Subject
 
-![Good Subject](../images/Other/Good%20Subject%20BOLD.png)
+![Good Subject](../images/Raw Data/Functional/Good%20Subject%20BOLD.png)
 
 Bad Subject
 
-![Bad Subject](../images/Other/Bad%20Subject%20BOLD.png)
+![Bad Subject](../images/Raw Data/Functional/Bad%20Subject%20BOLD.png)

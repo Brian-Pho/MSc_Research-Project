@@ -1,3 +1,4 @@
+# The ten WISC-V scaled subtests.
 SCALED_SUBTESTS = [
     'WISC_BD_Scaled',
     'WISC_Similarities_Scaled',
@@ -12,6 +13,7 @@ SCALED_SUBTESTS = [
 ]
 RAW_SUBTESTS = [subtest.replace("Scaled", "Raw") for subtest in SCALED_SUBTESTS]
 
+# The five WISC-V primary indices and full-scale IQ.
 FSIQ = ['WISC_FSIQ']
 PRIMARY_INDICES = [
     'WISC_VSI',
@@ -21,6 +23,7 @@ PRIMARY_INDICES = [
     'WISC_PSI',
 ]
 
+# The WISC-V level/granularity we want.
 WISC_LEVEL = {
     0: FSIQ + PRIMARY_INDICES + SCALED_SUBTESTS,
     1: FSIQ,

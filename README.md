@@ -11,4 +11,4 @@ This repository contains the code for my Masters in Neuroscience research projec
 
 To view this project's detailed documentation and results, head over to the [wiki](https://github.com/Brian-Pho/MSc_Research-Project/wiki).
 
-To read the completed thesis, download the PDF from [here](TODO).
+To read the completed thesis, download the PDF from [here](https://ir.lib.uwo.ca/etd/8917/).
