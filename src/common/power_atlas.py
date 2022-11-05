@@ -98,6 +98,7 @@ def to_power_fc_matrix(fc_vector):
     fc_matrix = np.zeros((POWER_NUM_NODES, POWER_NUM_NODES))
     fc_matrix[np.triu_indices_from(fc_matrix, k=1)] = fc_vector
     fc_matrix = fc_matrix + fc_matrix.T
+
     return fc_matrix
 
 

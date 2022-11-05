@@ -174,7 +174,6 @@ def get_subjects(subject_folder, desired_subjects=None):
     list
 
     """
-    # TODO: CHANGE FUNCTION NAME
     subjects = [folder for folder in os.listdir(subject_folder) if
                 folder.startswith("sub-")]
 

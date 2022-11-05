@@ -180,6 +180,7 @@ def convert_fc_to_node_strength(fc):
     """
     node_strength = np.sum(np.abs(fc), axis=0)
     node_strength /= np.max(node_strength)
+
     return node_strength
 
 
@@ -196,8 +197,7 @@ def get_positive_connections(fc_matrix):
     positive_connections : np.array
 
     """
-    positive_connections = np.clip(fc_matrix, 0, np.max(fc_matrix))
-    return positive_connections
+    return np.clip(fc_matrix, 0, np.max(fc_matrix))
 
 
 def get_negative_connections(fc_matrix):
@@ -213,8 +213,7 @@ def get_negative_connections(fc_matrix):
     negative_connections : np.array
 
     """
-    negative_connections = np.clip(fc_matrix, np.min(fc_matrix), 0)
-    return negative_connections
+    return np.clip(fc_matrix, np.min(fc_matrix), 0)
 
 
 def get_matrix_mask(fc_matrix_shape, part='upper'):
