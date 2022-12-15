@@ -231,7 +231,7 @@ def to_power_network_fc_vector(fc_node_vector, reduction_func=np.mean):
     return fc_network_vector
 
 
-def to_power_network_fc_matrix(fc_vector):
+def to_power_network_fc_matrix(fc_network_vector):
     """
     Converts a Power network connectivity vector (91 x 1) to a matrix (13 x 13).
 
@@ -247,11 +247,33 @@ def to_power_network_fc_matrix(fc_vector):
     fc_matrix : np.array
 
     """
-    fc_matrix = np.zeros((POWER_NUM_NETWORKS, POWER_NUM_NETWORKS))
-    fc_matrix[np.triu_indices_from(fc_matrix, k=0)] = fc_vector
-    fc_matrix = fc_matrix + fc_matrix.T - np.diag(np.diag(fc_matrix))
+    fc_network_matrix = np.zeros((POWER_NUM_NETWORKS, POWER_NUM_NETWORKS))
+    fc_network_matrix[np.triu_indices_from(fc_network_matrix, k=0)] = fc_network_vector
+    fc_network_matrix = fc_network_matrix + fc_network_matrix.T - np.diag(np.diag(fc_network_matrix))
 
-    return fc_matrix
+    return fc_network_matrix
+
+
+def to_power_network_fc_matrix_node(fc_node_vector):
+    """
+    Reduces a Power FC vector (34716 x 1) to a matrix (13 x 13).
+
+    Sets the diagonal to within-network connections and makes the matrix
+    symmetric about the diagonal.
+
+    Parameters
+    ----------
+    fc_vector : np.array
+
+    Returns
+    -------
+    fc_matrix : np.array
+
+    """
+    fc_network_vector = to_power_network_fc_vector(fc_node_vector)
+    fc_network_matrix = to_power_network_fc_matrix(fc_network_vector)
+    
+    return fc_network_matrix
 
 
 def select_k_connections(fc_vector, k=10, mode='top'):

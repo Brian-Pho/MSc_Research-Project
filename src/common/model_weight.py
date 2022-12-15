@@ -10,7 +10,7 @@ from common.paths import PLS_WEIGHTS, RIDGE_WEIGHTS
 from common.wisc import WISC_LEVEL
 
 
-def save_model_weight(model, population, measure, age_group, model_weight):
+def save_model_weight(model, population, measure, age_group, model_weight, average=True, intercept=False):
     """
     Saves the feature/model weights for a specific model, diagnosis,
     WISC measure, and age bin.
@@ -22,6 +22,8 @@ def save_model_weight(model, population, measure, age_group, model_weight):
     measure : str
     age_group : str
     model_weight : np.array
+    average : bool
+    intercept : bool
 
     Returns
     -------
@@ -29,15 +31,16 @@ def save_model_weight(model, population, measure, age_group, model_weight):
         Location of the saved model weight.
     
     """
-    filename = f'{model}_{population}_{measure}_{age_group}.npy'
+    filename = f'{model}_{population}_{measure}_{age_group}{"_inte" if intercept else "_coef"}{"_avg" if average else ""}.npy'
     model_weight_folder = PLS_WEIGHTS if model == 'pls' else RIDGE_WEIGHTS
+        
     filepath = os.path.join(model_weight_folder, filename)
     np.save(filepath, model_weight)
     
     return filepath
 
 
-def load_model_weight(model, population, measure, age_group):
+def load_model_weight(model, population, measure, age_group, average=True, intercept=False):
     """
     Loads the feature/model weights for a specific model, diagnosis,
     WISC measure, and age bin.
@@ -48,25 +51,22 @@ def load_model_weight(model, population, measure, age_group):
     population : str
     measure : str
     age_group : str
+    average : bool
+    intercept : bool
 
     Returns
     -------
     np.array
 
     """
-    if model == "pls":
-        coef_filename, model_weight_path = "", PLS_WEIGHTS
-    elif model == "ridge":
-        coef_filename, model_weight_path = "_coef", RIDGE_WEIGHTS
-
-    weight_filepath = os.path.join(
-        model_weight_path,
-        f'{model}_{population}_{measure}_{age_group}{coef_filename}.npy')
-
-    return np.load(weight_filepath)
+    filename = f'{model}_{population}_{measure}_{age_group}{"_inte" if intercept else "_coef"}{"_avg" if average else ""}.npy'
+    model_weight_folder = PLS_WEIGHTS if model == 'pls' else RIDGE_WEIGHTS
+    
+    filepath = os.path.join(model_weight_folder, filename)
+    return np.load(filepath)
 
 
-def load_all_model_weights(model, population):
+def load_all_model_weights(model, population, average, intercept):
     """
     Loads all model weights for a specific model and diagnosis.
 
@@ -95,7 +95,7 @@ def load_all_model_weights(model, population):
 
         for target in WISC_LEVEL[5]:
             bin_weights[target] = load_model_weight(model, population, target,
-                                                    bin_label)
+                                                    bin_label, average, intercept)
 
         model_weights[bin_label] = bin_weights
 
