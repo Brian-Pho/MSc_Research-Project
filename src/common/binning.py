@@ -142,3 +142,53 @@ def subsample_bin(X_bin, y_bin, num_samples):
     subsample_indices = np.random.choice(X_bin.shape[0], num_samples, replace=False)
     
     return X_bin[subsample_indices], y_bin[subsample_indices]
+
+
+def bin_by_sliding_window(X: np.array, y: np.array, ages: np.array, window_size: int = 3) -> list[tuple[np.array, np.array]]:
+    """Bins the data by a sliding age window.
+
+    Parameters
+    ----------
+    X
+    y
+    ages
+    window_size
+
+    Returns
+    -------
+
+    """
+    all_sliding_windows = []
+    min_age, max_age = np.min(ages), np.max(ages)
+
+    for current_window in range(min_age, max_age - window_size + 1):
+        min_window_age, max_window_age = current_window, current_window + window_size - 1
+        window_indices = np.where(np.logical_and(min_window_age <= ages, ages <= max_window_age))
+        X_window, y_window = X[window_indices], y[window_indices]
+        all_sliding_windows.append((X_window, y_window))
+
+    return all_sliding_windows
+
+
+def bin_by_random_equivalent_size(X, y, bin_sizes=(114, 147, 112)) -> tuple:
+    """Bins the data into equivalent sized bins, disregarding age.
+
+    Parameters
+    ----------
+    X
+    y
+    bin_sizes
+
+    Returns
+    -------
+
+    """
+    X_bins, y_bins, bin_labels = [], [], []
+
+    for bin_num, bin_size in enumerate(bin_sizes, start=1):
+        bin_indices = np.random.choice(X.shape[0], bin_size, replace=False)
+        X_bins.append(X[bin_indices])
+        y_bins.append(y[bin_indices])
+        bin_labels.append(f'Bin {bin_num}')
+
+    return X_bins, y_bins, bin_labels
