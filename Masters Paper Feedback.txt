@@ -1,0 +1,28 @@
+Response to Reviewer 1
+---
+1. Any other sampling factors (E.g. sampling variability) influence prediction.
+   - TODO: Randomly splitting the entire dataset into 3 groups repeatedly (n=114, 147, 112) and test the predictive performance
+   - Expect worse performance
+2. Larger age range.
+   - TODO: Randomly sample 112 subjects between 7-11 and test predictive performance
+   - NOT DOING: Already done by point 6.
+3. Couldn't predict in NT, possibility due to smaller sample size.
+	- TODO: Randomly sample 106 subjects for entire age range and test predictive performance.
+4. Group differences (E.g. cognitive measures and symptom scores)
+	- TODO: Run chi-squared test on cognitive measures between the three groups
+5. Unfamiliar with max-stat method.
+	- TODO: Switch results to use FDR
+6. Overextrapolation of three age bins
+	- TODO: Randomly sample an equal number of subjects in a 3 year sliding window from 6 to 16
+7. Across cognitive measures, models assigned the largest positive weights to connections within two networks.
+	- TODO: Create heat map (frequency) of weight assignment to each network 
+
+- [ ] Randomly split dataset into three groups of matching n=size and test
+- [ ] Randomly sample 106 subjects and test
+
+Response to Reviewer 2
+---
+
+1. We aren't sure if the differences found between age bins are due to the unreliability of features or meaningful developmental differences.
+	- TODO: Split-half ICC analysis for each age bin and show the models trained on two halves of the same age bin are significantly more similar than models across age bins.
+	- NOT DOING: too similar to cross prediction
