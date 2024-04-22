@@ -4,7 +4,7 @@ Holds the constants for the main program paths.
 from os.path import join
 
 # Main data and script locations
-BPHO_DIR = '/imaging3/owenlab/bpho'
+BPHO_DIR = '/imaging/bpho'
 REPO_DIR = '/home/bpho/Documents/MSc_Research-Project'
 
 # Common folders

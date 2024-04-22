@@ -142,3 +142,68 @@ def subsample_bin(X_bin, y_bin, num_samples):
     subsample_indices = np.random.choice(X_bin.shape[0], num_samples, replace=False)
     
     return X_bin[subsample_indices], y_bin[subsample_indices]
+
+
+def bin_by_sliding_window(X: np.array, y: np.array, ages: np.array, window_size: int = 3):
+    """Bins the data by a sliding age window.
+
+    Parameters
+    ----------
+    X
+    y
+    ages
+    window_size
+
+    Returns
+    -------
+
+    """
+    all_sliding_windows = []
+    age_windows = []
+    min_age, max_age = int(np.round(np.min(ages))), int(np.round(np.max(ages)))
+
+    for current_window in range(min_age, max_age - window_size):
+        if current_window == 12:
+            min_window_age, max_window_age = current_window, current_window + window_size
+        else:
+            min_window_age, max_window_age = current_window, current_window + window_size - 1
+        
+        window_indices = np.where(np.logical_and(min_window_age <= ages, ages <= max_window_age))
+        X_window, y_window = X[window_indices], y[window_indices]
+        all_sliding_windows.append((X_window, y_window))
+        age_windows.append((min_window_age, max_window_age))
+
+    return all_sliding_windows, age_windows
+
+
+def bin_by_random_equivalent_size(X, y, bin_sizes=(114, 147, 112)) -> tuple:
+    """Bins the data into equivalent sized bins, disregarding age.
+
+    Parameters
+    ----------
+    X
+    y
+    bin_sizes
+
+    Returns
+    -------
+
+    """
+    X_bins, y_bins, bin_labels = [], [], []
+    random_indices = np.random.choice(X.shape[0], X.shape[0], replace=False)
+    bin_indices = [random_indices[0:bin_sizes[0]], random_indices[bin_sizes[0]:bin_sizes[0]+bin_sizes[1]], random_indices[bin_sizes[1]:bin_sizes[1]+bin_sizes[2]]]
+
+    for bin_num, bin_index in enumerate(bin_indices, start=1):
+        X_bins.append(X[bin_index])
+        y_bins.append(y[bin_index])
+        bin_labels.append(f'Bin {bin_num}')
+
+    return X_bins, y_bins, bin_labels
+
+
+def bin_to_approximate_size(X, y, N=75):
+    if len(X) < N:
+        return X, y
+
+    random_indices = np.random.choice(X.shape[0], N, replace=False)
+    return X[random_indices], y[random_indices]
